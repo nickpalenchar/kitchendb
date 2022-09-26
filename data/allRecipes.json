@@ -1,6 +1,9 @@
-[
-  {
-    "name": "Popular Breaded Chicken",
-    "link": "/popular-breaded-chicken"
-  }
-]
+{
+  "test": [
+    {
+      "name": "Mushroom Zoodle Alfredo with Chicken",
+      "link": "/mushroom-zoodle-alfredo-with-chicken",
+      "data": "mushroom-zoodle-alfredo-with-chicken.json"
+    }
+  ]
+}
