@@ -1,0 +1,28 @@
+
+{{ with .Get "url" }}
+  {{ $data := getJSON . }}
+  {{ range $data.ingredients }}
+    <h2>Ingredients</h2>
+    {{ with .sectionTitle }}
+      <h3> {{ .sectionTitle }}</h3>
+    {{ end }}
+    {{ with .ingredients }}
+      <ul>
+      {{ range . }}
+        <li><b>{{ .amount }} {{ .unit }}</b> {{ .ingredient }}</li>
+      {{ end }}
+      </ul>
+    {{ end }}
+  {{ end }}
+
+  {{ range $data.steps }}
+    {{ with .sectionTitle }}
+      <h3> {{ .sectionTitle }}</h3>
+    {{ end }}
+    <ol>
+    {{ range .steps }}
+      <li>{{ . }}</li>
+    {{ end }}
+    </ol>
+  {{ end }}
+{{ end }}
