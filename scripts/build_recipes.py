@@ -7,14 +7,18 @@ def build():
 
   JSON files must all be UpperCammelCase
   """
+  clean()
+
   for file in os.listdir('data/recipes'):
     validate_file_name(file)
-    mkdown_name = file.replace(".json", ".md")
+    mkdown_name = camel_to_snake_case(file).replace(".json", ".md")
 
-    print(camel_to_snake_case(mkdown_name))
+    print(f"building {mkdown_name}...")
+    subprocess.run(["hugo", "new", "--kind", "recipes", f"content/recipes/{mkdown_name}"])
 
-    #subprocess.run(["hugo", "new", "--kind", "recipes", f"content/"])
-
+def clean():
+  for file in os.listdir("content/recipes"):
+    os.remove(f"content/recipes/{file}")
 
 def validate_file_name(name):
   if name[0].islower():
