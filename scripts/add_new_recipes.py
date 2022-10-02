@@ -11,6 +11,8 @@ import sys
 import csv
 from datetime import datetime
 from collections import namedtuple
+from schema_class import Recipe
+
 
 reciperow = namedtuple('reciperow', ['timestamp', 'name', 'summary', 'prep_time', 'cook_time', 'ingredients', 'steps', 'link_to_photo', 'submitter_email'])
 
@@ -36,6 +38,7 @@ def add_new_recipes(filepath):
         continue
       print(f'the next recipe is {recipe.name}')
       # TODO the actual parsing
+
       with open('add_new_recipes_since', mode='w') as datefh:
         datefh.write(str(isodate_from_recipe(recipe)))
       return
@@ -55,6 +58,9 @@ def is_recipe_old(recipe: reciperow, since) -> bool:
   recipe_date = datetime.strptime(recipe.timestamp, '%m/%d/%Y %H:%M:%S')
   return recipe_date <= since
 
+def write_recipe_to_json(recipe: reciperow):
+  # TODO parse the recipe and add it to the json fileszzzz
+  pass
 
 if __name__ == '__main__':
   if len(sys.argv) < 2:

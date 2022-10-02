@@ -4,6 +4,7 @@ import json
 import functools
 from jsonschema import validate
 
+
 RECIPE_DIR = 'data/recipes'
 SCHEMA_DIR = 'data/schemas'
 
@@ -59,4 +60,3 @@ def camel_to_snake_case(name):
 
 if __name__ == '__main__':
   build()
-  
