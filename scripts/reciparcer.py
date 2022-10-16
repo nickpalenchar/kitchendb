@@ -30,8 +30,13 @@ def parse_ingredients(s: str):
         "name": "",
     }
     for line in s.split("\n"):
-        _parse_ingredient(line)
-        print(f"line: {line}")
+        ing = _parse_ingredient(line)
+        if ing == UNPARSABLE_INGREDIENT:
+            continue
+        result.append(ing)
+    from pprint import pprint
+
+    pprint(result)
 
 
 def _parse_ingredient(m: str):
@@ -39,13 +44,12 @@ def _parse_ingredient(m: str):
     result = {}
 
     m = _convert_frac_chars(m).strip()
-    breakpoint()
     try:
         amount, slicepoint = parse_amount(m)
         amount = _format_amount(amount)
         rest = m[slicepoint:]
         log.debug(f"parsed amount: {amount}")
-        result["amount"] = int(amount)
+        result["amount"] = float(amount)
     except:
         log.warn(f"Unparsable Ingredient: {m}")
         return UNPARSABLE_INGREDIENT
@@ -77,7 +81,6 @@ def _parse_unit(m: str):
     Attempts to parse a unit of measurement.
     """
     log.debug(f"parsing unit: {m}")
-    breakpoint()
     # NB: These acceptable enums come from the `data/schemase/recipes.json` schema.
     # keep the min sync
     valid_units = (
@@ -104,8 +107,6 @@ def _parse_unit(m: str):
 ### matchers
 # go through each of these to parse the amount text
 ###
-def number_match(m: str) -> t.Optional[t.Tuple[str, int]]:
-    match = re.search("(\d+")
 
 
 def fraction_match(m: str) -> t.Optional[t.Tuple[str, int]]:
