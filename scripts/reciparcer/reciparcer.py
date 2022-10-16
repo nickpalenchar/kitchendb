@@ -2,24 +2,8 @@ from parser import expr
 import re
 import logging as log
 import typing as t
-
-UNPARSABLE_INGREDIENT = object()
-UNPARSABLE_UNIT = object()
-
-FRAC_CHARS_TO_DEC = {
-    "⅘": 0.8,
-    "½": 0.5,
-    "⅔": 0.67,
-    "¾": 0.75,
-    "⅝": 0.62,
-    "⅗": 0.6,
-    "⅜": 0.375,
-    "⅖": 0.4,
-    "⅕": 0.20,
-    "⅐": 0.14,
-    "⅑": 0.11,
-    "⅒": 0.10,
-}
+from .constants import UNPARSABLE_INGREDIENT, UNPARSABLE_UNIT, FRAC_CHARS_TO_DEC
+from .matchers import fraction_match, decimal_match
 
 
 def parse_ingredients(s: str):
@@ -63,6 +47,7 @@ def _parse_ingredient(m: str):
 
     unit = _parse_unit(possible_unit)
     if unit == UNPARSABLE_UNIT:
+        # result["customUnit"] = _parse_custom_unit(f"{possible_unit} {rest[0]}")
         result["customUnit"] = ""
     else:
         result["unit"] = unit
@@ -104,29 +89,11 @@ def _parse_unit(m: str):
     return UNPARSABLE_UNIT
 
 
-### matchers
-# go through each of these to parse the amount text
-###
-
-
-def fraction_match(m: str) -> t.Optional[t.Tuple[str, int]]:
-    match = re.search("(\d?[\s&+]{0,4}?\d+\/\d+)(.*)", m)
-    if not match:
-        return None
-    groups = match.groups()
-    if len(match.groups() < 1):
-        return None
-    return (groups[0].strip(), len(groups[0]))
-
-
-def decimal_match(m: str) -> t.Optional[t.Tuple[str, int]]:
-    match = re.search("((\d\s)?\d*(\.\d)*)(.*)", m)
-    if not match:
-        return None
-    groups = match.groups()
-    if len(match.groups()) < 1:
-        return None
-    return (groups[0].strip(), len(groups[0]))
+def _parse_custom_unit(m: str) -> t.Optional[t.Tuple[str, int]]:
+    if match := re.match('"(.*)"', m):
+        return (match.group(1), len(match.group(1) + 2))
+    first, _ = m.split(" ", 1)
+    return (first, len(first))
 
 
 def parse_amount(m: str) -> t.Optional[t.Tuple[str, int]]:
