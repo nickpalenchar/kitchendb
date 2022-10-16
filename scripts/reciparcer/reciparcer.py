@@ -14,7 +14,7 @@ def parse_ingredients(s: str):
         "name": "",
     }
     for line in s.split("\n"):
-        ing = _parse_ingredient(line)
+        ing = parse_ingredient(line)
         if ing == UNPARSABLE_INGREDIENT:
             continue
         result.append(ing)
@@ -23,7 +23,7 @@ def parse_ingredients(s: str):
     pprint(result)
 
 
-def _parse_ingredient(m: str):
+def parse_ingredient(m: str):
     log.debug(f"parsing ingredient: {m}")
     result = {}
 
@@ -55,7 +55,7 @@ def _parse_ingredient(m: str):
     ingredient, *modifier = rest[0].split(",", 1)
     result["ingredient"] = ingredient
     if modifier:
-        result["modifier"] = modifier[0]
+        result["modifier"] = modifier[0].strip()
 
     log.debug(result)
     return result
