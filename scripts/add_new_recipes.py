@@ -8,6 +8,7 @@ a script that can do said checkout and PR.
 date of the last recipe to be added. This script will 
 """
 import sys
+import os
 import csv
 from datetime import datetime
 from collections import namedtuple
@@ -15,6 +16,8 @@ from schema_class import Recipe
 import build_recipes
 import reciparcer
 import logging
+
+logging.basicConfig(level=os.environ.get("LOGLEVEL", "WARN"))
 
 reciperow = namedtuple(
     "reciperow",
@@ -79,7 +82,12 @@ def is_recipe_old(recipe: reciperow, since) -> bool:
 def write_recipe_to_json(recipe: reciperow):
     # TODO parse the recipe and add it to the json file
     print("parsing")
+    name = "German Apple pancakes"
+    summary = ""
+    yields = 4
+    yieldsUnit = "pancakes"
     reciparcer.parse_ingredients(recipe.ingredients)
+    breakpoint()
     logging.info("Successfully imported recipe")
 
 
