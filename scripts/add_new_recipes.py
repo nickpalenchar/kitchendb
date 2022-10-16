@@ -87,7 +87,6 @@ def write_recipe_to_json(recipe: reciperow):
     yields = 4
     yieldsUnit = "pancakes"
     reciparcer.parse_ingredients(recipe.ingredients)
-    breakpoint()
     logging.info("Successfully imported recipe")
 
 

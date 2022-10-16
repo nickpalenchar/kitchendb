@@ -1,9 +1,10 @@
 from parser import expr
 import re
+from collections import OrderedDict
 import logging as log
 import typing as t
 from .constants import UNPARSABLE_INGREDIENT, UNPARSABLE_UNIT, FRAC_CHARS_TO_DEC
-from .matchers import fraction_match, decimal_match
+from .matchers import fraction_match, decimal_match, number_match
 
 
 def parse_ingredients(s: str):
@@ -21,6 +22,7 @@ def parse_ingredients(s: str):
     from pprint import pprint
 
     pprint(result)
+    return result
 
 
 def parse_ingredient(m: str):
@@ -102,10 +104,13 @@ def parse_amount(m: str) -> t.Optional[t.Tuple[str, int]]:
     consumed from the string. The char should be used to
     slice off what was used in the calling function
     """
-    matchers = {
-        "FRACTION_MATCH": fraction_match,
-        "DECIMAL_MATCH": decimal_match,
-    }
+    matchers = OrderedDict(
+        (
+            ("NUMBER_MATCH", number_match),
+            ("FRACTION_MATCH", fraction_match),
+            ("DECIMAL_MATCH", decimal_match),
+        )
+    )
     for matcher, fn in matchers.items():
         match = fn(m)
         if match:
@@ -143,3 +148,7 @@ def _convert_frac_chars(m: str) -> str:
     for char, dec in FRAC_CHARS_TO_DEC.items():
         result = result.replace(char, str(dec))
     return result
+
+
+if __name__ == "__main__":
+    parse_ingredients(" ¼ cup dark rum or cognac (optional)")
