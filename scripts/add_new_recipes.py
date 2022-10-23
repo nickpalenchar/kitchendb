@@ -1,4 +1,6 @@
 """
+ASSUMES YOUR WORKING DIRECTORY IS scripts/
+
 builds new recipes from the submitted google sheet.
 
 Each new recipe should be its own separate PR. Therefore, it should be ran with
@@ -10,6 +12,7 @@ date of the last recipe to be added. This script will
 import sys
 import os
 import csv
+import json
 import typing as t
 from collections import namedtuple
 from schema_class import Recipe
@@ -17,6 +20,7 @@ from datetime import datetime
 import build_recipes
 import reciparcer
 import logging
+from os import path
 
 T = t.TypeVar("T")
 
@@ -68,8 +72,12 @@ def add_new_recipes(filepath):
         logging.info("no new recipes")
 
 
-def isodate_from_recipe(recipe: reciperow):
+def isodate_from_recipe(recipe: reciperow) -> datetime:
     return datetime.strptime(recipe.timestamp, "%m/%d/%Y %H:%M:%S")
+
+
+def get_recipe_filename(recipe: reciperow) -> str:
+    return f'{isodate_from_recipe(recipe).isoformat()[:10]}_{recipe.name.replace(" ", "-").lower()}.json'
 
 
 def is_recipe_old(recipe: reciperow, since) -> bool:
@@ -84,10 +92,25 @@ def is_recipe_old(recipe: reciperow, since) -> bool:
 
 def write_recipe_to_json(recipe: reciperow):
     # TODO parse the recipe and add it to the json file
+    attrs = {
+        "version": "1",
+        "name": recipe.name,
+        "summary": recipe.summary,
+        "steps": reciparcer.parse_steps(recipe.steps),
+        "ingredients": reciparcer.parse_ingredients(recipe.ingredients),
+        "timestamp": recipe.timestamp,
+    }
+    optional_attrs = {
+        "yields": None,  # TODO
+        "yieldsUnit": None,  # TODO
+        "prep_time": optional(recipe.prep_time),
+        "cook_time": optional(recipe.cook_time),
+    }
+
     logging.debug("parsing")
     logging.debug(f"csv row: {recipe}")
     name: str = recipe.name
-    summary: str = optional(recipe.summary) or ''
+    summary: str = optional(recipe.summary) or ""
     yields: t.Optional[int] = optional(4)
     yieldsUnit = None  # TODO
     prep_time: t.Optional[int] = optional(recipe.prep_time)
@@ -95,20 +118,14 @@ def write_recipe_to_json(recipe: reciperow):
     ingredients = reciparcer.parse_ingredients(recipe.ingredients)
     steps: t.Lest = reciparcer.parse_steps(recipe.steps)
     link_to_photo: t.Optional[str] = optional(recipe.link_to_photo)
-    logging.debug("STP", steps)
     logging.info("Successfully imported recipe")
+    recipe = Recipe(**attrs)
 
-    recipe = Recipe(
-        name=name,
-        summary=summary,
-        yields=yields,
-        yieldsUnit=yieldsUnit,
-        prep_time=prep_time,
-        cook_time=cook_time,
-        ingredients=ingredients,
-        steps=steps,
-        link_to_photo=link_to_photo,
-    )
+    filename = get_recipe_filename(recipe)
+    logging.debug(f"Recipe will be named {filename}")
+
+    with open(path.join("..", "data", "recipes", filename), "a") as fh:
+        fh.write(json.dumps(recipe, indent=2))
 
 
 def optional(value: t.Generic[T]) -> t.Optional[T]:

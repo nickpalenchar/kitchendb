@@ -11,14 +11,14 @@ def parse_ingredients(s: str):
 
     ## TODO (1) - section titles
     result = []
-    section = {
-        "name": "",
-    }
+    section = {"sectionTitle": "", "ingredients": []}
     for line in s.split("\n"):
         ing = parse_ingredient(line)
         if ing == UNPARSABLE_INGREDIENT:
             continue
-        result.append(ing)
+        section["ingredients"].append(ing)
+
+    result.append(section)
     from pprint import pprint
 
     pprint(result)
