@@ -10,12 +10,14 @@ date of the last recipe to be added. This script will
 import sys
 import os
 import csv
-from datetime import datetime
+import typing as t
 from collections import namedtuple
 from schema_class import Recipe
 import build_recipes
 import reciparcer
 import logging
+
+T = TypeVar("T")
 
 logging.basicConfig(level=os.environ.get("LOGLEVEL", "WARN"))
 
@@ -81,13 +83,20 @@ def is_recipe_old(recipe: reciperow, since) -> bool:
 
 def write_recipe_to_json(recipe: reciperow):
     # TODO parse the recipe and add it to the json file
-    print("parsing")
-    name = "German Apple pancakes"
-    summary = ""
-    yields = 4
-    yieldsUnit = "pancakes"
-    reciparcer.parse_ingredients(recipe.ingredients)
+    logging.debug("parsing")
+    logging.debug(f"csv row: {recipe}")
+    name: str = recipe.name
+    summary: t.Optional(str) = optional(recipe.summary)
+    yields: t.Optional(int) = optional(4)
+    yieldsUnit = None # TODO
+    prep_time: t.Optional(int) = optional(recipe.prep_time)
+    cook_time: t.Optional(int) = optional(recipe.cook_time)
+    ingredients = reciparcer.parse_ingredients(recipe.ingredients)
+    link_to_photo: t.Optional(str) = optional(recipe.link_to_photo)
     logging.info("Successfully imported recipe")
+
+def optional(value: t.Generic(T)) -> t.Optional(T):
+  return value if value else None
 
 
 if __name__ == "__main__":
