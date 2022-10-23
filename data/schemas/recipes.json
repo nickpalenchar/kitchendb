@@ -1,0 +1,135 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://kitchendb.com/data/schemas/recipes.json",
+  "title": "Recipe",
+  "description": "A Recipe",
+  "type": "object",
+  "properties": {
+    "timestamp": {
+      "description": "time the recipe was submitted",
+      "type": "string"
+    },
+    "version": {
+      "description": "The version number. Always \"1\".",
+      "type": "string"
+    },
+    "name": {
+      "description": "Human readable name of the recipe.",
+      "type": "string"
+    },
+    "summary": {
+      "description": "short summary that goes before the recipe.",
+      "type": "string",
+      "maxLength": 480
+    },
+    "yields": {
+      "description": "number of servings recipe makes",
+      "type": "integer",
+      "minimum": 1
+    },
+    "yieldsUnit": {
+      "description": "The unit of what the recipe yields",
+      "type": "string"
+    },
+    "originalSource": {
+      "description": "Link to the original source of the recipe",
+      "type": "string"
+    },
+    "ingredients": {
+      "description": "List of ingredients, divided into one or more sections",
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "properties": {
+          "sectionTitle": {
+            "description": "Title of the section. If only one section, use \"\"",
+            "type": "string"
+          },
+          "ingredients": {
+            "description": "The ingredients for the section",
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "object",
+              "properties": {
+                "unit": {
+                  "description": "unit of measurement",
+                  "type": "string",
+                  "enum": [
+                    "lb",
+                    "oz",
+                    "g",
+                    "cup",
+                    "fl oz",
+                    "ml",
+                    "pint",
+                    "tsp",
+                    "tbsp",
+                    "kg",
+                    "gal",
+                    "liter"
+                  ]
+                },
+                "customUnit": {
+                  "description": "use for non-standard unit of measurement",
+                  "type": "string"
+                },
+                "amount": {
+                  "description": "the quantity of the measurement",
+                  "type": "number"
+                },
+                "ingredient": {
+                  "description": "The name of the ingredient",
+                  "type": "string"
+                },
+                "modifier": {
+                  "description": "A way to arrange or prep ingredient. i.e. 'chopped'",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "ingredient"
+              ]
+            }
+          }
+        },
+        "required": [
+          "sectionTitle",
+          "ingredients"
+        ]
+      }
+    },
+    "steps": {
+      "description": "The series of steps for making the recipe",
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "description": "A group of steps",
+        "properties": {
+          "sectionTitle": {
+            "description": "Title of the section. If only one section, use \"\"",
+            "type": "string"
+          },
+          "steps": {
+            "type": "array",
+            "description": "steps in the section",
+            "minItems": 1,
+            "items": {
+              "type": "string",
+              "description": "A single step"
+            }
+          }
+        }
+      }
+    }
+  },
+  "required": [
+    "version",
+    "name",
+    "ingredients",
+    "steps",
+    "timestamp"
+  ]
+}

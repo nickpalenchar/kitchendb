@@ -1,0 +1,85 @@
+{
+  "name": "Low Carb Chicken Gyro",
+  "version": "1",
+  "summary": "",
+  "photoURL": null,
+  "timestamp": "09/1/2022 11:36:41",
+  "time": {
+    "prep": 10,
+    "cook": 20
+  },
+  "yields": 4,
+  "ingredients": [
+    {
+      "sectionTitle": "",
+      "ingredients": [
+        {
+          "amount": 16,
+          "unit": "oz",
+          "ingredient": "boneless skinless chicken thighs"
+        },
+        {
+          "amount": 1,
+          "unit": "tsp",
+          "ingredient": "oregano"
+        },
+        {
+          "amount": 0.5,
+          "unit": "tsp",
+          "ingredient": "salt"
+        },
+        {
+          "amount": 0.5,
+          "unit": "tsp",
+          "ingredient": "smoked paprika"
+        },
+        {
+          "amount": 0.5,
+          "unit": "tsp",
+          "ingredient": "olive oil"
+        },
+        {
+          "amount": 0.5,
+          "customUnit": "",
+          "ingredient": "lemon's squeezed juice"
+        },
+        {
+          "amount": 1,
+          "unit": "tsp",
+          "ingredient": "minced garlic"
+        },
+        {
+          "amount": 2,
+          "unit": "tbsp",
+          "ingredient": "Yogurt"
+        }
+      ]
+    },
+    {
+      "sectionTitle": "",
+      "ingredients": [
+        {
+          "amount": 4,
+          "ingredient": "thin flour flatbread"
+        },
+        {
+          "ingredient": "tomato"
+        },
+        {
+          "ingredient": "tzatziki"
+        }
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "sectionTitle": "",
+      "steps": [
+        "Combine marinade in a bowl",
+        "Grill on medium-high heat for 6 minutes on each side",
+        "Meanwhile, assemble the flatbreads: spread a dollop of tzatiki on each one, followed by a slice of tomato",
+        "Top with 4oz of chicken each and roll up"
+      ]
+    }
+  ]
+}
