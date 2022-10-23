@@ -13,26 +13,27 @@ import csv
 import typing as t
 from collections import namedtuple
 from schema_class import Recipe
+from datetime import datetime
 import build_recipes
 import reciparcer
 import logging
 
-T = TypeVar("T")
+T = t.TypeVar("T")
 
 logging.basicConfig(level=os.environ.get("LOGLEVEL", "WARN"))
 
-reciperow = namedtuple(
+reciperow = t.NamedTuple(
     "reciperow",
     [
-        "timestamp",
-        "name",
-        "summary",
-        "prep_time",
-        "cook_time",
-        "ingredients",
-        "steps",
-        "link_to_photo",
-        "submitter_email",
+        ("timestamp", str),
+        ("name", str),
+        ("summary", t.Optional[str]),
+        ("prep_time", t.Optional[int]),
+        ("cook_time", t.Optional[str]),
+        ("ingredients", t.Any),
+        ("steps", t.List[str]),
+        ("link_to_photo", t.Optional[str]),
+        ("submitter_email", t.Optional[str]),
     ],
 )
 
@@ -86,17 +87,32 @@ def write_recipe_to_json(recipe: reciperow):
     logging.debug("parsing")
     logging.debug(f"csv row: {recipe}")
     name: str = recipe.name
-    summary: t.Optional(str) = optional(recipe.summary)
-    yields: t.Optional(int) = optional(4)
-    yieldsUnit = None # TODO
-    prep_time: t.Optional(int) = optional(recipe.prep_time)
-    cook_time: t.Optional(int) = optional(recipe.cook_time)
+    summary: str = optional(recipe.summary) or ''
+    yields: t.Optional[int] = optional(4)
+    yieldsUnit = None  # TODO
+    prep_time: t.Optional[int] = optional(recipe.prep_time)
+    cook_time: t.Optional[int] = optional(recipe.cook_time)
     ingredients = reciparcer.parse_ingredients(recipe.ingredients)
-    link_to_photo: t.Optional(str) = optional(recipe.link_to_photo)
+    steps: t.Lest = reciparcer.parse_steps(recipe.steps)
+    link_to_photo: t.Optional[str] = optional(recipe.link_to_photo)
+    logging.debug("STP", steps)
     logging.info("Successfully imported recipe")
 
-def optional(value: t.Generic(T)) -> t.Optional(T):
-  return value if value else None
+    recipe = Recipe(
+        name=name,
+        summary=summary,
+        yields=yields,
+        yieldsUnit=yieldsUnit,
+        prep_time=prep_time,
+        cook_time=cook_time,
+        ingredients=ingredients,
+        steps=steps,
+        link_to_photo=link_to_photo,
+    )
+
+
+def optional(value: t.Generic[T]) -> t.Optional[T]:
+    return value if value else None
 
 
 if __name__ == "__main__":
