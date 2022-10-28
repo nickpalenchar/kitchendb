@@ -49,11 +49,12 @@ def parse_ingredient(m: str):
 
     unit = _parse_unit(possible_unit)
     if unit == UNPARSABLE_UNIT:
-        # result["customUnit"] = _parse_custom_unit(f"{possible_unit} {rest[0]}")
+        # there is probably no unit and the first word was part of the ingredients.
+        # i.e. "1 Granny Smith Apple"
         result["customUnit"] = ""
+        rest[0] = possible_unit + " " + rest[0]
     else:
         result["unit"] = unit
-
     ingredient, *modifier = rest[0].split(",", 1)
     result["ingredient"] = ingredient
     if modifier:

@@ -123,7 +123,7 @@ def write_recipe_to_json(recipe: reciperow):
     filename = get_recipe_filename(recipe)
     logging.debug(f"Recipe will be named {filename}")
 
-    with open(path.join("..", "data", "recipes", filename), "a") as fh:
+    with open(path.join("..", "data", "recipes", filename), "w") as fh:
         fh.write(json.dumps(recipe, indent=2))
 
 
