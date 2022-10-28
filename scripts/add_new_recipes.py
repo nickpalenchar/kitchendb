@@ -76,7 +76,7 @@ def isodate_from_recipe(recipe: reciperow) -> datetime:
 
 
 def get_recipe_filename(recipe: reciperow) -> str:
-    return f'{isodate_from_recipe(recipe).isoformat()[:10]}_{recipe.name.replace(" ", "-").lower()}.json'
+    return f"{recipe.name.replace(' ', '-').lower()}.json"
 
 
 def is_recipe_old(recipe: reciperow, since) -> bool:

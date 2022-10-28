@@ -4,4 +4,4 @@ date: {{ .Date }}
 draft: true
 ---
 
-{{< recipe-list url="data/recipes/{{ replace (replace .Name "-" " " | title) " " "" }}.json">}}
+{{< recipe-list url="data/recipes/{{ .Name }}.json">}}

@@ -31,7 +31,7 @@ def build():
             log.debug(f"Validating schema for {file}...")
             validate_file_schema(fh)
 
-        mkdown_name = file.replace(".json", ".md")
+        mkdown_name = camel_to_snake_case(file).replace(".json", ".md")
 
         log.debug(f"building {mkdown_name}...")
         log.debug(f"CMD: hugo new --kind recipes {HUGO_RECIPE_DIR}/{mkdown_name}")
