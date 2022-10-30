@@ -11,7 +11,7 @@ class TestParseIngredient(unittest.TestCase):
             {
                 "amount": 2.0,
                 "customUnit": "",
-                "ingredient": "Smith or other tart cooking apples (15 oz.)",
+                "ingredient": "Granny Smith or other tart cooking apples (15 oz.)",
                 "modifier": "peeled, cored, and thinly sliced",
             },
             result,

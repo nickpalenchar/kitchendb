@@ -1,0 +1,86 @@
+{
+  "version": "1",
+  "name": "Slow Cooker Chicken Taco Bowls",
+  "summary": "",
+  "steps": [
+    {
+      "sectionTitle": "",
+      "steps": [
+        "Place chicken breasts in a large (5qt) slow cooker. Drain the black beans and add to the slow cooker, along with the salsa and corn. Next, add 1/4 cup water, along with the minced garlic, chili powder, cumin, oregano, cayenne, and freshly cracked pepper. Stir until combined.",
+        "Cook on low for 8 hours or high for 4 hours.",
+        "When finished, use a fork to shred the chicken, and stir everything once more.",
+        "Optional) Add freshly shredded cheese. Eat as is or with tortilla chips"
+      ]
+    }
+  ],
+  "ingredients": [
+    {
+      "sectionTitle": "",
+      "ingredients": [
+        {
+          "amount": 1.5,
+          "customUnit": "",
+          "ingredient": "lbs boneless skinless chicken"
+        },
+        {
+          "amount": 1.0,
+          "customUnit": "",
+          "ingredient": "16oz. jar salsa"
+        },
+        {
+          "amount": 2.0,
+          "customUnit": "",
+          "ingredient": "cloves garlic",
+          "modifier": "minced"
+        },
+        {
+          "amount": 1.0,
+          "customUnit": "",
+          "ingredient": "15oz can black beans"
+        },
+        {
+          "amount": 1.0,
+          "customUnit": "",
+          "ingredient": "/2 lb. frozen corn"
+        },
+        {
+          "amount": 1.0,
+          "unit": "tbsp",
+          "ingredient": "chili powder"
+        },
+        {
+          "amount": 0.5,
+          "unit": "tbsp",
+          "ingredient": "ground cumin"
+        },
+        {
+          "amount": 0.5,
+          "unit": "tsp",
+          "ingredient": "dried oregano"
+        },
+        {
+          "amount": 0.25,
+          "unit": "tsp",
+          "ingredient": "cayenne pepper"
+        },
+        {
+          "amount": 6.0,
+          "customUnit": "",
+          "ingredient": "cups cooked rice"
+        },
+        {
+          "amount": 8.0,
+          "unit": "oz",
+          "ingredient": "shredded cheddar"
+        },
+        {
+          "amount": 3.0,
+          "customUnit": "",
+          "ingredient": "green onions",
+          "modifier": "sliced (or fresh cilantro)"
+        }
+      ]
+    }
+  ],
+  "timestamp": "10/1/2022 11:40:21"
+}

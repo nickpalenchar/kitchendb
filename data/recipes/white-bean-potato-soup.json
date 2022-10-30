@@ -1,0 +1,120 @@
+{
+  "version": "1",
+  "name": "White Bean Potato Soup",
+  "summary": "The perfect transition from Summer to Fall: summer notes and flavors with the comfort of Fall SOUP",
+  "steps": [
+    {
+      "sectionTitle": "",
+      "steps": [
+        "If using a leek, make sure to cut the root and woody dark green top off. Cut the remaining white and light green stalk lengthwise and rinse between the layers under running water to remove any dirt. Thinly slice it and then warm a soup pot over medium heat. ",
+        "Heat up the oil in the pot and then add in the leeks, carrots, celery with a pinch of salt and saut\u00e9 until softened, about 3-5 minutes. Then, add in the garlic and red pepper flakes and stir until fragrant, about 1-2 minutes. ",
+        "To the pan, add in the nutritional yeast, thyme, mustard, and give a good stir to combine. Next, pour in the potatoes and beans, mix again to fully coat in the mixture. ",
+        "Pour in the vegetable broth and add in the bay leaves. Then, bring your pot to a boil and reduce to a simmer for 15-20 minutes, making sure the potato is cooked through. ",
+        "Remove the soup from heat and use an immersion blender to blend a small portion of the soup to help thicken it. ",
+        "If adding miso, take a spoonful of soup from the pot and place into a small bowl. Use this to mix your miso paste in until smooth, then pour back into the soup. ",
+        "Stir in the spinach, dill, lemon zest and juice, adjust salt and pepper to taste and serve. "
+      ]
+    }
+  ],
+  "ingredients": [
+    {
+      "sectionTitle": "",
+      "ingredients": [
+        {
+          "amount": 1.0,
+          "unit": "tbsp",
+          "ingredient": "Avocado Oil"
+        },
+        {
+          "amount": 1.0,
+          "customUnit": "",
+          "ingredient": "Large Leek OR 0.5 of a medium yellow onion",
+          "modifier": "diced"
+        },
+        {
+          "amount": 2.0,
+          "customUnit": "",
+          "ingredient": "stalks celery",
+          "modifier": "diced"
+        },
+        {
+          "amount": 2.0,
+          "customUnit": "",
+          "ingredient": "carrots",
+          "modifier": "sliced or diced"
+        },
+        {
+          "amount": 5.0,
+          "customUnit": "",
+          "ingredient": "-6 cloves garlic",
+          "modifier": "crushed or minced"
+        },
+        {
+          "amount": 1.0,
+          "unit": "tsp",
+          "ingredient": "red pepper flakes",
+          "modifier": "optional"
+        },
+        {
+          "amount": 2.0,
+          "unit": "tbsp",
+          "ingredient": "nutritional yeast"
+        },
+        {
+          "amount": 4.0,
+          "customUnit": "",
+          "ingredient": "sprigs fresh thyme"
+        },
+        {
+          "amount": 1.0,
+          "customUnit": "",
+          "ingredient": "heaping tsp Dijon Mustard"
+        },
+        {
+          "amount": 3.0,
+          "customUnit": "",
+          "ingredient": "medium sized potatoes",
+          "modifier": "diced into 0.5 inch cubes"
+        },
+        {
+          "amount": 30.0,
+          "unit": "oz",
+          "ingredient": "of canned white beans"
+        },
+        {
+          "amount": 6.0,
+          "customUnit": "",
+          "ingredient": "cups vegetable broth"
+        },
+        {
+          "amount": 2.0,
+          "customUnit": "",
+          "ingredient": "bay leaves"
+        },
+        {
+          "amount": 1.0,
+          "unit": "tbsp",
+          "ingredient": "white miso paste"
+        },
+        {
+          "amount": 2.0,
+          "customUnit": "",
+          "ingredient": "cups spinach"
+        },
+        {
+          "amount": 1.0,
+          "customUnit": "",
+          "ingredient": "lemon",
+          "modifier": "(juice and zest)"
+        },
+        {
+          "amount": 1.0,
+          "customUnit": "",
+          "ingredient": "small bunch of dill",
+          "modifier": "minced (about 0.24 cups)"
+        }
+      ]
+    }
+  ],
+  "timestamp": "10/3/2022 9:09:02"
+}

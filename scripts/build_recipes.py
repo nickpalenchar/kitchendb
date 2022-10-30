@@ -26,7 +26,6 @@ def build():
 
     for file in os.listdir(RECIPE_DIR):
         validate_file_name(file)
-        breakpoint()
         with open(os.path.join(RECIPE_DIR, file)) as fh:
             log.debug(f"Validating schema for {file}...")
             validate_file_schema(fh)
@@ -36,7 +35,8 @@ def build():
         log.debug(f"building {mkdown_name}...")
         log.debug(f"CMD: hugo new --kind recipes {HUGO_RECIPE_DIR}/{mkdown_name}")
         subprocess.run(
-            ["hugo", "new", "--kind", "recipes", f"{HUGO_RECIPE_DIR}/{mkdown_name}"], cwd=PROJECT_ROOT
+            ["hugo", "new", "--kind", "recipes", f"{HUGO_RECIPE_DIR}/{mkdown_name}"],
+            cwd=PROJECT_ROOT,
         )
 
 
