@@ -1,0 +1,105 @@
+{
+  "version": "1",
+  "name": "Earl Grey Blackberry Scones with Lemon Glaze",
+  "summary": "Makes 16 scones. Keep all ingredients chilled until needed.",
+  "steps": [
+    {
+      "sectionTitle": "",
+      "steps": [
+        "Preheat oven to 400 F. Move baking tray to upper 1/3 of the oven. Line a baking tray with parchment paper and set aside.",
+        "Grind 1 1/4 tbs earl grey tea in a small blender or with a mortar and pestle.",
+        "In a large mixing bowl, sift together flour, sugar, tea, baking powder, baking soda, and salt. Discard any pieces that don\u2019t go through sieve with ease. Cut in butter using a pastry cutter or your fingers until the mixture is course and butter is pea-sized or smaller. Place dry mixture in the freezer or refrigerator for 5 minutes while you prepare the wet ingredients.",
+        "In a small mixing bowl, combine egg and buttermilk and beat lightly with a fork. Rinse and dry the blackberries.",
+        "Take the dry mixture out of the freezer or refrigerator. Mix wet and dry mixtures with a spoon until combined. Continue to combine with your hands until a soft dough is formed. Knead by folding the dough in half 3-5 times.",
+        "Add blackberries and continue to fold until blackberries are combined. The blackberries may get crushed a bit, that\u2019s okay. Add more flour as needed. Don\u2019t overwork.",
+        "Shape dough to a 1 inch thickness. Cut dough into 2 inch circles using a round pastry cutter or cut into 2 inch squares with a knife. Reshape excess dough, fold and re-cut.",
+        "Place scones onto your prepared baking tray. Place tray in the freezer for 5 minutes so that the butter can firm up again.",
+        "Brush scones with buttermilk and sprinkle with granulated sugar before placing in the oven. Bake for 16-20 minutes until tops are golden brown. Place scones on a metal rack with a piece of parchment paper underneath until scones are cool.",
+        "Prep the glaze. Mix powdered sugar, lemon juice, vanilla and lemon zest with a fork until smooth. Add extra lemon juice or powdered sugar as needed until you get the right consistency.",
+        "Drizzle glaze evenly onto the scones, allowing excess to drip onto the parchment paper. Let scones sit for 10-15 minutes until glaze sets.",
+        "Serve as soon as possible. Scones will keep about 2 days. You can freeze extra scones (wrap in saran wrap) and reheat later as needed."
+      ]
+    }
+  ],
+  "ingredients": [
+    {
+      "sectionTitle": "",
+      "ingredients": [
+        {
+          "amount": 3.25,
+          "customUnit": "",
+          "ingredient": "cups all-purpose flour \u2014 plus extra flour for kneading"
+        },
+        {
+          "amount": 0.3,
+          "unit": "cup",
+          "ingredient": "granulated sugar"
+        },
+        {
+          "amount": 1.5,
+          "customUnit": "",
+          "ingredient": "tablespoon earl grey tea",
+          "modifier": "ground until fine"
+        },
+        {
+          "amount": 2.5,
+          "customUnit": "",
+          "ingredient": "teaspoons baking powder"
+        },
+        {
+          "amount": 0.5,
+          "customUnit": "",
+          "ingredient": "teaspoon baking soda"
+        },
+        {
+          "amount": 1.0,
+          "customUnit": "",
+          "ingredient": "teaspoon salt"
+        },
+        {
+          "amount": 0.75,
+          "unit": "cup",
+          "ingredient": "cold unsalted butter"
+        },
+        {
+          "amount": 1.0,
+          "customUnit": "",
+          "ingredient": "large egg",
+          "modifier": "lightly beaten"
+        },
+        {
+          "amount": 0.75,
+          "unit": "cup",
+          "ingredient": "cold buttermilk"
+        },
+        {
+          "amount": 1.0,
+          "unit": "cup",
+          "ingredient": "fresh blackberries"
+        },
+        {
+          "amount": 1.0,
+          "unit": "cup",
+          "ingredient": "powdered sugar"
+        },
+        {
+          "amount": 1.5,
+          "customUnit": "",
+          "ingredient": "tablespoon lemon juice"
+        },
+        {
+          "amount": 1.0,
+          "unit": "tsp",
+          "ingredient": "vanilla"
+        },
+        {
+          "amount": 1.0,
+          "customUnit": "",
+          "ingredient": "lemon",
+          "modifier": "the Zest of"
+        }
+      ]
+    }
+  ],
+  "timestamp": "10/3/2022 17:40:58"
+}
