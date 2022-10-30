@@ -9,7 +9,6 @@ from .matchers import fraction_match, decimal_match, number_match
 
 def parse_ingredients(s: str):
 
-    ## TODO (1) - section titles
     result = []
     section = {"sectionTitle": "", "ingredients": []}
     for line in s.split("\n"):
@@ -24,6 +23,10 @@ def parse_ingredients(s: str):
     pprint(result)
     return result
 
+def parse_section(m: str) -> t.Optional[str]:
+    m = m.strip()
+    if m.startswith('(') and m.endswith(')'):
+        return m[1:-1].strip()
 
 def parse_ingredient(m: str):
     log.debug(f"parsing ingredient: {m}")
