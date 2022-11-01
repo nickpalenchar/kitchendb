@@ -16,6 +16,7 @@ import json
 import typing as t
 from collections import namedtuple
 from ..schema.hugodata import Recipe, Ingredient
+from recibundler.schema import reciperow
 from recibundler import json_writing
 from datetime import datetime
 from .. import reciparcer
@@ -29,22 +30,6 @@ ADD_NEW_RECIPES_SINCE_PATH = 'add_new_recipes_since'
 T = t.TypeVar("T")
 
 logging.basicConfig(level=os.environ.get("LOGLEVEL", "WARN"))
-
-reciperow = t.NamedTuple(
-    "reciperow",
-    [
-        ("timestamp", str),
-        ("name", str),
-        ("summary", t.Optional[str]),
-        ("prep_time", t.Optional[int]),
-        ("cook_time", t.Optional[str]),
-        ("ingredients", t.Any),
-        ("steps", t.List[str]),
-        ("link_to_photo", t.Optional[str]),
-        ("submitter_email", t.Optional[str]),
-    ],
-)
-
 
 def add_new_recipes(filepath):
     logging.debug(f"filepath is {filepath}")
