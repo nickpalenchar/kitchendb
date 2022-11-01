@@ -10,6 +10,10 @@ import pathlib
 import os
 import json
 
-with open(os.path.join(pathlib.Path(__file__).parent.absolute(), '../data/schemas/recipes.json')) as fh:
+with open(os.path.join(pathlib.Path(__file__).parent.absolute(), '../../../data/schemas/recipes.json')) as fh:
   recipe_schema = json.loads(fh.read())
   Recipe = warlock.model_factory(recipe_schema)
+
+with open(os.path.join(pathlib.Path(__file__).parent.absolute(), '../../../data/schemas/ingredient.json')) as fh:
+  ingredient_schema = json.loads(fh.read())
+  Ingredient = warlock.model_factory(ingredient_schema)

@@ -32,7 +32,7 @@ def build():
 
         mkdown_name = camel_to_snake_case(file).replace(".json", ".md")
 
-        log.debug(f"building {mkdown_name}...")
+        log.info(f"building {mkdown_name}...")
         log.debug(f"CMD: hugo new --kind recipes {HUGO_RECIPE_DIR}/{mkdown_name}")
         subprocess.run(
             ["hugo", "new", "--kind", "recipes", f"{HUGO_RECIPE_DIR}/{mkdown_name}"],
