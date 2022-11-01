@@ -6,21 +6,26 @@ import typing as t
 from .constants import UNPARSABLE_INGREDIENT, UNPARSABLE_UNIT, FRAC_CHARS_TO_DEC
 from .matchers import fraction_match, decimal_match, number_match
 
-
 def parse_ingredients(s: str):
 
     result = []
     section = {"sectionTitle": "", "ingredients": []}
     for line in s.split("\n"):
+        if not line:
+            continue
+        if section_title := parse_section(line):
+            if not section['sectionTitle']:
+                section['sectionTitle'] = section_title
+            else:
+                result.append(section)
+                section = {"sectionTitle": section_title, "ingredients": []}
+            continue
         ing = parse_ingredient(line)
         if ing == UNPARSABLE_INGREDIENT:
             continue
         section["ingredients"].append(ing)
 
     result.append(section)
-    from pprint import pprint
-
-    pprint(result)
     return result
 
 def parse_section(m: str) -> t.Optional[str]:

@@ -14,11 +14,12 @@ class TestParseIngredients(unittest.TestCase):
 0.5 cups confectioners sugar, sifted
 """
         result = reciparcer.parse_ingredients(recipe)
+        self.assertEqual(2, len(result[0]['ingredients']), f"first section should have 2 ingredients. But got {result[0]['ingredients']}")
         self.assertEqual(
-            2, len(result), "Result list should have length 2 (for 2 sections)"
+            2, len(result), f"Result list should have length 2 (for 2 sections)\n result was {result}"
         )
-        self.assertEqual("scones", result[0])
-        self.assertEqual("glaze", result[1])
+        self.assertEqual("scones", result[0]['sectionTitle'])
+        self.assertEqual("glaze", result[1]['sectionTitle'])
 
 
 class TestParseSection(unittest.TestCase):
@@ -33,3 +34,11 @@ class TestParseSection(unittest.TestCase):
     def test_should_return_none_if_invalid(self):
       result = reciparcer.parse_section('3 cup instant noodles, (dry)')
       self.assertIsNone(result)
+    
+    def test_should_update_section_if_its_first(self):
+      result = reciparcer.parse_ingredients("""(scones)
+1 cup flour
+1 tsp salt
+""")  
+      self.assertEqual('scones', result[0]['sectionTitle'])
+      self.assertEqual(1, len(result))
