@@ -1,2 +1,2 @@
 from . import hugodata
-from .reciperow import reciperow
+from . import reciperow

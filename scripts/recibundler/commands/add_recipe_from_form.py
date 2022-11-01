@@ -14,7 +14,6 @@ import os
 import csv
 import json
 import typing as t
-from collections import namedtuple
 from ..schema.hugodata import Recipe, Ingredient
 from recibundler.schema import reciperow
 from recibundler import json_writing
@@ -22,8 +21,6 @@ from datetime import datetime
 from .. import reciparcer
 import logging
 from os import path
-
-
 
 ADD_NEW_RECIPES_SINCE_PATH = 'add_new_recipes_since'
 
@@ -48,8 +45,8 @@ def add_new_recipes(filepath):
         next(reader)
 
         for recipe in reader:
-            recipe = reciperow(*recipe)
-            if is_recipe_old(recipe, last_date):
+            recipe = reciperow.reciperow(*recipe)
+            if reciperow.is_recipe_old(recipe, last_date):
                 continue
             logging.info(f"the next recipe is {recipe.name}")
             json_writing.write_recipe_to_json(recipe)
@@ -68,16 +65,6 @@ def isodate_from_recipe(recipe: reciperow) -> datetime:
 
 def get_recipe_filename(recipe: reciperow) -> str:
     return f"{recipe.name.replace(' ', '-').lower()}.json"
-
-
-def is_recipe_old(recipe: reciperow, since) -> bool:
-    """
-    Parses the date from the "google" submission date and
-    simply compares the date delta with `since`. If True, this is
-    the next recipe to use
-    """
-    recipe_date = datetime.strptime(recipe.timestamp, "%m/%d/%Y %H:%M:%S")
-    return recipe_date <= since
 
 def write_recipe_to_json(recipe: reciperow):
     attrs = {

@@ -1,4 +1,5 @@
 import typing as t
+from datetime import datetime
 
 reciperow = t.NamedTuple(
     "reciperow",
@@ -15,3 +16,11 @@ reciperow = t.NamedTuple(
     ],
 )
 
+def is_recipe_old(recipe: reciperow, since) -> bool:
+    """
+    Parses the date from the "google" submission date and
+    simply compares the date delta with `since`. If True, this is
+    the next recipe to use
+    """
+    recipe_date = datetime.strptime(recipe.timestamp, "%m/%d/%Y %H:%M:%S")
+    return recipe_date <= since
