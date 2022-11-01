@@ -15,11 +15,13 @@ import csv
 import json
 import typing as t
 from collections import namedtuple
-from .schema.hugodata import Recipe, Ingredient
+from ..schema.hugodata import Recipe, Ingredient
 from datetime import datetime
-from . import reciparcer
+from .. import reciparcer
 import logging
 from os import path
+
+ADD_NEW_RECIPES_SINCE_PATH = 'add_new_recipes_since'
 
 T = t.TypeVar("T")
 
@@ -47,7 +49,7 @@ def add_new_recipes(filepath):
     with open(filepath, newline="") as fh:
         reader = csv.reader(fh)
 
-        with open("add_new_recipes_since") as datefh:
+        with open(ADD_NEW_RECIPES_SINCE_PATH) as datefh:
             try:
                 last_date = datetime.fromisoformat(datefh.read().strip())
             except ValueError:
@@ -64,7 +66,7 @@ def add_new_recipes(filepath):
             logging.info(f"the next recipe is {recipe.name}")
             write_recipe_to_json(recipe)
 
-            with open("add_new_recipes_since", mode="w") as datefh:
+            with open(ADD_NEW_RECIPES_SINCE_PATH, mode="w") as datefh:
                 datefh.write(str(isodate_from_recipe(recipe)))
             return
 

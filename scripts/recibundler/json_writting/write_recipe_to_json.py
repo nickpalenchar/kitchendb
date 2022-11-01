@@ -15,9 +15,9 @@ import csv
 import json
 import typing as t
 from collections import namedtuple
-from schema.hugodata import Recipe, Ingredient
+from recibundler.schema.hugodata import Recipe, Ingredient
 from datetime import datetime
-import reciparcer
+from recibundler import reciparcer
 import logging
 from os import path
 

@@ -1,5 +1,5 @@
 import sys
-from . import add_recipe_from_form
+from .commands.add_recipe_from_form import add_new_recipes
 
 help = """
 Commands available:
@@ -16,7 +16,7 @@ if __name__ == "__main__":
     cmd = sys.argv[1]
 
     if cmd == 'next-recipe':
-      pass
+      add_new_recipes(*sys.argv[2:])
     elif cmd == 'build-content':
       pass
     else:

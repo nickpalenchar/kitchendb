@@ -1,6 +1,6 @@
 import unittest
 
-import reciparcer
+from recibundler import reciparcer
 
 
 class TestStepsParser(unittest.TestCase):

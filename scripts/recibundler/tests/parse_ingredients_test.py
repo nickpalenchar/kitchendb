@@ -1,6 +1,6 @@
 import unittest
 from pprint import pprint as print
-import reciparcer
+from recibundler import reciparcer
 
 
 class TestParseIngredients(unittest.TestCase):
