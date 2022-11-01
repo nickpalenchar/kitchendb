@@ -2,11 +2,10 @@
 {{ with .Get "url" }}
   {{ $data := getJSON . }}
 
-  <!--more-->
+  <h2>Ingredients</h2>
   {{ range $data.ingredients }}
-    <h2>Ingredients</h2>
     {{ with .sectionTitle }}
-      <h3> {{ .sectionTitle }}</h3>
+      <h3> {{ . }}</h3>
     {{ end }}
     {{ with .ingredients }}
       <ul>

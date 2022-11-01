@@ -23,7 +23,7 @@
   ],
   "ingredients": [
     {
-      "sectionTitle": "",
+      "sectionTitle": "Scones",
       "ingredients": [
         {
           "amount": 3.25,
@@ -76,7 +76,12 @@
           "amount": 1.0,
           "unit": "cup",
           "ingredient": "fresh blackberries"
-        },
+        }
+      ]
+    },
+    {
+      "sectionTitle": "Glaze",
+      "ingredients": [
         {
           "amount": 1.0,
           "unit": "cup",
