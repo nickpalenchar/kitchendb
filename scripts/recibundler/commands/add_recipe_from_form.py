@@ -63,39 +63,6 @@ def isodate_from_recipe(recipe: reciperow) -> datetime:
     return datetime.strptime(recipe.timestamp, "%m/%d/%Y %H:%M:%S")
 
 
-def get_recipe_filename(recipe: reciperow) -> str:
-    return f"{recipe.name.replace(' ', '-').lower()}.json"
-
-def write_recipe_to_json(recipe: reciperow):
-    attrs = {
-        "version": "1",
-        "name": recipe.name,
-        "summary": recipe.summary,
-        "steps": reciparcer.parse_steps(recipe.steps),
-        "ingredients": reciparcer.parse_ingredients(recipe.ingredients),
-        "timestamp": recipe.timestamp,
-    }
-    optional_attrs = {
-        "yields": None,  # TODO
-        "yieldsUnit": None,  # TODO
-        "prep_time": optional(recipe.prep_time),
-        "cook_time": optional(recipe.cook_time),
-    }
-
-    logging.debug("parsing")
-    logging.debug(f"csv row: {recipe}")
-    logging.info("Successfully imported recipe")
-    recipe = Recipe(**attrs)
-
-    filename = get_recipe_filename(recipe)
-    logging.debug(f"Recipe will be named {filename}")
-
-    with open(path.join("..", "data", "recipes", filename), "w") as fh:
-        fh.write(json.dumps(recipe, indent=2))
-
-
-def optional(value: t.Generic[T]) -> t.Optional[T]:
-    return value if value else None
 
 
 if __name__ == "__main__":

@@ -18,6 +18,7 @@ from collections import namedtuple
 from recibundler.schema.hugodata import Recipe, Ingredient
 from datetime import datetime
 from recibundler import reciparcer
+from .util import get_recipe_filename
 import logging
 from os import path
 
@@ -74,10 +75,6 @@ def add_new_recipes(filepath):
 
 def isodate_from_recipe(recipe: reciperow) -> datetime:
     return datetime.strptime(recipe.timestamp, "%m/%d/%Y %H:%M:%S")
-
-
-def get_recipe_filename(recipe: reciperow) -> str:
-    return f"{recipe.name.replace(' ', '-').lower()}.json"
 
 
 def is_recipe_old(recipe: reciperow, since) -> bool:
