@@ -16,10 +16,13 @@ import json
 import typing as t
 from collections import namedtuple
 from ..schema.hugodata import Recipe, Ingredient
+from recibundler import json_writing
 from datetime import datetime
 from .. import reciparcer
 import logging
 from os import path
+
+
 
 ADD_NEW_RECIPES_SINCE_PATH = 'add_new_recipes_since'
 
@@ -64,7 +67,7 @@ def add_new_recipes(filepath):
             if is_recipe_old(recipe, last_date):
                 continue
             logging.info(f"the next recipe is {recipe.name}")
-            write_recipe_to_json(recipe)
+            json_writing.write_recipe_to_json(recipe)
 
             with open(ADD_NEW_RECIPES_SINCE_PATH, mode="w") as datefh:
                 datefh.write(str(isodate_from_recipe(recipe)))
