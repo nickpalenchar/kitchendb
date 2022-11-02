@@ -1,6 +1,6 @@
 import unittest
 
-import build_recipes
+from recibundler import build_recipes
 
 
 class TestCamelToSnakeCase(unittest.TestCase):

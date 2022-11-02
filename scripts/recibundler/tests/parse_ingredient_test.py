@@ -1,7 +1,6 @@
 import unittest
 
-import reciparcer
-
+from recibundler import reciparcer
 
 class TestParseIngredient(unittest.TestCase):
     def test_parses_with_number(self):

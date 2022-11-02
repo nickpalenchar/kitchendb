@@ -15,30 +15,17 @@ import csv
 import json
 import typing as t
 from collections import namedtuple
-from schema_class import Recipe
+from recibundler.schema.hugodata import Recipe, Ingredient
 from datetime import datetime
-import reciparcer
+from recibundler import reciparcer
+from recibundler.schema.reciperow import reciperow
+from .util import get_recipe_filename
 import logging
 from os import path
 
 T = t.TypeVar("T")
 
 logging.basicConfig(level=os.environ.get("LOGLEVEL", "WARN"))
-
-reciperow = t.NamedTuple(
-    "reciperow",
-    [
-        ("timestamp", str),
-        ("name", str),
-        ("summary", t.Optional[str]),
-        ("prep_time", t.Optional[int]),
-        ("cook_time", t.Optional[str]),
-        ("ingredients", t.Any),
-        ("steps", t.List[str]),
-        ("link_to_photo", t.Optional[str]),
-        ("submitter_email", t.Optional[str]),
-    ],
-)
 
 
 def add_new_recipes(filepath):
@@ -68,15 +55,12 @@ def add_new_recipes(filepath):
                 datefh.write(str(isodate_from_recipe(recipe)))
             return
 
-        logging.info("no new recipes")
+        logging.error("no new recipes")
+        sys.exit(1)
 
 
 def isodate_from_recipe(recipe: reciperow) -> datetime:
     return datetime.strptime(recipe.timestamp, "%m/%d/%Y %H:%M:%S")
-
-
-def get_recipe_filename(recipe: reciperow) -> str:
-    return f"{recipe.name.replace(' ', '-').lower()}.json"
 
 
 def is_recipe_old(recipe: reciperow, since) -> bool:
@@ -88,9 +72,7 @@ def is_recipe_old(recipe: reciperow, since) -> bool:
     recipe_date = datetime.strptime(recipe.timestamp, "%m/%d/%Y %H:%M:%S")
     return recipe_date <= since
 
-
 def write_recipe_to_json(recipe: reciperow):
-    # TODO parse the recipe and add it to the json file
     attrs = {
         "version": "1",
         "name": recipe.name,
@@ -108,15 +90,6 @@ def write_recipe_to_json(recipe: reciperow):
 
     logging.debug("parsing")
     logging.debug(f"csv row: {recipe}")
-    name: str = recipe.name
-    summary: str = optional(recipe.summary) or ""
-    yields: t.Optional[int] = optional(4)
-    yieldsUnit = None  # TODO
-    prep_time: t.Optional[int] = optional(recipe.prep_time)
-    cook_time: t.Optional[int] = optional(recipe.cook_time)
-    ingredients = reciparcer.parse_ingredients(recipe.ingredients)
-    steps: t.Lest = reciparcer.parse_steps(recipe.steps)
-    link_to_photo: t.Optional[str] = optional(recipe.link_to_photo)
     logging.info("Successfully imported recipe")
     recipe = Recipe(**attrs)
 
