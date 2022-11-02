@@ -12,15 +12,11 @@ date of the last recipe to be added. This script will
 import sys
 import os
 import csv
-import json
 import typing as t
-from ..schema.hugodata import Recipe, Ingredient
+from datetime import datetime
+import logging
 from recibundler.schema import reciperow
 from recibundler import json_writing
-from datetime import datetime
-from .. import reciparcer
-import logging
-from os import path
 
 ADD_NEW_RECIPES_SINCE_PATH = 'add_new_recipes_since'
 
@@ -52,17 +48,11 @@ def add_new_recipes(filepath):
             json_writing.write_recipe_to_json(recipe)
 
             with open(ADD_NEW_RECIPES_SINCE_PATH, mode="w") as datefh:
-                datefh.write(str(isodate_from_recipe(recipe)))
+                datefh.write(str(reciperow.isodate_from_recipe(recipe)))
             return
 
         logging.error("no new recipes")
         sys.exit(1)
-
-
-def isodate_from_recipe(recipe: reciperow) -> datetime:
-    return datetime.strptime(recipe.timestamp, "%m/%d/%Y %H:%M:%S")
-
-
 
 
 if __name__ == "__main__":

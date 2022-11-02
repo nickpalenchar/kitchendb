@@ -18,6 +18,7 @@ from collections import namedtuple
 from recibundler.schema.hugodata import Recipe, Ingredient
 from datetime import datetime
 from recibundler import reciparcer
+from recibundler.schema.reciperow import reciperow
 from .util import get_recipe_filename
 import logging
 from os import path
@@ -25,21 +26,6 @@ from os import path
 T = t.TypeVar("T")
 
 logging.basicConfig(level=os.environ.get("LOGLEVEL", "WARN"))
-
-reciperow = t.NamedTuple(
-    "reciperow",
-    [
-        ("timestamp", str),
-        ("name", str),
-        ("summary", t.Optional[str]),
-        ("prep_time", t.Optional[int]),
-        ("cook_time", t.Optional[str]),
-        ("ingredients", t.Any),
-        ("steps", t.List[str]),
-        ("link_to_photo", t.Optional[str]),
-        ("submitter_email", t.Optional[str]),
-    ],
-)
 
 
 def add_new_recipes(filepath):
