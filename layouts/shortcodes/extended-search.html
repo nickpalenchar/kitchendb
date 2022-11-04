@@ -1,0 +1,44 @@
+<h1>Find a recipe.!</h1>
+<div id="filter-ingredients">
+  ingredients filterr
+</div>
+<script>
+  async function main() {
+    console.log('importing page find')
+    var pagefind = await import("/_pagefind/pagefind.js");
+    var search = await pagefind.search("soup");
+    var data = await search.results[0].data();
+    window.filters = await pagefind.filters();
+    window.allIngredients = Object.entries(filters.ingredient).sort((a, b) => a[1] > b[1])
+    window.displayedIngredients = allIngredients.slice(0, 10);
+    for (var i = 0; i < displayedIngredients.length; i++) {
+      const ing = IngredientBox(displayedIngredients[i][0], true);
+      $('#filter-ingredients').append(ing);
+    }
+  }
+
+  function IngredientBox(name, persistent = false) {
+    var el = $('<div id="filter-ingredient">');
+    var input = $('<input type="checkbox" class="filter-ingredient" id="' + name + '" name="' + name + '" >');
+    var label = $('<label class="filter-ingredient-label" for="' + name + '"> ' + name + ' </label>');
+    el.append(input, label);
+    el.addClass('ingredient-box');
+    el.attr('id', 'filter-ingredient').attr('data-persistent', persistent);
+
+    el.on('click', () => {
+      if (persistent) {
+        return;
+      }
+      el.remove()
+    });
+  
+    return el;
+  }
+  main();
+</script>
+
+<style>
+.filter-ingredient-label {
+  cursor: pointer;
+}
+</style>
