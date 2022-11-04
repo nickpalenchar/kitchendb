@@ -1,0 +1,5 @@
+#!/bin/bash
+
+# downloads the pagefind binary
+
+wget -q -O- https://github.com/CloudCannon/pagefind/releases/download/v0.9.1/pagefind-v0.9.1-x86_64-apple-darwin.tar.gz | tar -xz -C ".."

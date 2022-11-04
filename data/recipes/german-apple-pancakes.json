@@ -1,0 +1,80 @@
+{
+  "version": "1",
+  "name": "German Apple Pancakes",
+  "summary": "",
+  "steps": [
+    {
+      "sectionTitle": "",
+      "steps": [
+        "Toss lemon juice and apple slices in a medium bowl.",
+        "Heat a medium skillet on medium-high heat. Melt 2 tbsp butter until foam subsides. Then, stir in the brown sugar, cinnamon, and nutmeg. Add the apples and cook until darkly caramelized and fragrant, 11\u201312 minutes. Remove from the heat and set aside.",
+        "In a large bowl, beat the eggs, then whisk in the flour, granulated sugar, and salt until smooth. Add the milk and continue whisking until a thin, smooth batter forms.",
+        "In a nonstick 8-inch skillet over medium heat, melt 1 teaspoon butter. When the foam begins to subside, pour in \u2153 cup batter, tilting the skillet to coat the entire surface with batter and form a thin pancake. Cook until just set, about 2 minutes. Evenly distribute one-third of the apples over the pancake, then pour another \u2153 cup batter on top, tilting the skillet to coat the surface and the apples with batter. Cook until the edges of the fresh batter have begun to set, 1\u20132 minutes, then use two wide, offset spatulas to flip the pancake. Continue cooking until the bottom is evenly golden brown, 1\u20132 minutes more, then turn out onto a large plate. Sprinkle generously with granulated sugar, then roll the pancake up like a jelly roll. Sprinkle with more granulated sugar, and if desired, drizzle with a few drops of lemon juice. Repeat with the remaining batter and apples to make a total of 3 rolled pancakes.",
+        "optional) flame the pancakes: In the skillet used to cook the apples, add the rum and remaining 1 tablespoon butter; warm over medium heat. Add the pancakes, spoon the rum mixture over the top, and remove from the heat. Working quickly and carefully, use a gas lighter or a long match to set the pancakes on fire. Shake the skillet gently until the flame goes out, then transfer the pancakes to a large plate. Serve warm. "
+      ]
+    }
+  ],
+  "ingredients": [
+    {
+      "sectionTitle": "",
+      "ingredients": [
+        {
+          "amount": 2.0,
+          "customUnit": "",
+          "ingredient": "Granny Smith or other tart cooking apples (15 oz.)",
+          "modifier": "peeled, cored, and thinly sliced"
+        },
+        {
+          "amount": 2.0,
+          "unit": "tbsp",
+          "ingredient": "fresh lemon juice",
+          "modifier": "plus more for drizzling"
+        },
+        {
+          "amount": 0.5,
+          "customUnit": "",
+          "ingredient": "stick (4 Tbsp.) unsalted butter",
+          "modifier": "divided"
+        },
+        {
+          "amount": 0.25,
+          "unit": "cup",
+          "ingredient": "light brown sugar",
+          "modifier": "packed"
+        },
+        {
+          "amount": 0.5,
+          "unit": "tsp",
+          "ingredient": "ground cinnamon"
+        },
+        {
+          "amount": 3.0,
+          "customUnit": "",
+          "ingredient": "large eggs"
+        },
+        {
+          "amount": 0.75,
+          "unit": "cup",
+          "ingredient": "(4 oz.) all-purpose flour"
+        },
+        {
+          "amount": 1.0,
+          "unit": "tbsp",
+          "ingredient": "granulated sugar",
+          "modifier": "plus more for sprinkling"
+        },
+        {
+          "amount": 1.0,
+          "unit": "cup",
+          "ingredient": "whole milk"
+        },
+        {
+          "amount": 0.25,
+          "unit": "cup",
+          "ingredient": "dark rum or cognac (optional)"
+        }
+      ]
+    }
+  ],
+  "timestamp": "10/1/2022 11:36:41"
+}

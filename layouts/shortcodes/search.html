@@ -1,0 +1,12 @@
+<!-- This search page uses pagefind https://pagefind.app/
+It's ran after the site is built: i.e. after you run `hugo`
+The binary can be fetched from scripts, by running ./get_pagefind
+-->
+<link href="/_pagefind/pagefind-ui.css" rel="stylesheet">
+<script src="/_pagefind/pagefind-ui.js" type="text/javascript"></script>
+<div id="search"></div>
+<script>
+    window.addEventListener('DOMContentLoaded', (event) => {
+        new PagefindUI({ element: "#search" });
+    });
+</script>
