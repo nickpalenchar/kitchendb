@@ -39,10 +39,25 @@
 
     return el;
   }
+
   function AddIngredientForm(ingredients) {
-    var el = $('<input>').autocomplete({ source: ingredients });
+    var el = $('<input>', { id: 'add-ingredient-form' }).autocomplete({ source: ingredients });
+    el.keypress(function (event) {
+      var key = event.originalEvent.key;
+      if (key === "Enter") {
+        updateIngredientList(el.value);
+      }
+    })
     return el;
   }
+
+  function updateIngredientList(ingredient) {
+    var el = IngredientBox(ingredient);
+    el.attr('checked', true);
+    $('#add-ingredient-form').remove();
+    $('#filter-ingredients').append(el, AddIngredientForm());
+  }
+
   var loader = document.querySelectorAll('#jquery-request')[0];
   main()
 </script>
