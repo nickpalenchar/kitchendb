@@ -1,3 +1,5 @@
+
+<div data-pagefind-body>
 {{ with .Get "url" }}
   {{ $data := getJSON . }}
 
@@ -34,6 +36,8 @@
     </ol>
   {{ end }}
 {{ end }}
+</div>
+
 <script>
   function displayUnits(mul=1) {
     let els = document.getElementsByClassName('recipe-unit');

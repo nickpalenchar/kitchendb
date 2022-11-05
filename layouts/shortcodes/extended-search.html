@@ -3,7 +3,11 @@
   ingredients filterr
 </div>
 <script>
-  async function main() {
+  async function main(nextDelay=100) {
+    if (!window.jQuery) {
+      console.log('trying again');
+      setTimeout(function(){ main(nextDelay * 2 )}, nextDelay);
+    }
     console.log('importing page find')
     var pagefind = await import("/_pagefind/pagefind.js");
     var search = await pagefind.search("soup");
@@ -34,7 +38,8 @@
   
     return el;
   }
-  main();
+  var loader = document.querySelectorAll('#jquery-request')[0];
+  main()
 </script>
 
 <style>
