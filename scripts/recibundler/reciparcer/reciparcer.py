@@ -130,9 +130,9 @@ def parse_amount(m: str) -> t.Optional[t.Tuple[t.Union[str, t.Tuple[str, str]], 
             min = f"{min} cup devnull"
             parsed_min = parse_amount(min)
             parsed_max = parse_amount(max)
-            if type(parsed_min[0]) is tuple or type(parsed_max[0]) is tuple:
-                return None
             if parsed_min and parsed_max:
+                if type(parsed_min[0]) is tuple or type(parsed_max[0]) is tuple:
+                    return None
                 return (
                     (parsed_min[0], parsed_max[0]),
                     parsed_min[1] + parsed_max[1] + 1,
