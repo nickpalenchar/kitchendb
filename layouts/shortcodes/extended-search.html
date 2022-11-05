@@ -45,17 +45,22 @@
     el.keypress(function (event) {
       var key = event.originalEvent.key;
       if (key === "Enter") {
-        updateIngredientList(el.value);
+        var ingredient = el[0].value;
+        if (ingredients.indexOf(ingredient) === -1) {
+          el[0].value = "";
+          return;
+        }
+        updateIngredientList(el[0].value, ingredients);
       }
     })
     return el;
   }
 
-  function updateIngredientList(ingredient) {
+  function updateIngredientList(ingredient, ingredients) {
     var el = IngredientBox(ingredient);
     el.attr('checked', true);
     $('#add-ingredient-form').remove();
-    $('#filter-ingredients').append(el, AddIngredientForm());
+    $('#filter-ingredients').append(el, AddIngredientForm(ingredients));
   }
 
   var loader = document.querySelectorAll('#jquery-request')[0];
