@@ -9,7 +9,7 @@ class TestParseIngredient(unittest.TestCase):
         result = reciparcer.parse_ingredient(line)
         self.assertDictEqual(
             {
-                "amount": 2.0,
+                "amount": [2.0],
                 "customUnit": "",
                 "ingredient": "Granny Smith or other tart cooking apples (15 oz.)",
                 "modifier": "peeled, cored, and thinly sliced",
@@ -29,7 +29,7 @@ class TestParseIngredient(unittest.TestCase):
         # updated to pass with the new stuff
         self.assertDictEqual(
             {
-                "amount": 0.75,
+                "amount": [0.75],
                 "unit": "cup",
                 "ingredient": "all-purpose flour",  # (expect-error) cup should be in "unit"
             },
@@ -40,7 +40,7 @@ class TestParseIngredient(unittest.TestCase):
         line = "2.5 cup cinnamon"
         result = reciparcer.parse_ingredient(line)
         self.assertDictEqual(
-            result, {"amount": 2.5, "unit": "cup", "ingredient": "cinnamon"}
+            result, {"amount": [2.5], "unit": "cup", "ingredient": "cinnamon"}
         )
 
     @unittest.skip("todo")
@@ -70,11 +70,11 @@ class TestParseIngredient(unittest.TestCase):
         result2 = reciparcer.parse_ingredient(line2)
 
         self.assertDictEqual(
-            {"amount": 3.0, "unit": "cup", "ingredient": "onion"}, result1
+            {"amount": [3.0], "unit": "cup", "ingredient": "onion"}, result1
         )
         self.assertDictEqual(
             {
-                "amount": 3.0,
+                "amount": [3.0],
                 "unit": "tbsp",
                 "ingredient": "ginger",
                 "modifier": "minced",
