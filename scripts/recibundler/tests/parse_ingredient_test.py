@@ -2,6 +2,7 @@ import unittest
 
 from recibundler import reciparcer
 
+
 class TestParseIngredient(unittest.TestCase):
     def test_parses_with_number(self):
         line = "2 Granny Smith or other tart cooking apples (15 oz.), peeled, cored, and thinly sliced"
@@ -54,4 +55,24 @@ class TestParseIngredient(unittest.TestCase):
         result = reciparcer.parse_ingredient(line)
         self.assertDictContainsSubset(
             {"modifier": "chopped, then mashed"}, result, msg=result
+        )
+
+    def test_handles_plurals(self):
+        line1 = "3 cups onion"
+        line2 = "3 tbsps ginger, minced"
+
+        result1 = reciparcer.parse_ingredient(line1)
+        result2 = reciparcer.parse_ingredient(line2)
+
+        self.assertDictEqual(
+            {"amount": 3.0, "unit": "cup", "ingredient": "onion"}, result1
+        )
+        self.assertDictEqual(
+            {
+                "amount": 3.0,
+                "unit": "tbsp",
+                "ingredient": "ginger",
+                "modifier": "minced",
+            },
+            result2,
         )

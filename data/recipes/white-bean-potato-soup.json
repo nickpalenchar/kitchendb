@@ -83,8 +83,8 @@
         },
         {
           "amount": 6.0,
-          "customUnit": "",
-          "ingredient": "cups vegetable broth"
+          "customUnit": "cup",
+          "ingredient": "vegetable broth"
         },
         {
           "amount": 2.0,
@@ -98,8 +98,8 @@
         },
         {
           "amount": 2.0,
-          "customUnit": "",
-          "ingredient": "cups spinach"
+          "customUnit": "cup",
+          "ingredient": "spinach"
         },
         {
           "amount": 1.0,
@@ -109,8 +109,8 @@
         },
         {
           "amount": 1.0,
-          "customUnit": "",
-          "ingredient": "small bunch of dill",
+          "customUnit": "small bunch of",
+          "ingredient": "dill",
           "modifier": "minced (about 0.24 cups)"
         }
       ]

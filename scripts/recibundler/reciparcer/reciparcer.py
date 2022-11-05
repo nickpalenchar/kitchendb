@@ -36,7 +36,6 @@ def parse_section(m: str) -> t.Optional[str]:
 def parse_ingredient(m: str):
     log.debug(f"parsing ingredient: {m}")
     result = {}
-
     m = _convert_frac_chars(m).strip()
     try:
         amount, slicepoint = parse_amount(m)
@@ -78,7 +77,7 @@ def _parse_unit(m: str):
     """
     log.debug(f"parsing unit: {m}")
     # NB: These acceptable enums come from the `data/schemase/recipes.json` schema.
-    # keep the min sync
+    # keep them in sync
     valid_units = (
         "lb",
         "oz",
@@ -97,6 +96,8 @@ def _parse_unit(m: str):
     parsed = m.strip().replace(".", "").lower()
     if parsed in valid_units:
         return parsed
+    if parsed.endswith('s'):
+        return _parse_unit(parsed[:-1])
     return UNPARSABLE_UNIT
 
 
