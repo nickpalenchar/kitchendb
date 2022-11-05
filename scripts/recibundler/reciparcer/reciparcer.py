@@ -5,6 +5,8 @@ import logging as log
 import typing as t
 from .constants import UNPARSABLE_INGREDIENT, UNPARSABLE_UNIT, FRAC_CHARS_TO_DEC
 from .matchers import fraction_match, decimal_match, number_match
+from recibundler.constants import DASHES
+
 
 def parse_ingredients(s: str):
 
@@ -14,8 +16,8 @@ def parse_ingredients(s: str):
         if not line:
             continue
         if section_title := parse_section(line):
-            if not section['sectionTitle']:
-                section['sectionTitle'] = section_title
+            if not section["sectionTitle"]:
+                section["sectionTitle"] = section_title
             else:
                 result.append(section)
                 section = {"sectionTitle": section_title, "ingredients": []}
@@ -28,10 +30,12 @@ def parse_ingredients(s: str):
     result.append(section)
     return result
 
+
 def parse_section(m: str) -> t.Optional[str]:
     m = m.strip()
-    if m.startswith('(') and m.endswith(')'):
+    if m.startswith("(") and m.endswith(")"):
         return m[1:-1].strip()
+
 
 def parse_ingredient(m: str):
     log.debug(f"parsing ingredient: {m}")
@@ -42,11 +46,10 @@ def parse_ingredient(m: str):
         amount = _format_amount(amount)
         rest = m[slicepoint:]
         log.debug(f"parsed amount: {amount}")
-        result["amount"] = float(amount)
+        result["amount"] = float(amount) if type(amount) is str else [float(amount[0]), float(amount[1])]
     except:
         log.warn(f"Unparsable Ingredient: {m}")
         return UNPARSABLE_INGREDIENT
-
     possible_unit, *rest = rest.strip().split(" ", 1)
     if not rest:
         # there is only one word so it must be an ingredient with no unit
@@ -96,7 +99,7 @@ def _parse_unit(m: str):
     parsed = m.strip().replace(".", "").lower()
     if parsed in valid_units:
         return parsed
-    if parsed.endswith('s'):
+    if parsed.endswith("s"):
         return _parse_unit(parsed[:-1])
     return UNPARSABLE_UNIT
 
@@ -108,7 +111,7 @@ def _parse_custom_unit(m: str) -> t.Optional[t.Tuple[str, int]]:
     return (first, len(first))
 
 
-def parse_amount(m: str) -> t.Optional[t.Tuple[str, int]]:
+def parse_amount(m: str) -> t.Optional[t.Tuple[t.Union[str, t.Tuple[str, str]], int]]:
     """
     Returns the match, and a number indicating the characters
     consumed from the string. The char should be used to
@@ -121,6 +124,20 @@ def parse_amount(m: str) -> t.Optional[t.Tuple[str, int]]:
             ("DECIMAL_MATCH", decimal_match),
         )
     )
+    for dash in DASHES:
+        if dash in m:
+            min, max = m.split(dash)
+            min = f"{min} cup devnull"
+            parsed_min = parse_amount(min)
+            parsed_max = parse_amount(max)
+            if type(parsed_min[0]) is tuple or type(parsed_max[0]) is tuple:
+                return None
+            if parsed_min and parsed_max:
+                return (
+                    (parsed_min[0], parsed_max[0]),
+                    parsed_min[1] + parsed_max[1] + 1,
+                )
+
     for matcher, fn in matchers.items():
         match = fn(m)
         if match:
@@ -130,10 +147,14 @@ def parse_amount(m: str) -> t.Optional[t.Tuple[str, int]]:
     return None
 
 
-def _format_amount(m: str) -> str:
+def _format_amount(m: t.Union[str, t.Tuple[str, str]]) -> t.Union[str, t.Tuple[str, str]]:
     """
     attempts to parse the measurement for the `amount` into its decimal form
     """
+    if type(m) is tuple:
+        # this happens when a range of units is detected
+        return (_format_amount(m[0]), _format_amount(m[1]))
+
     m = re.sub("\s+", " ", m.strip())
 
     leading = "0"

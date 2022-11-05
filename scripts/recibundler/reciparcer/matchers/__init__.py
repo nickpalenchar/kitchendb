@@ -2,6 +2,7 @@ import re
 import typing as t
 
 
+
 def number_match(m: str) -> t.Optional[t.Tuple[str, int]]:
     """
     simply matches for whole numbers at the beginning.

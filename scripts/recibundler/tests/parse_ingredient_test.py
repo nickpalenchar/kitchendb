@@ -76,3 +76,11 @@ class TestParseIngredient(unittest.TestCase):
             },
             result2,
         )
+
+    def test_handle_range(self):
+        line = "6-7 gals milk"
+        result = reciparcer.parse_ingredient(line)
+        self.assertIsNotNone(result)
+        self.assertDictEqual(
+            {"amount": [6.0, 7.0], "unit": "gal", "ingredient": "milk"}, result
+        )
