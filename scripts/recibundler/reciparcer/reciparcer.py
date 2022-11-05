@@ -46,7 +46,7 @@ def parse_ingredient(m: str):
         amount = _format_amount(amount)
         rest = m[slicepoint:]
         log.debug(f"parsed amount: {amount}")
-        result["amount"] = float(amount) if type(amount) is str else [float(amount[0]), float(amount[1])]
+        result["amount"] = float(amount) if type(amount) is not tuple else [float(amount[0]), float(amount[1])]
     except:
         log.warn(f"Unparsable Ingredient: {m}")
         return UNPARSABLE_INGREDIENT
@@ -167,7 +167,7 @@ def _format_amount(m: t.Union[str, t.Tuple[str, str]]) -> t.Union[str, t.Tuple[s
 
     try:
         float(m)
-        return int(leading) + round(float(m), 2)
+        return str(int(leading) + round(float(m), 2))
     except ValueError:
         if "/" in m:
             num, den = m.split("/")

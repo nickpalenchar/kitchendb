@@ -16,6 +16,11 @@ class TestParseIngredient(unittest.TestCase):
             },
             result,
         )
+    
+    def test_parses_number_no_modifier(self):
+        line = "1 cup flour"
+        result = reciparcer.parse_ingredient(line)
+        self.assertDictEqual({"amount": 1.0, "unit": "cup", "ingredient": "flour"}, result)
 
     def test_parses_fraction_unicode_and_extra_whitespace(self):
         line = "    ¾ cup all-purpose flour  "
