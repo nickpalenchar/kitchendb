@@ -30,13 +30,13 @@
         },
         {
           "amount": 1.0,
-          "customUnit": "",
-          "ingredient": "pinch sea salt and freshly ground black pepper"
+          "unit": "pinch",
+          "ingredient": "sea salt and freshly ground black pepper"
         },
         {
           "amount": 1.0,
           "unit": "tbsp",
-          "ingredient": "fresh white miso"
+          "ingredient": "white miso"
         },
         {
           "amount": 1.0,

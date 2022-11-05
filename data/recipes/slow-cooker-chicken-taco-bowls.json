@@ -65,8 +65,8 @@
         },
         {
           "amount": 6.0,
-          "customUnit": "",
-          "ingredient": "cups cooked rice"
+          "unit": "cup",
+          "ingredient": "rice, cooked"
         },
         {
           "amount": 8.0,

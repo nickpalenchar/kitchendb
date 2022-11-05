@@ -1,3 +1,3 @@
 #!/bin/bash
 
-python -m unittest discover -s recibundler -p '*_test.py'
+LOGLEVEL=INFO python -m unittest discover -s recibundler -p '*_test.py' $@
