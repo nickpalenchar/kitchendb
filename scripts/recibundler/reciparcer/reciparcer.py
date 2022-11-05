@@ -25,7 +25,7 @@ def parse_ingredients(s: str):
         ing = parse_ingredient(line)
         if ing == UNPARSABLE_INGREDIENT:
             continue
-        section["ingredients"].append(ing)
+        section["ingredients"].append(ing) # type: ignore
 
     result.append(section)
     return result
@@ -35,9 +35,10 @@ def parse_section(m: str) -> t.Optional[str]:
     m = m.strip()
     if m.startswith("(") and m.endswith(")"):
         return m[1:-1].strip()
+    return None
 
 
-def parse_ingredient(m: str):
+def parse_ingredient(m: str) -> t.Union[dict, object]:
     log.debug(f"parsing ingredient: {m}")
     result = {}
     m = _convert_frac_chars(m).strip()
@@ -45,18 +46,18 @@ def parse_ingredient(m: str):
         parsed = parse_amount(m)
         if parsed is None:
             return UNPARSABLE_INGREDIENT
-        amount, slicepoint = parsed
-        amount = _format_amount(amount)
+        amount_parsed, slicepoint = parsed
+        amount = _format_amount([str(a) for a in amount_parsed])
         slice_rest = m[slicepoint:]
         log.debug(f"parsed amount: {amount}")
-        result["amount"] = amount
+        result["amount"] = [ float(a) for a in amount ]
     except:
         log.warn(f"Unparsable Ingredient: {m}")
         return UNPARSABLE_INGREDIENT
     possible_unit, *rest = slice_rest.strip().split(" ", 1)
     if not rest:
         # there is only one word so it must be an ingredient with no unit
-        result["customUnit"] = [""]
+        result["customUnit"] = "" # type: ignore
         result["ingredient"] = possible_unit # type: ignore
         return result
 
@@ -71,7 +72,6 @@ def parse_ingredient(m: str):
     ingredient, *modifier = rest[0].split(",", 1)
     result["ingredient"] = ingredient # type: ignore
     if modifier:
-        breakpoint()
         result["modifier"] = modifier[0].strip() # type: ignore
 
     log.debug(result)
@@ -108,7 +108,7 @@ def _parse_unit(m: str):
     return UNPARSABLE_UNIT
 
 
-def parse_amount(m: str) -> t.Optional[t.Tuple[t.List[str], int]]:
+def parse_amount(m: str) -> t.Optional[t.Tuple[t.List[float], int]]:
     """
     Returns the match, and a number indicating the characters
     consumed from the string. The char should be used to
