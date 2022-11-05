@@ -3,10 +3,10 @@
   ingredients filterr
 </div>
 <script>
-  async function main(nextDelay=100) {
+  async function main(nextDelay = 100) {
     if (!window.jQuery) {
       console.log('trying again');
-      setTimeout(function(){ main(nextDelay * 2 )}, nextDelay);
+      setTimeout(function () { main(nextDelay * 2) }, nextDelay);
     }
     console.log('importing page find')
     var pagefind = await import("/_pagefind/pagefind.js");
@@ -19,6 +19,7 @@
       const ing = IngredientBox(displayedIngredients[i][0], true);
       $('#filter-ingredients').append(ing);
     }
+    $('#filter-ingredients').append(AddIngredientForm(window.allIngredients.map(function (el) { return el[0] })));
   }
 
   function IngredientBox(name, persistent = false) {
@@ -35,13 +36,17 @@
       }
       el.remove()
     });
-  
+
+    return el;
+  }
+  function AddIngredientForm(ingredients) {
+    var el = $('<input>').autocomplete({ source: ingredients });
     return el;
   }
   var loader = document.querySelectorAll('#jquery-request')[0];
   main()
 </script>
-
+<link rel="stylesheet" href="/jquery-ui.structure.min.css">
 <style>
   .filter-ingredient {
     display: inline-block;
