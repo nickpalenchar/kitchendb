@@ -18,7 +18,7 @@
   }
 
   function IngredientBox(name, persistent = false) {
-    var el = $('<div id="filter-ingredient">');
+    var el = $('<div class="filter-ingredient">');
     var input = $('<input type="checkbox" class="filter-ingredient" id="' + name + '" name="' + name + '" >');
     var label = $('<label class="filter-ingredient-label" for="' + name + '"> ' + name + ' </label>');
     el.append(input, label);
@@ -38,7 +38,21 @@
 </script>
 
 <style>
-.filter-ingredient-label {
-  cursor: pointer;
-}
+  .filter-ingredient {
+    display: inline-block;
+    background-color: rgb(205, 236, 255);
+    border-radius: 2px;
+    padding: 0 2px 0;
+    margin: 0.22em;
+  }
+
+  .filter-ingredient:hover {
+    background-color: rgb(162, 219, 255);
+    ;
+  }
+
+  .filter-ingredient-label {
+    cursor: pointer;
+    padding: 0 4px 0;
+  }
 </style>
