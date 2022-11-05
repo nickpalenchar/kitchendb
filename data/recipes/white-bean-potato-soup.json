@@ -44,9 +44,9 @@
           "modifier": "sliced or diced"
         },
         {
-          "amount": 5.0,
+          "amount": [5.0, 6.0],
           "customUnit": "",
-          "ingredient": "-6 cloves garlic",
+          "ingredient": "cloves garlic",
           "modifier": "crushed or minced"
         },
         {

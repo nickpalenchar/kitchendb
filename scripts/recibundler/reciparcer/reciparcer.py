@@ -42,33 +42,37 @@ def parse_ingredient(m: str):
     result = {}
     m = _convert_frac_chars(m).strip()
     try:
-        amount, slicepoint = parse_amount(m)
+        parsed = parse_amount(m)
+        if parsed is None:
+            return UNPARSABLE_INGREDIENT
+        amount, slicepoint = parsed
         amount = _format_amount(amount)
-        rest = m[slicepoint:]
+        slice_rest = m[slicepoint:]
         log.debug(f"parsed amount: {amount}")
-        result["amount"] = float(amount) if type(amount) is not tuple else [float(amount[0]), float(amount[1])]
+        result["amount"] = amount
     except:
         log.warn(f"Unparsable Ingredient: {m}")
         return UNPARSABLE_INGREDIENT
-    possible_unit, *rest = rest.strip().split(" ", 1)
+    possible_unit, *rest = slice_rest.strip().split(" ", 1)
     if not rest:
         # there is only one word so it must be an ingredient with no unit
-        result["customUnit"] = ""
-        result["ingredient"] = possible_unit
+        result["customUnit"] = [""]
+        result["ingredient"] = possible_unit # type: ignore
         return result
 
     unit = _parse_unit(possible_unit)
     if unit == UNPARSABLE_UNIT:
         # there is probably no unit and the first word was part of the ingredients.
         # i.e. "1 Granny Smith Apple"
-        result["customUnit"] = ""
+        result["customUnit"] = "" # type: ignore
         rest[0] = possible_unit + " " + rest[0]
     else:
         result["unit"] = unit
     ingredient, *modifier = rest[0].split(",", 1)
-    result["ingredient"] = ingredient
+    result["ingredient"] = ingredient # type: ignore
     if modifier:
-        result["modifier"] = modifier[0].strip()
+        breakpoint()
+        result["modifier"] = modifier[0].strip() # type: ignore
 
     log.debug(result)
     return result
@@ -104,14 +108,7 @@ def _parse_unit(m: str):
     return UNPARSABLE_UNIT
 
 
-def _parse_custom_unit(m: str) -> t.Optional[t.Tuple[str, int]]:
-    if match := re.match('"(.*)"', m):
-        return (match.group(1), len(match.group(1) + 2))
-    first, _ = m.split(" ", 1)
-    return (first, len(first))
-
-
-def parse_amount(m: str) -> t.Optional[t.Tuple[t.Union[str, t.Tuple[str, str]], int]]:
+def parse_amount(m: str) -> t.Optional[t.Tuple[t.List[str], int]]:
     """
     Returns the match, and a number indicating the characters
     consumed from the string. The char should be used to
@@ -131,10 +128,10 @@ def parse_amount(m: str) -> t.Optional[t.Tuple[t.Union[str, t.Tuple[str, str]], 
             parsed_min = parse_amount(min)
             parsed_max = parse_amount(max)
             if parsed_min and parsed_max:
-                if type(parsed_min[0]) is tuple or type(parsed_max[0]) is tuple:
+                if len(parsed_min[0]) > 1 or len(parsed_max[0]) > 1:
                     return None
                 return (
-                    (parsed_min[0], parsed_max[0]),
+                    [parsed_min[0][0], parsed_max[0][0]],
                     parsed_min[1] + parsed_max[1] + 1,
                 )
 
@@ -142,28 +139,28 @@ def parse_amount(m: str) -> t.Optional[t.Tuple[t.Union[str, t.Tuple[str, str]], 
         match = fn(m)
         if match:
             log.debug(f"matched on {matcher}")
-            return match
+            return ([match[0]], match[1])
 
     return None
 
 
-def _format_amount(m: t.Union[str, t.Tuple[str, str]]) -> t.Union[str, t.Tuple[str, str]]:
+def _format_amount(m: t.Union[str, t.List[str]]) -> t.List[str]:
     """
     attempts to parse the measurement for the `amount` into its decimal form
     """
-    if type(m) is tuple:
-        # this happens when a range of units is detected
-        return (_format_amount(m[0]), _format_amount(m[1]))
+    return [_format_amount_item(el) for el in m]
+
+
+def _format_amount_item(m: str) -> str:
 
     m = re.sub("\s+", " ", m.strip())
-
     leading = "0"
 
     if " " in m:
         leading, m = m.split(" ")
 
     if m in FRAC_CHARS_TO_DEC.keys():
-        return leading + FRAC_CHARS_TO_DEC[m]
+        return leading + str(FRAC_CHARS_TO_DEC[m])
 
     try:
         float(m)
@@ -171,8 +168,8 @@ def _format_amount(m: t.Union[str, t.Tuple[str, str]]) -> t.Union[str, t.Tuple[s
     except ValueError:
         if "/" in m:
             num, den = m.split("/")
-            return int(leading) + round(num / den, 2)
-
+            return leading + str(round(int(num) / int(den), 2))
+        raise Exception("could not parse amount")
 
 def _convert_frac_chars(m: str) -> str:
     result = m

@@ -6,6 +6,7 @@ from recibundler import reciparcer
 class TestParseIngredient(unittest.TestCase):
     def test_parses_with_number(self):
         line = "2 Granny Smith or other tart cooking apples (15 oz.), peeled, cored, and thinly sliced"
+        breakpoint()
         result = reciparcer.parse_ingredient(line)
         self.assertDictEqual(
             {
