@@ -26,54 +26,54 @@
       "sectionTitle": "Scones",
       "ingredients": [
         {
-          "amount": 3.25,
+          "amount": [3.25],
           "customUnit": "",
           "ingredient": "cups all-purpose flour \u2014 plus extra flour for kneading"
         },
         {
-          "amount": 0.3,
+          "amount": [0.3],
           "unit": "cup",
           "ingredient": "granulated sugar"
         },
         {
-          "amount": 1.5,
+          "amount": [1.5],
           "customUnit": "",
           "ingredient": "tablespoon earl grey tea",
           "modifier": "ground until fine"
         },
         {
-          "amount": 2.5,
+          "amount": [2.5],
           "customUnit": "",
           "ingredient": "teaspoons baking powder"
         },
         {
-          "amount": 0.5,
+          "amount": [0.5],
           "customUnit": "",
           "ingredient": "teaspoon baking soda"
         },
         {
-          "amount": 1.0,
+          "amount": [1.0],
           "customUnit": "",
           "ingredient": "teaspoon salt"
         },
         {
-          "amount": 0.75,
+          "amount": [0.75],
           "unit": "cup",
           "ingredient": "cold unsalted butter"
         },
         {
-          "amount": 1.0,
+          "amount": [1.0],
           "customUnit": "",
           "ingredient": "large egg",
           "modifier": "lightly beaten"
         },
         {
-          "amount": 0.75,
+          "amount": [0.75],
           "unit": "cup",
           "ingredient": "cold buttermilk"
         },
         {
-          "amount": 1.0,
+          "amount": [1.0],
           "unit": "cup",
           "ingredient": "fresh blackberries"
         }
@@ -83,22 +83,22 @@
       "sectionTitle": "Glaze",
       "ingredients": [
         {
-          "amount": 1.0,
+          "amount": [1.0],
           "unit": "cup",
           "ingredient": "powdered sugar"
         },
         {
-          "amount": 1.5,
+          "amount": [1.5],
           "customUnit": "",
           "ingredient": "tablespoon lemon juice"
         },
         {
-          "amount": 1.0,
+          "amount": [1.0],
           "unit": "tsp",
           "ingredient": "vanilla"
         },
         {
-          "amount": 1.0,
+          "amount": [1.0],
           "customUnit": "",
           "ingredient": "lemon",
           "modifier": "the Zest of"
