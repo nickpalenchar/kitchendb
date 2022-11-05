@@ -21,94 +21,94 @@
       "sectionTitle": "",
       "ingredients": [
         {
-          "amount": 1.0,
+          "amount": [1.0],
           "unit": "tbsp",
           "ingredient": "Avocado Oil"
         },
         {
-          "amount": 1.0,
+          "amount": [1.0],
           "customUnit": "",
           "ingredient": "Large Leek OR 0.5 of a medium yellow onion",
           "modifier": "diced"
         },
         {
-          "amount": 2.0,
+          "amount": [2.0],
           "customUnit": "",
           "ingredient": "stalks celery",
           "modifier": "diced"
         },
         {
-          "amount": 2.0,
+          "amount": [2.0],
           "customUnit": "",
           "ingredient": "carrots",
           "modifier": "sliced or diced"
         },
         {
-          "amount": 5.0,
+          "amount": [5.0, 6.0],
           "customUnit": "",
-          "ingredient": "-6 cloves garlic",
+          "ingredient": "cloves garlic",
           "modifier": "crushed or minced"
         },
         {
-          "amount": 1.0,
+          "amount": [1.0],
           "unit": "tsp",
           "ingredient": "red pepper flakes",
           "modifier": "optional"
         },
         {
-          "amount": 2.0,
+          "amount": [2.0],
           "unit": "tbsp",
           "ingredient": "nutritional yeast"
         },
         {
-          "amount": 4.0,
+          "amount": [4.0],
           "customUnit": "",
           "ingredient": "sprigs fresh thyme"
         },
         {
-          "amount": 1.0,
+          "amount": [1.0],
           "customUnit": "",
           "ingredient": "heaping tsp Dijon Mustard"
         },
         {
-          "amount": 3.0,
+          "amount": [3.0],
           "customUnit": "",
           "ingredient": "medium sized potatoes",
           "modifier": "diced into 0.5 inch cubes"
         },
         {
-          "amount": 30.0,
+          "amount": [30.0],
           "unit": "oz",
           "ingredient": "of canned white beans"
         },
         {
-          "amount": 6.0,
+          "amount": [6.0],
           "customUnit": "cup",
           "ingredient": "vegetable broth"
         },
         {
-          "amount": 2.0,
+          "amount": [2.0],
           "customUnit": "",
           "ingredient": "bay leaves"
         },
         {
-          "amount": 1.0,
+          "amount": [1.0],
           "unit": "tbsp",
           "ingredient": "white miso paste"
         },
         {
-          "amount": 2.0,
+          "amount": [2.0],
           "customUnit": "cup",
           "ingredient": "spinach"
         },
         {
-          "amount": 1.0,
+          "amount": [1.0],
           "customUnit": "",
           "ingredient": "lemon",
           "modifier": "(juice and zest)"
         },
         {
-          "amount": 1.0,
+          "amount": [1.0],
           "customUnit": "small bunch of",
           "ingredient": "dill",
           "modifier": "minced (about 0.24 cups)"

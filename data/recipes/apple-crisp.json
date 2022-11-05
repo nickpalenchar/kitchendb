@@ -18,58 +18,58 @@
       "sectionTitle": "",
       "ingredients": [
         {
-          "amount": 10.0,
+          "amount": [10.0],
           "customUnit": "",
           "ingredient": "cups all-purpose apples",
           "modifier": "peeled, cored and slice"
         },
         {
-          "amount": 0.5,
+          "amount": [0.5],
           "unit": "cup",
           "ingredient": "white sugar"
         },
         {
-          "amount": 1.0,
+          "amount": [1.0],
           "unit": "tbsp",
           "ingredient": "all-purpose flour"
         },
         {
-          "amount": 1.0,
+          "amount": [1.0],
           "unit": "tsp",
           "ingredient": "ground cinnamon"
         },
         {
-          "amount": 0.5,
+          "amount": [0.5],
           "unit": "cup",
           "ingredient": "water"
         },
         {
-          "amount": 1.0,
+          "amount": [1.0],
           "unit": "cup",
           "ingredient": "quick-cooking oats"
         },
         {
-          "amount": 1.0,
+          "amount": [1.0],
           "unit": "cup",
           "ingredient": "all-purpose flour"
         },
         {
-          "amount": 1.0,
+          "amount": [1.0],
           "unit": "cup",
           "ingredient": "packed brown sugar"
         },
         {
-          "amount": 0.25,
+          "amount": [0.25],
           "unit": "tsp",
           "ingredient": "baking powder"
         },
         {
-          "amount": 0.25,
+          "amount": [0.25],
           "unit": "tsp",
           "ingredient": "baking soda"
         },
         {
-          "amount": 0.5,
+          "amount": [0.5],
           "unit": "cup",
           "ingredient": "butter",
           "modifier": "melted"

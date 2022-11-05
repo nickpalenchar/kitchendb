@@ -10,7 +10,7 @@
     {{ with .ingredients }}
       <ul>
       {{ range . }}
-        <li><b>{{ .amount }} {{ .unit }}</b> {{ .ingredient }}</li>
+        <li><b>{{ cond ( eq (len .amount) 1 ) ( index .amount 0 ) ( printf "%v-%v" (index .amount 0) (index .amount 1) ) }} {{ .unit }}</b> {{ .ingredient }}</li>
       {{ end }}
       </ul>
     {{ end }}

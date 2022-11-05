@@ -78,7 +78,7 @@
                 },
                 "amount": {
                   "description": "the quantity of the measurement",
-                  "type": "number"
+                  "type": "array", "minItems": 1, "maxLength": 2 
                 },
                 "ingredient": {
                   "description": "The name of the ingredient",
