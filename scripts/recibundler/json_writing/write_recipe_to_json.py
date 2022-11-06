@@ -77,7 +77,7 @@ def write_recipe_to_json(recipe: reciperow):
         "version": "1",
         "name": recipe.name,
         "summary": recipe.summary,
-        "steps": reciparcer.parse_steps(recipe.steps),
+        "steps": [reciparcer.parse_steps(r) for r in recipe.steps],
         "ingredients": reciparcer.parse_ingredients(recipe.ingredients),
         "timestamp": recipe.timestamp,
     }
@@ -100,7 +100,7 @@ def write_recipe_to_json(recipe: reciperow):
         fh.write(json.dumps(recipe, indent=2))
 
 
-def optional(value: t.Generic[T]) -> t.Optional[T]:
+def optional(value) -> t.Optional[t.Any]:
     return value if value else None
 
 
