@@ -1,0 +1,92 @@
+{
+  "version": "1",
+  "name": "Cote NYC Steak Marinade",
+  "summary": "Steak the way they make it in would famous nyc steakhouses",
+  "steps": [
+    {
+      "sectionTitle": "",
+      "steps": [
+        "Using a knife, make 3/4 slits in the meat, about 1/2 inch apart.",
+        "Puree all puree ingredients, then rub all over the steak. Place in the fridge for at least 30 minutes.",
+        "Combine all soy ingredients, being sure to stir the sugar in well. Add to the steak, keep in fridge for another 3-4 hours.",
+        "Cook. Grilling recommended.",
+        "Optional. Finish with chopped green onions"
+      ]
+    }
+  ],
+  "ingredients": [
+    {
+      "sectionTitle": "Meat",
+      "ingredients": [
+        {
+          "ingredient": "Steak or Beef Steak"
+        }
+      ]
+    },
+    {
+      "sectionTitle": "Puree Marinade",
+      "ingredients": [
+        {
+          "amount": [
+            1.0
+          ],
+          "customUnit": "",
+          "ingredient": "pear",
+          "modifier": "chopped"
+        },
+        {
+          "amount": [
+            0.5
+          ],
+          "customUnit": "",
+          "ingredient": "onion",
+          "modifier": "chopped"
+        },
+        {
+          "ingredient": "Thumbnail size of ginger, zested"
+        },
+        {
+          "amount": [
+            1.0
+          ],
+          "unit": "tbsp",
+          "ingredient": "minced garlic"
+        }
+      ]
+    },
+    {
+      "sectionTitle": "Soy Marinade",
+      "ingredients": [
+        {
+          "amount": [
+            2.0
+          ],
+          "unit": "cup",
+          "ingredient": "soy sauce"
+        },
+        {
+          "amount": [
+            2.0
+          ],
+          "unit": "cup",
+          "ingredient": "water"
+        },
+        {
+          "amount": [
+            1.0
+          ],
+          "unit": "cup",
+          "ingredient": "Mirin"
+        },
+        {
+          "amount": [
+            1.0
+          ],
+          "unit": "cup",
+          "ingredient": "Sugar"
+        }
+      ]
+    }
+  ],
+  "timestamp": "11/4/2022 15:48:21"
+}

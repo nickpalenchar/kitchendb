@@ -45,7 +45,7 @@ def parse_ingredient(m: str) -> t.Union[dict, object]:
     try:
         parsed = parse_amount(m)
         if parsed is None:
-            return UNPARSABLE_INGREDIENT
+            return {'ingredient': m}
         amount_parsed, slicepoint = parsed
         amount = _format_amount([str(a) for a in amount_parsed])
         slice_rest = m[slicepoint:]

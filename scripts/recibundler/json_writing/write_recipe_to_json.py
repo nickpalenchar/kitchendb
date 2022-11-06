@@ -100,7 +100,7 @@ def write_recipe_to_json(recipe: reciperow):
         fh.write(json.dumps(recipe, indent=2))
 
 
-def optional(value: t.Generic[T]) -> t.Optional[T]:
+def optional(value) -> t.Optional[t.Any]:
     return value if value else None
 
 

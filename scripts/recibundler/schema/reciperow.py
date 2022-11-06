@@ -10,7 +10,7 @@ reciperow = t.NamedTuple(
         ("prep_time", t.Optional[int]),
         ("cook_time", t.Optional[str]),
         ("ingredients", t.Any),
-        ("steps", t.List[str]),
+        ("steps", str),
         ("link_to_photo", t.Optional[str]),
         ("submitter_email", t.Optional[str]),
     ],
