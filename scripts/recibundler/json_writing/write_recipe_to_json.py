@@ -77,7 +77,7 @@ def write_recipe_to_json(recipe: reciperow):
         "version": "1",
         "name": recipe.name,
         "summary": recipe.summary,
-        "steps": [reciparcer.parse_steps(r) for r in recipe.steps],
+        "steps": reciparcer.parse_steps(recipe.steps),
         "ingredients": reciparcer.parse_ingredients(recipe.ingredients),
         "timestamp": recipe.timestamp,
     }
