@@ -1,7 +1,8 @@
 ---
 title: "{{ replace .Name "-" " " | title }}"
-date: {{ .Date }}
+date: {{ .Date }} #$DATE$
 draft: true
+categories: [] #$CATEGORIES$
 ---
 
 {{< recipe-summary url="data/recipes/{{ .Name }}.json">}}

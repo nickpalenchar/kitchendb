@@ -31,6 +31,31 @@
       "description": "The unit of what the recipe yields",
       "type": "string"
     },
+    "categories": {
+      "description": "list of categories for further recipe refinement",
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "side dish",
+          "breakfast",
+          "lunch",
+          "dinner",
+          "appetizer",
+          "dessert",
+          "drink",
+          "cocktail",
+          "mocktail",
+          "vegetarian",
+          "vegan",
+          "gluten-free",
+          "seasonal",
+          "cookout",
+          "crock pot",
+          "soup"
+        ]
+      }
+    },
     "originalSource": {
       "description": "Link to the original source of the recipe",
       "type": "string"

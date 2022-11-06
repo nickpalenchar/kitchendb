@@ -1,5 +1,7 @@
 import os
 import subprocess
+from datetime import datetime
+from recibundler.schema.reciperow import isodate_from_recipe
 import json
 import string
 import functools
@@ -38,6 +40,9 @@ def build():
             ["hugo", "new", "--kind", "recipes", f"{HUGO_RECIPE_DIR}/{mkdown_name}"],
             cwd=PROJECT_ROOT,
         )
+        post_build_mods(
+            os.path.join(RECIPE_DIR, file), f"{HUGO_RECIPE_DIR}/{mkdown_name}"
+        )
 
 
 def clean():
@@ -74,6 +79,34 @@ def camel_to_snake_case(name: str) -> str:
             for c in name[1:]
         ]
     )
+
+
+# POST BUILD SCRIPTS #
+"""
+Because content (content/recipes) is generated from scratch each
+time, additional modification to form are required.
+"""
+
+
+def post_build_mods(file: str, mkdown: str) -> None:
+    with open(file) as fh:
+        recipe = json.loads(fh.read())
+
+    correct_date(recipe, mkdown)
+    correct_categories(recipe, mkdown)
+
+
+def correct_date(recipe: dict, mkdown: str) -> None:
+    date = datetime.strptime(recipe["timestamp"], "%m/%d/%Y %H:%M:%S")
+    timestamp = date.strftime("%Y-%m-%dT%H:%M:%S-05:00")
+    subprocess.run(["sed", "-i", "", f"s#.*\\$DATE\\$$#date: {timestamp}#", mkdown])
+
+
+def correct_categories(recipe: dict, mkdown: str) -> None:
+    if "categories" not in recipe:
+        return
+    categories = recipe["categories"]
+    subprocess.run(["sed", "-i", "", f"s#.*\\$CATEGORIES\\$$#categories: {categories}#", mkdown])
 
 
 if __name__ == "__main__":

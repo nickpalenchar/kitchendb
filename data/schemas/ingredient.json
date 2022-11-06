@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://kitchendb.net/data/schemas/ingredient.json",
+  "title": "Ingredient",
+  "description": "An ingredient used in a recipe",
+  "type": "object",
+  "properties": {
+    "name": {
+      "description:": "The name of the ingredient",
+      "type": "string"
+    },
+    "description": {
+      "description": "description of the ingredient",
+      "type": "string"
+    },
+    "categories": {
+      "description": "pre-defined categories",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}
