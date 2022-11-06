@@ -37,6 +37,7 @@
       "items": {
         "type": "string",
         "enum": [
+          "side dish",
           "breakfast",
           "lunch",
           "dinner",
@@ -49,7 +50,9 @@
           "vegan",
           "gluten-free",
           "seasonal",
-          "cookout"
+          "cookout",
+          "crock pot",
+          "soup"
         ]
       }
     },
