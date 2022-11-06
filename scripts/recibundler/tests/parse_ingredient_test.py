@@ -51,6 +51,11 @@ class TestParseIngredient(unittest.TestCase):
             {"amount": 1.5, "ingredient": "cup ginger"}, result
         )
 
+    def test_parses_fractions(self):
+        line = "1/8 tbsp salt"
+        result = reciparcer.parse_ingredient(line)
+        self.assertDictEqual({'amount': [0.12], 'unit': 'tbsp', 'ingredient': 'salt'}, result)
+
     def test_parses_modifiers(self):
         """
         modifiers explain how the ingredient in prepped, after the ingredient is listed
