@@ -25,7 +25,7 @@ def parse_ingredients(s: str):
         ing = parse_ingredient(line)
         if ing == UNPARSABLE_INGREDIENT:
             continue
-        section["ingredients"].append(ing) # type: ignore
+        section["ingredients"].append(ing)  # type: ignore
 
     result.append(section)
     return result
@@ -45,34 +45,34 @@ def parse_ingredient(m: str) -> t.Union[dict, object]:
     try:
         parsed = parse_amount(m)
         if parsed is None:
-            return {'ingredient': m}
+            return {"ingredient": m}
         amount_parsed, slicepoint = parsed
         amount = _format_amount([str(a) for a in amount_parsed])
         slice_rest = m[slicepoint:]
         log.debug(f"parsed amount: {amount}")
-        result["amount"] = [ float(a) for a in amount ]
+        result["amount"] = [float(a) for a in amount]
     except:
         log.warn(f"Unparsable Ingredient: {m}")
         return UNPARSABLE_INGREDIENT
     possible_unit, *rest = slice_rest.strip().split(" ", 1)
     if not rest:
         # there is only one word so it must be an ingredient with no unit
-        result["customUnit"] = "" # type: ignore
-        result["ingredient"] = possible_unit # type: ignore
+        result["customUnit"] = ""  # type: ignore
+        result["ingredient"] = possible_unit  # type: ignore
         return result
 
     unit = _parse_unit(possible_unit)
     if unit == UNPARSABLE_UNIT:
         # there is probably no unit and the first word was part of the ingredients.
         # i.e. "1 Granny Smith Apple"
-        result["customUnit"] = "" # type: ignore
+        result["customUnit"] = ""  # type: ignore
         rest[0] = possible_unit + " " + rest[0]
     else:
         result["unit"] = unit
     ingredient, *modifier = rest[0].split(",", 1)
-    result["ingredient"] = ingredient # type: ignore
+    result["ingredient"] = ingredient  # type: ignore
     if modifier:
-        result["modifier"] = modifier[0].strip() # type: ignore
+        result["modifier"] = modifier[0].strip()  # type: ignore
 
     log.debug(result)
     return result
@@ -116,8 +116,8 @@ def parse_amount(m: str) -> t.Optional[t.Tuple[t.List[float], int]]:
     """
     matchers = OrderedDict(
         (
-            ("NUMBER_MATCH", number_match),
             ("FRACTION_MATCH", fraction_match),
+            ("NUMBER_MATCH", number_match),
             ("DECIMAL_MATCH", decimal_match),
         )
     )
@@ -152,7 +152,6 @@ def _format_amount(m: t.Union[str, t.List[str]]) -> t.List[str]:
 
 
 def _format_amount_item(m: str) -> str:
-
     m = re.sub("\s+", " ", m.strip())
     leading = "0"
 
@@ -170,6 +169,7 @@ def _format_amount_item(m: str) -> str:
             num, den = m.split("/")
             return leading + str(round(int(num) / int(den), 2))
         raise Exception("could not parse amount")
+
 
 def _convert_frac_chars(m: str) -> str:
     result = m

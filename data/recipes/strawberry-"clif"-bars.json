@@ -1,0 +1,59 @@
+{
+  "version": "1",
+  "name": "Strawberry \"Clif\" Bars",
+  "summary": "Immatation clif bars",
+  "steps": [
+    {
+      "sectionTitle": "",
+      "steps": [
+        "In a blender or food processor, blend the frozen berries so they are powdery or in tiny pieces. Stir all dry ingredients together in a bowl, then stir in nut butter. Add in honey/agave and mix until sticky dough forms.",
+        "Line a pan with parchment paper, add the mix and spread evenly. Freeze for 1 hour or longer.",
+        "Remove from freezer and cut into bars.",
+        "Store at room temperature or in the fridge for 2-3 days, or freeze up to a month."
+      ]
+    }
+  ],
+  "ingredients": [
+    {
+      "sectionTitle": "",
+      "ingredients": [
+        {
+          "amount": [
+            0.75
+          ],
+          "unit": "cup",
+          "ingredient": "quick oats or rolled oats"
+        },
+        {
+          "amount": [
+            0.12
+          ],
+          "unit": "tsp",
+          "ingredient": "salt"
+        },
+        {
+          "amount": [
+            1.0
+          ],
+          "unit": "cup",
+          "ingredient": "freeze-dried raspberries or strawberries"
+        },
+        {
+          "amount": [
+            0.33
+          ],
+          "unit": "cup",
+          "ingredient": "peanut butter or nut butter of choice"
+        },
+        {
+          "amount": [
+            0.25
+          ],
+          "unit": "cup",
+          "ingredient": "agave or honey"
+        }
+      ]
+    }
+  ],
+  "timestamp": "11/4/2022 22:54:34"
+}
