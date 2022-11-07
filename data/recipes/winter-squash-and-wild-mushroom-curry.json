@@ -1,0 +1,131 @@
+{
+  "version": "1",
+  "name": "Winter Squash and Wild Mushroom Curry",
+  "summary": "",
+  "steps": [
+    {
+      "sectionTitle": "",
+      "steps": [
+        "in a wide skillet, heat oil over medium-high. When hot, add squash cubes in one layer. Season with salt and pepper. Cook for about 2 minutes, letting cubes brown slightly, then flip and cook for 2 minutes more. Use a slotted spoon to lift squash out, and set aside.",
+        "Cut a lengthwise slit in each chile to open it, but leave whole. (This helps the chiles heat the sauce without making it too spicy.)",
+        "Add shallots, salt lightly and cook, stirring, 1 minute. Add mustard seeds, cumin seeds and curry leaves, if using, and let sizzle for 30 seconds, then add garlic, coriander, cayenne, turmeric and chiles. Stir well and cook for 30 seconds more.",
+        "Add mushrooms, season with salt and toss to coat. Cook, stirring, until mushrooms begin to soften, about 5 minutes.",
+        "Return squash cubes to skillet, stir in coconut milk and bring to a simmer. Lower heat to medium and simmer for another 5 minutes. If mixture looks dry, thin with a little water. Taste and season with salt.",
+        "Before serving, stir in lime juice. Transfer to a warm serving dish and garnish with cilantro."
+      ]
+    }
+  ],
+  "ingredients": [
+    {
+      "sectionTitle": "",
+      "ingredients": [
+        {
+          "amount": [
+            3.0
+          ],
+          "customUnit": "",
+          "ingredient": "tablespoons vegetable oil"
+        },
+        {
+          "amount": [
+            0.5
+          ],
+          "customUnit": "",
+          "ingredient": "unces butternut or other winter squash",
+          "modifier": "peeled and cut into 1/2-inch pieces"
+        },
+        {
+          "ingredient": "Kosher salt"
+        },
+        {
+          "ingredient": "Black pepper"
+        },
+        {
+          "amount": [
+            1.0,
+            2.0
+          ],
+          "customUnit": "",
+          "ingredient": "small green chiles",
+          "modifier": "such as jalape\u00f1o or serrano"
+        },
+        {
+          "amount": [
+            3.0
+          ],
+          "customUnit": "",
+          "ingredient": "medium shallots or 1 small onion",
+          "modifier": "finely diced"
+        },
+        {
+          "amount": [
+            0.5
+          ],
+          "customUnit": "",
+          "ingredient": "teaspoon black mustard seeds"
+        },
+        {
+          "amount": [
+            0.5
+          ],
+          "customUnit": "",
+          "ingredient": "teaspoon cumin seeds"
+        },
+        {
+          "ingredient": "Handful of fresh or frozen curry leaves (optional)"
+        },
+        {
+          "amount": [
+            2.0
+          ],
+          "customUnit": "",
+          "ingredient": "garlic cloves",
+          "modifier": "minced"
+        },
+        {
+          "amount": [
+            1.0
+          ],
+          "customUnit": "",
+          "ingredient": "teaspoon ground coriander"
+        },
+        {
+          "ingredient": "Pinch of ground cayenne"
+        },
+        {
+          "amount": [
+            0.5
+          ],
+          "customUnit": "",
+          "ingredient": "teaspoon ground turmeric"
+        },
+        {
+          "amount": [
+            0.12
+          ],
+          "customUnit": "",
+          "ingredient": "und mushrooms",
+          "modifier": "preferably a mix of cultivated and wild, trimmed and sliced 1/8-inch thick"
+        },
+        {
+          "amount": [
+            0.75
+          ],
+          "unit": "cup",
+          "ingredient": "coconut milk"
+        },
+        {
+          "amount": [
+            2.0
+          ],
+          "customUnit": "",
+          "ingredient": "tablespoons lime juice"
+        },
+        {
+          "ingredient": "Cilantro sprigs, for garnish"
+        }
+      ]
+    }
+  ],
+  "timestamp": "11/4/2022 22:56:00"
+}
