@@ -102,7 +102,7 @@ def _parse_unit(m: str):
 
     parsed = m.strip().replace(".", "").lower()
     if parsed in valid_units:
-        return parsed
+        return parsed.lower()
     if parsed.endswith("s"):
         return _parse_unit(parsed[:-1])
     return UNPARSABLE_UNIT
