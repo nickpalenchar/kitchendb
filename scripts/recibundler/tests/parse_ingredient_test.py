@@ -16,11 +16,13 @@ class TestParseIngredient(unittest.TestCase):
             },
             result,
         )
-    
+
     def test_parses_number_no_modifier(self):
         line = "1 cup flour"
         result = reciparcer.parse_ingredient(line)
-        self.assertDictEqual({"amount": [1.0], "unit": "cup", "ingredient": "flour"}, result)
+        self.assertDictEqual(
+            {"amount": [1.0], "unit": "cup", "ingredient": "flour"}, result
+        )
 
     def test_parses_fraction_unicode_and_extra_whitespace(self):
         line = "    ¾ cup all-purpose flour  "
@@ -54,7 +56,9 @@ class TestParseIngredient(unittest.TestCase):
     def test_parses_fractions(self):
         line = "1/8 tbsp salt"
         result = reciparcer.parse_ingredient(line)
-        self.assertDictEqual({'amount': [0.12], 'unit': 'tbsp', 'ingredient': 'salt'}, result)
+        self.assertDictEqual(
+            {"amount": [0.12], "unit": "tbsp", "ingredient": "salt"}, result
+        )
 
     def test_parses_modifiers(self):
         """
@@ -93,4 +97,23 @@ class TestParseIngredient(unittest.TestCase):
         self.assertIsNotNone(result)
         self.assertDictEqual(
             {"amount": [6.0, 7.0], "unit": "gal", "ingredient": "milk"}, result
+        )
+
+    def test_parse_unit_handles_caps(self):
+        line = "1 TSP baking soda"
+        result = reciparcer.parse_ingredient(line)
+        self.assertDictEqual(
+            {"amount": [1.0], "unit": "tsp", "ingredient": "baking soda"}, result
+        )
+
+    def test_parse_with_alias_unit(self):
+        line = '1 tablespoon ginger'
+        result = reciparcer.parse_ingredient(line)
+        self.assertDictEqual(
+            {
+                "amount": [1.0],
+                "unit": "tbsp",
+                "ingredient": "ginger"
+            },
+            result
         )
