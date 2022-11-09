@@ -105,3 +105,15 @@ class TestParseIngredient(unittest.TestCase):
         self.assertDictEqual(
             {"amount": [1.0], "unit": "tsp", "ingredient": "baking soda"}, result
         )
+
+    def test_parse_with_alias_unit(self):
+        line = '1 tablespoon ginger'
+        result = reciparcer.parse_ingredient(line)
+        self.assertDictEqual(
+            {
+                "amount": [1.0],
+                "unit": "tbsp",
+                "ingredient": "ginger"
+            },
+            result
+        )
