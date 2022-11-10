@@ -1,0 +1,95 @@
+{
+  "version": "1",
+  "name": "Cucumber Salad with Roasted Peanuts and Chile",
+  "summary": "",
+  "steps": [
+    {
+      "sectionTitle": "",
+      "steps": [
+        "Toss cucumbers with 1/2 teaspoon kosher salt in a colander. Set aside to drain.",
+        "Chop peanuts, cilantro and red-pepper flakes together until very fine. Set aside.",
+        "In a large bowl, whisk together peanut butter, soy sauce, rice vinegar, sugar, garlic and 1/2 teaspoon kosher salt. Add up to 1 tablespoon water, if needed to thin mixture. Transfer salted cucumbers to the bowl with dressing and toss to coat.",
+        "To serve, place half the cucumber salad on the plate, sprinkle with half the peanut mixture. Repeat with the remaining cucumber salad and peanut mixture. Drizzle with chile oil, if using, and serve immediately."
+      ]
+    }
+  ],
+  "categories": ["vegetarian", "gluten-free", "side dish"],
+  "ingredients": [
+    {
+      "sectionTitle": "",
+      "ingredients": [
+        {
+          "amount": [
+            6.0
+          ],
+          "customUnit": "",
+          "ingredient": "Persian cucumbers",
+          "modifier": "cut lengthwise into thin spears, then cut crosswise into 2-inch pieces"
+        },
+        {
+          "ingredient": "Kosher salt"
+        },
+        {
+          "amount": [
+            0.25
+          ],
+          "unit": "cup",
+          "ingredient": "salted",
+          "modifier": "roasted peanuts"
+        },
+        {
+          "amount": [
+            0.25
+          ],
+          "unit": "cup",
+          "ingredient": "cilantro leaves"
+        },
+        {
+          "amount": [
+            1.0
+          ],
+          "unit": "tsp",
+          "ingredient": "red-pepper flakes"
+        },
+        {
+          "amount": [
+            3.0
+          ],
+          "unit": "tbsp",
+          "ingredient": "natural unsalted peanut butter"
+        },
+        {
+          "amount": [
+            2.0
+          ],
+          "unit": "tbsp",
+          "ingredient": "soy sauce"
+        },
+        {
+          "amount": [
+            2.0
+          ],
+          "unit": "tbsp",
+          "ingredient": "rice vinegar",
+          "modifier": "unseasoned"
+        },
+        {
+          "amount": [
+            1.0
+          ],
+          "unit": "tsp",
+          "ingredient": "granulated sugar"
+        },
+        {
+          "amount": [
+            1.0
+          ],
+          "customUnit": "",
+          "ingredient": "small garlic clove",
+          "modifier": "grated"
+        }
+      ]
+    }
+  ],
+  "timestamp": "11/4/2022 23:00:59"
+}

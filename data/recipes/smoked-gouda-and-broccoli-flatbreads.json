@@ -1,0 +1,66 @@
+{
+  "version": "1",
+  "name": "Smoked Gouda and Broccoli Flatbreads",
+  "summary": "",
+  "steps": [
+    {
+      "sectionTitle": "",
+      "steps": [
+        "Heat the oven to 450 degrees. Move oven racks to lower and upper thirds of the oven if able. ",
+        "Combine in a large bowl the Gouda, broccoli, scallions and oil. Season with salt and pepper, stir to combine.\u00a0",
+        "Place the flatbread on two baking sheets, then top evenly with the cheese mixture. Roast, rotating pans halfway through, until the bread is crisp and the cheese well melted, 8 to 10 minutes."
+      ]
+    }
+  ],
+  "categories": ["vegetarian"],
+  "ingredients": [
+    {
+      "sectionTitle": "",
+      "ingredients": [
+        {
+          "amount": [
+            8.0
+          ],
+          "unit": "oz",
+          "ingredient": "smoked Gouda",
+          "modifier": "grated on the holes of a box grater."
+        },
+        {
+          "amount": [
+            8.0
+          ],
+          "unit": "oz",
+          "ingredient": "broccoli",
+          "modifier": "stems and florets, coarsely chopped (about 3 cups)"
+        },
+        {
+          "amount": [
+            3.0
+          ],
+          "customUnit": "",
+          "ingredient": "scallions",
+          "modifier": "thinly sliced"
+        },
+        {
+          "amount": [
+            1.0
+          ],
+          "unit": "tbsp",
+          "ingredient": "extra-virgin olive oil"
+        },
+        {
+          "ingredient": "Kosher salt and black pepper"
+        },
+        {
+          "amount": [
+            4.0
+          ],
+          "customUnit": "",
+          "ingredient": "flatbread",
+          "modifier": "naan or pocketless pita"
+        }
+      ]
+    }
+  ],
+  "timestamp": "11/4/2022 23:03:00"
+}
