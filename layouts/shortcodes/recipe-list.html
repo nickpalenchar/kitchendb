@@ -15,7 +15,8 @@
             {{ cond ( eq (len .amount) 1 ) ( index .amount 0 ) ( printf "%v-%v" (index .amount 0) (index .amount 1) ) }}
             </span>
         {{ end }}
-        {{ .unit }}</b> {{ .ingredient }}</li>
+        {{ .unit }}</b> {{ .ingredient }}{{ if .modifier }}, {{ .modifier }}{{ end}}
+      </li>
       {{ end }}
       </ul>
     {{ end }}
