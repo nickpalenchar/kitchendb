@@ -113,6 +113,8 @@ def _parse_unit(m: str):
         "kilogram": "kg",
         "killogram": "kg",
         "gallon": "gal",
+        "ounce": "oz",
+        "fluid ounces": "fl oz",
     }
 
     parsed = m.strip().replace(".", "").lower()
