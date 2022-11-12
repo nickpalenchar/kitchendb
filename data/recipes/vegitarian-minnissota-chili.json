@@ -1,14 +1,15 @@
 {
   "version": "1",
-  "name": "Vegitarian Minnissota Chili",
+  "name": "Vegetarian Minnesota Chili",
   "summary": "From \"Eat and Run.\" Vegetarian chili never tasted so hearty.",
+  "categories": ["soup", "vegetarian", "vegetarian"],
   "steps": [
     {
       "sectionTitle": "",
       "steps": [
         "Finely chop onion, red and green peppers, and carrots. Add with corn into pot on medium to meduim low heat. Simmer for 10 minutes or until tender.",
-        "Add remanining ingrediants except cilantro and simmer over medium-low heat, covered, for 30 minutes.",
-        "uncover and stir and simmer for an aditional 20-30 minutes."
+        "Add remaining ingredients except cilantro and simmer over medium-low heat, covered, for 30 minutes.",
+        "uncover and stir and simmer for an additional 20-30 minutes."
       ]
     }
   ],
@@ -85,7 +86,7 @@
             1.5
           ],
           "unit": "cup",
-          "ingredient": "frozen corn kernals (maybe more)"
+          "ingredient": "frozen corn kernals"
         },
         {
           "amount": [
