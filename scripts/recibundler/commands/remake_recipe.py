@@ -20,7 +20,7 @@ def remake_recipe(recipejson, csvfile):
 
       if recipe.timestamp == rdata['timestamp']:
         print('found it', recipe)
+        # TODO re-add categories
         json_writing.write_recipe_to_json(recipe)
-        sys.exit()
 
 

@@ -2,6 +2,7 @@
   "version": "1",
   "name": "Earl Grey Blackberry Scones with Lemon Glaze",
   "summary": "Makes 16 scones. Keep all ingredients chilled until needed.",
+  "categories": ["dessert"],
   "steps": [
     {
       "sectionTitle": "",
@@ -26,79 +27,56 @@
       "sectionTitle": "Scones",
       "ingredients": [
         {
-          "amount": [
-            3.25
-          ],
-          "unit": "cup",
-          "ingredient": "all-purpose flour \u2014 plus extra flour for kneading"
+          "amount": [3.25],
+          "customUnit": "",
+          "ingredient": "cups all-purpose flour \u2014 plus extra flour for kneading"
         },
         {
-          "amount": [
-            0.3
-          ],
+          "amount": [0.3],
           "unit": "cup",
           "ingredient": "granulated sugar"
         },
         {
-          "amount": [
-            1.5
-          ],
-          "unit": "tbsp",
-          "ingredient": "earl grey tea",
+          "amount": [1.5],
+          "customUnit": "",
+          "ingredient": "tablespoon earl grey tea",
           "modifier": "ground until fine"
         },
         {
-          "amount": [
-            2.5
-          ],
-          "unit": "tsp",
-          "ingredient": "baking powder"
+          "amount": [2.5],
+          "customUnit": "",
+          "ingredient": "teaspoons baking powder"
         },
         {
-          "amount": [
-            0.5
-          ],
-          "unit": "tsp",
-          "ingredient": "baking soda"
+          "amount": [0.5],
+          "customUnit": "",
+          "ingredient": "teaspoon baking soda"
         },
         {
-          "amount": [
-            1.0
-          ],
-          "unit": "tsp",
-          "ingredient": "salt"
+          "amount": [1.0],
+          "customUnit": "",
+          "ingredient": "teaspoon salt"
         },
         {
-          "amount": [
-            0.75
-          ],
+          "amount": [0.75],
           "unit": "cup",
           "ingredient": "cold unsalted butter"
         },
         {
-          "amount": [
-            1.0
-          ],
+          "amount": [1.0],
           "customUnit": "",
           "ingredient": "large egg",
           "modifier": "lightly beaten"
         },
         {
-          "amount": [
-            0.75
-          ],
+          "amount": [0.75],
           "unit": "cup",
           "ingredient": "cold buttermilk"
         },
         {
-          "amount": [
-            1.0
-          ],
+          "amount": [1.0],
           "unit": "cup",
           "ingredient": "fresh blackberries"
-        },
-        {
-          "ingredient": "Extra buttermilk & granulated sugar to top scones before baking"
         }
       ]
     },
@@ -106,30 +84,22 @@
       "sectionTitle": "Glaze",
       "ingredients": [
         {
-          "amount": [
-            1.0
-          ],
+          "amount": [1.0],
           "unit": "cup",
           "ingredient": "powdered sugar"
         },
         {
-          "amount": [
-            1.5
-          ],
-          "unit": "tbsp",
-          "ingredient": "lemon juice"
+          "amount": [1.5],
+          "customUnit": "",
+          "ingredient": "tablespoon lemon juice"
         },
         {
-          "amount": [
-            1.0
-          ],
+          "amount": [1.0],
           "unit": "tsp",
           "ingredient": "vanilla"
         },
         {
-          "amount": [
-            1.0
-          ],
+          "amount": [1.0],
           "customUnit": "",
           "ingredient": "lemon",
           "modifier": "the Zest of"

@@ -15,7 +15,7 @@ def number_match(m: str) -> t.Optional[t.Tuple[float, int]]:
     groups = match.groups()
     if len(match.groups()) < 1:
         return None
-    return (groups[0].strip(), len(groups[0]))
+    return (float(groups[0].strip()), len(groups[0]))
 
 
 def fraction_match(m: str) -> t.Optional[t.Tuple[float, int]]:

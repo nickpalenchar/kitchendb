@@ -14,88 +14,63 @@
       ]
     }
   ],
+  "categories": ["breakfast", "vegetarian"],
   "ingredients": [
     {
       "sectionTitle": "",
       "ingredients": [
         {
-          "amount": [
-            2.0
-          ],
+          "amount": [2.0],
           "customUnit": "",
           "ingredient": "Granny Smith or other tart cooking apples (15 oz.)",
           "modifier": "peeled, cored, and thinly sliced"
         },
         {
-          "amount": [
-            2.0
-          ],
+          "amount": [2.0],
           "unit": "tbsp",
           "ingredient": "fresh lemon juice",
           "modifier": "plus more for drizzling"
         },
         {
-          "amount": [
-            0.5
-          ],
+          "amount": [0.5],
           "customUnit": "",
           "ingredient": "stick (4 Tbsp.) unsalted butter",
           "modifier": "divided"
         },
         {
-          "amount": [
-            0.25
-          ],
+          "amount": [0.25],
           "unit": "cup",
           "ingredient": "light brown sugar",
           "modifier": "packed"
         },
         {
-          "amount": [
-            0.5
-          ],
+          "amount": [0.5],
           "unit": "tsp",
           "ingredient": "ground cinnamon"
         },
         {
-          "ingredient": "Pinch of freshly grated nutmeg"
-        },
-        {
-          "amount": [
-            3.0
-          ],
+          "amount": [3.0],
           "customUnit": "",
           "ingredient": "large eggs"
         },
         {
-          "amount": [
-            0.75
-          ],
+          "amount": [0.75],
           "unit": "cup",
           "ingredient": "(4 oz.) all-purpose flour"
         },
         {
-          "amount": [
-            1.0
-          ],
+          "amount": [1.0],
           "unit": "tbsp",
           "ingredient": "granulated sugar",
           "modifier": "plus more for sprinkling"
         },
         {
-          "ingredient": "Pinch of kosher salt"
-        },
-        {
-          "amount": [
-            1.0
-          ],
+          "amount": [1.0],
           "unit": "cup",
           "ingredient": "whole milk"
         },
         {
-          "amount": [
-            0.25
-          ],
+          "amount": [0.25],
           "unit": "cup",
           "ingredient": "dark rum or cognac (optional)"
         }
