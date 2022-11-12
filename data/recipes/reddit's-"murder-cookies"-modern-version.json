@@ -1,0 +1,104 @@
+{
+  "version": "1",
+  "name": "Reddit's \"Murder Cookies\" (modern version)",
+  "summary": "From a 1930's recipe where the baker's neighbor got murdered, now repopularized on reddit under a name you can't forget! This recipe is updated with more common ingredients.",
+  "steps": [
+    {
+      "sectionTitle": "",
+      "steps": [
+        "Preheat the oven to 350 degrees F.",
+        "Combine sugar, butter, molasses and egg with an electric beater.",
+        "In a seperate bowl, sift together dry ingredients (flour, salt, baking soda, cinnamon, nutmeg, and allspice).",
+        "Mix in parts of the dry ingredients and milk into the first bowl, in about thirds.",
+        "Scoop batter by 1 tablespoon (slightly overflowing) onto greased cookie sheet.",
+        "Bake for 12-14 minutes."
+      ]
+    }
+  ],
+  "ingredients": [
+    {
+      "sectionTitle": "",
+      "ingredients": [
+        {
+          "amount": [
+            1.5
+          ],
+          "unit": "cup",
+          "ingredient": "sugar"
+        },
+        {
+          "amount": [
+            1.0
+          ],
+          "unit": "cup",
+          "ingredient": "butter",
+          "modifier": "softened"
+        },
+        {
+          "amount": [
+            0.5
+          ],
+          "unit": "cup",
+          "ingredient": "molasses"
+        },
+        {
+          "amount": [
+            1.0
+          ],
+          "customUnit": "",
+          "ingredient": "egg"
+        },
+        {
+          "amount": [
+            3.5
+          ],
+          "unit": "cup",
+          "ingredient": "flour"
+        },
+        {
+          "amount": [
+            1.0
+          ],
+          "unit": "tsp",
+          "ingredient": "salt"
+        },
+        {
+          "amount": [
+            2.5
+          ],
+          "unit": "tsp",
+          "ingredient": "baking soda"
+        },
+        {
+          "amount": [
+            1.0
+          ],
+          "unit": "tsp",
+          "ingredient": "cinnamon"
+        },
+        {
+          "amount": [
+            0.5
+          ],
+          "unit": "tsp",
+          "ingredient": "nutmeg"
+        },
+        {
+          "amount": [
+            0.5
+          ],
+          "unit": "tsp",
+          "ingredient": "allspice"
+        },
+        {
+          "amount": [
+            0.25
+          ],
+          "unit": "cup",
+          "ingredient": "whole milk"
+        }
+      ]
+    }
+  ],
+  "timestamp": "11/8/2022 21:55:28"
+}

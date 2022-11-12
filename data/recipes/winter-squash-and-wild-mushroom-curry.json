@@ -15,7 +15,6 @@
       ]
     }
   ],
-  "categories": ["vegetarian"],
   "ingredients": [
     {
       "sectionTitle": "",
@@ -24,8 +23,8 @@
           "amount": [
             3.0
           ],
-          "customUnit": "",
-          "ingredient": "tablespoons vegetable oil"
+          "unit": "tbsp",
+          "ingredient": "vegetable oil"
         },
         {
           "amount": [
@@ -62,15 +61,15 @@
           "amount": [
             0.5
           ],
-          "customUnit": "",
-          "ingredient": "teaspoon black mustard seeds"
+          "unit": "tsp",
+          "ingredient": "black mustard seeds"
         },
         {
           "amount": [
             0.5
           ],
-          "customUnit": "",
-          "ingredient": "teaspoon cumin seeds"
+          "unit": "tsp",
+          "ingredient": "cumin seeds"
         },
         {
           "ingredient": "Handful of fresh or frozen curry leaves (optional)"
@@ -87,8 +86,8 @@
           "amount": [
             1.0
           ],
-          "customUnit": "",
-          "ingredient": "teaspoon ground coriander"
+          "unit": "tsp",
+          "ingredient": "ground coriander"
         },
         {
           "ingredient": "Pinch of ground cayenne"
@@ -97,8 +96,8 @@
           "amount": [
             0.5
           ],
-          "customUnit": "",
-          "ingredient": "teaspoon ground turmeric"
+          "unit": "tsp",
+          "ingredient": "ground turmeric"
         },
         {
           "amount": [
@@ -119,8 +118,8 @@
           "amount": [
             2.0
           ],
-          "customUnit": "",
-          "ingredient": "tablespoons lime juice"
+          "unit": "tbsp",
+          "ingredient": "lime juice"
         },
         {
           "ingredient": "Cilantro sprigs, for garnish"
@@ -128,5 +127,8 @@
       ]
     }
   ],
-  "timestamp": "11/4/2022 22:56:00"
+  "timestamp": "11/4/2022 22:56:00",
+  "categories": [
+    "vegetarian"
+  ]
 }

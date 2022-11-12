@@ -12,7 +12,6 @@
       ]
     }
   ],
-  "categories": ["vegetarian"],
   "ingredients": [
     {
       "sectionTitle": "",
@@ -30,8 +29,8 @@
             8.0
           ],
           "unit": "oz",
-          "ingredient": "broccoli",
-          "modifier": "stems and florets, coarsely chopped (about 3 cups)"
+          "ingredient": "broccoli stems and florets",
+          "modifier": "coarsely chopped (about 3 cups)"
         },
         {
           "amount": [
@@ -62,5 +61,8 @@
       ]
     }
   ],
-  "timestamp": "11/4/2022 23:03:00"
+  "timestamp": "11/4/2022 23:03:00",
+  "categories": [
+    "vegetarian"
+  ]
 }

@@ -13,9 +13,6 @@
       ]
     }
   ],
-  "categories": [
-    "snack"
-  ],
   "ingredients": [
     {
       "sectionTitle": "",
@@ -58,5 +55,8 @@
       ]
     }
   ],
-  "timestamp": "11/4/2022 22:54:34"
+  "timestamp": "11/4/2022 22:54:34",
+  "categories": [
+    "snack"
+  ]
 }

@@ -14,7 +14,6 @@
       ]
     }
   ],
-  "categories": ["dinner", "cookout", "gluten-free"],
   "ingredients": [
     {
       "sectionTitle": "Meat",
@@ -89,5 +88,10 @@
       ]
     }
   ],
-  "timestamp": "11/4/2022 15:48:21"
+  "timestamp": "11/4/2022 15:48:21",
+  "categories": [
+    "dinner",
+    "cookout",
+    "gluten-free"
+  ]
 }

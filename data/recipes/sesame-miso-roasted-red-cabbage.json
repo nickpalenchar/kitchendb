@@ -6,71 +6,100 @@
     {
       "sectionTitle": "",
       "steps": [
-        "Preheat the oven to 200\u02daC/390\u02daF.",
+        "Preheat the oven to 200\u02daC/390\u02daF/gas mark 6.",
         "Spread out the cabbage wedges on a baking tray, toss with the oil and season lightly. Roast in the oven for 30 minutes.",
         "Meanwhile make the dressing by whisking together all the ingredients.",
-        "Once the 30 minutes is up, use a pastry brush to coat the cabbage pieces in the dressing then turn the oven up to 240\u02daC/465\u02daF and return them to the oven for a further 15 minutes until cooked through, caramelised and beginning to get a little crisp at the edges."
+        "Once the 30 minutes is up, use a pastry brush to coat the cabbage pieces in the dressing then turn the oven up to 240\u02daC/465\u02daF/gas mark 9 and return them to the oven for a further 15 minutes until cooked through, caramelised and beginning to get a little crisp at the edges."
       ]
     }
   ],
-  "categories": ["side dish", "vegetarian", "vegan"],
   "ingredients": [
     {
-      "sectionTitle": "",
+      "sectionTitle": "For Cabbage",
       "ingredients": [
         {
-          "amount": [1.0],
+          "amount": [
+            1.0
+          ],
           "customUnit": "",
           "ingredient": "red cabbage",
           "modifier": "cut into 8 wedges"
         },
         {
-          "amount": [2.0],
+          "amount": [
+            2.0
+          ],
           "unit": "tbsp",
           "ingredient": "rapeseed oil"
         },
         {
-          "amount": [1.0],
-          "unit": "pinch",
-          "ingredient": "sea salt and freshly ground black pepper"
-        },
+          "amount": [
+            1.0
+          ],
+          "customUnit": "",
+          "ingredient": "pinch sea salt and freshly ground black pepper"
+        }
+      ]
+    },
+    {
+      "sectionTitle": "For Dressing",
+      "ingredients": [
         {
-          "amount": [1.0],
+          "amount": [
+            1.0
+          ],
           "unit": "tbsp",
-          "ingredient": "white miso"
+          "ingredient": "fresh white miso"
         },
         {
-          "amount": [1.0],
+          "amount": [
+            1.0
+          ],
           "unit": "tbsp",
           "ingredient": "mirin"
         },
         {
-          "amount": [1.0],
+          "amount": [
+            1.0
+          ],
           "unit": "tbsp",
           "ingredient": "sake"
         },
         {
-          "amount": [1.5],
+          "amount": [
+            1.5
+          ],
           "unit": "tbsp",
           "ingredient": "water"
         },
         {
-          "amount": [1.0],
+          "amount": [
+            1.0
+          ],
           "unit": "tbsp",
           "ingredient": "sugar"
         },
         {
-          "amount": [1.0],
+          "amount": [
+            1.0
+          ],
           "unit": "tbsp",
           "ingredient": "sesame seeds"
         },
         {
-          "amount": [0.5],
+          "amount": [
+            0.5
+          ],
           "unit": "tsp",
           "ingredient": "roasted sesame oil"
         }
       ]
     }
   ],
-  "timestamp": "10/3/2022 17:31:54"
+  "timestamp": "10/3/2022 17:31:54",
+  "categories": [
+    "side dish",
+    "vegetarian",
+    "vegan"
+  ]
 }
