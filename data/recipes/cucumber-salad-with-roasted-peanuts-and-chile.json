@@ -13,7 +13,6 @@
       ]
     }
   ],
-  "categories": ["vegetarian", "gluten-free", "side dish"],
   "ingredients": [
     {
       "sectionTitle": "",
@@ -23,7 +22,7 @@
             6.0
           ],
           "customUnit": "",
-          "ingredient": "Persian cucumbers",
+          "ingredient": "Persian cucumbers (about 1 pound)",
           "modifier": "cut lengthwise into thin spears, then cut crosswise into 2-inch pieces"
         },
         {
@@ -70,8 +69,7 @@
             2.0
           ],
           "unit": "tbsp",
-          "ingredient": "rice vinegar",
-          "modifier": "unseasoned"
+          "ingredient": "unseasoned rice vinegar"
         },
         {
           "amount": [
