@@ -1,0 +1,56 @@
+{
+  "version": "1",
+  "name": "Cacio e pepe",
+  "summary": "A simple yet elegant three-ingredient pasta dish",
+  "categories": ["pasta", "dinner"],
+  "steps": [
+    {
+      "sectionTitle": "",
+      "steps": [
+        "Bring a large pot of salted water to a boil.",
+        "Using a microplane, finely grate 5 ounces Pecorino Romano cheese into a large bowl to get about 2 1/2 cups. Transfer 1/2 cup to a small bowl to use as garnish.",
+        "Coarsely grind enough black pepper to get 1 tablespoon and use a fork to mix it into the large bowl of cheese. Drizzle in 1/3 cup ice water and use the fork to whisk it into the cheese mixture, then press the mixture against the side of the bowl, as needed, to form a thick, mostly smooth and lump-free paste; set aside.",
+        "Add 1 pound dried pasta to the boiling water and cook until al dente, about 10 minutes or according to package instructions.",
+        "Reserve 1/2 cup of the pasta water. Drain the pasta and working quickly, immediately add it to the large bowl of cheese paste and use the fork to vigorously stir and toss the pasta with the cheese paste, adding 1 tablespoon of the reserved pasta water at a time to loosen the paste until it evenly coats the pasta in a creamy sauce. (You\u2019ll likely use only about 2 to 3 tablespoons of the pasta water total and not use all of it.)",
+        "Serve immediately, topping with the reserved grated Pecorino and a few coarse grinds of black pepper."
+      ]
+    }
+  ],
+  "ingredients": [
+    {
+      "sectionTitle": "",
+      "ingredients": [
+        {
+          "amount": [
+            5.0
+          ],
+          "unit": "oz",
+          "ingredient": "Pecorino Romano cheese"
+        },
+        {
+          "amount": [
+            1.0
+          ],
+          "unit": "tbsp",
+          "ingredient": "coarsely ground black pepper"
+        },
+        {
+          "amount": [
+            0.33
+          ],
+          "unit": "cup",
+          "ingredient": "ice water"
+        },
+        {
+          "amount": [
+            1.0
+          ],
+          "unit": "lb",
+          "ingredient": "dried spaghetti",
+          "modifier": "bucatini, or tonnarelli pasta"
+        }
+      ]
+    }
+  ],
+  "timestamp": "11/11/2022 9:00:30"
+}

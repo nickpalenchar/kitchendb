@@ -42,3 +42,13 @@ next thing"""
             ],
             result,
         )
+    
+    def test_removes_lines_with_no_text(self):
+        line = "Bring a large pot of salted water to a boil\n    \nAdd pasta"
+        result = reciparcer.parse_steps(line)
+        self.assertListEqual(
+            [
+                { "sectionTitle": "", "steps": ["Bring a large pot of salted water to a boil", "Add pasta"]}
+            ],
+            result
+        )

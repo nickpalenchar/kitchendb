@@ -151,5 +151,12 @@
       ]
     }
   ],
-  "timestamp": "10/3/2022 9:09:02"
+  "timestamp": "10/3/2022 9:09:02",
+  "categories": [
+    "soup",
+    "seasonal",
+    "side dish",
+    "vegetarian",
+    "vegan"
+  ]
 }

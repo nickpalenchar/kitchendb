@@ -31,8 +31,8 @@ def build():
         with open(os.path.join(RECIPE_DIR, file)) as fh:
             log.debug(f"Validating schema for {file}...")
             validate_file_schema(fh)
-
-        mkdown_name = camel_to_snake_case(file).replace(".json", ".md")
+        json_name = file.replace("'", "ʼ")
+        mkdown_name = camel_to_snake_case(json_name).replace(".json", ".md")
 
         log.info(f"building {mkdown_name}...")
         log.debug(f"CMD: hugo new --kind recipes {HUGO_RECIPE_DIR}/{mkdown_name}")
@@ -41,7 +41,7 @@ def build():
             cwd=PROJECT_ROOT,
         )
         post_build_mods(
-            os.path.join(RECIPE_DIR, file), f"{HUGO_RECIPE_DIR}/{mkdown_name}"
+            os.path.join(RECIPE_DIR, json_name), f"{HUGO_RECIPE_DIR}/{mkdown_name}"
         )
 
 
@@ -74,7 +74,7 @@ def camel_to_snake_case(name: str) -> str:
         [name[0].lower()]
         + [
             c
-            if (c not in string.ascii_letters or c.islower()) or c == "."
+            if (c not in string.ascii_letters or c.islower()) or c in ".()"
             else f"-{c.lower()}"
             for c in name[1:]
         ]

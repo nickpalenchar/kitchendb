@@ -1,0 +1,188 @@
+{
+  "version": "1",
+  "name": "Vegetarian Minnesota Chili",
+  "summary": "From \"Eat and Run.\" Vegetarian chili never tasted so hearty.",
+  "categories": ["soup", "vegetarian", "vegetarian"],
+  "steps": [
+    {
+      "sectionTitle": "",
+      "steps": [
+        "Finely chop onion, red and green peppers, and carrots. Add with corn into pot on medium to meduim low heat. Simmer for 10 minutes or until tender.",
+        "Add remaining ingredients except cilantro and simmer over medium-low heat, covered, for 30 minutes.",
+        "uncover and stir and simmer for an additional 20-30 minutes."
+      ]
+    }
+  ],
+  "ingredients": [
+    {
+      "sectionTitle": "",
+      "ingredients": [
+        {
+          "amount": [
+            2.0
+          ],
+          "unit": "tbsp",
+          "ingredient": "coconut oil or olive oil"
+        },
+        {
+          "amount": [
+            3.0
+          ],
+          "customUnit": "",
+          "ingredient": "garlic cloves",
+          "modifier": "minced"
+        },
+        {
+          "amount": [
+            1.0
+          ],
+          "unit": "cup",
+          "ingredient": "finely chopped onion"
+        },
+        {
+          "amount": [
+            8.0,
+            10.0
+          ],
+          "customUnit": "",
+          "ingredient": "medium mushrooms",
+          "modifier": "finely chopped"
+        },
+        {
+          "amount": [
+            1.0
+          ],
+          "customUnit": "",
+          "ingredient": "green bell pepper",
+          "modifier": "finely chopped"
+        },
+        {
+          "amount": [
+            1.0
+          ],
+          "customUnit": "",
+          "ingredient": "red bell pepper",
+          "modifier": "finely chopped"
+        },
+        {
+          "amount": [
+            2.0,
+            3.0
+          ],
+          "customUnit": "",
+          "ingredient": "full carrots",
+          "modifier": "finely chopped"
+        },
+        {
+          "amount": [
+            1.0
+          ],
+          "customUnit": "",
+          "ingredient": "jalapeno pepper",
+          "modifier": "seeded and very finely chopped."
+        },
+        {
+          "amount": [
+            1.5
+          ],
+          "unit": "cup",
+          "ingredient": "frozen corn kernals"
+        },
+        {
+          "amount": [
+            2.0
+          ],
+          "unit": "tsp",
+          "ingredient": "ground cumin"
+        },
+        {
+          "amount": [
+            1.0
+          ],
+          "unit": "tsp",
+          "ingredient": "coriander"
+        },
+        {
+          "amount": [
+            2.0
+          ],
+          "unit": "tbsp",
+          "ingredient": "chili powder"
+        },
+        {
+          "amount": [
+            2.0
+          ],
+          "unit": "tbsp",
+          "ingredient": "sea salt",
+          "modifier": "plus more to taste"
+        },
+        {
+          "ingredient": "black pepper to taste"
+        },
+        {
+          "amount": [
+            1.0
+          ],
+          "customUnit": "",
+          "ingredient": "28-oz can diced tomatoes"
+        },
+        {
+          "amount": [
+            1.0
+          ],
+          "customUnit": "",
+          "ingredient": "15-oz can tomato puree"
+        },
+        {
+          "amount": [
+            1.0
+          ],
+          "customUnit": "",
+          "ingredient": "15-oz can kidney beans",
+          "modifier": "drained"
+        },
+        {
+          "amount": [
+            1.0
+          ],
+          "customUnit": "",
+          "ingredient": "15-oz can red beans",
+          "modifier": "drained"
+        },
+        {
+          "amount": [
+            1.0
+          ],
+          "customUnit": "",
+          "ingredient": "15-oz can black beans",
+          "modifier": "drained"
+        },
+        {
+          "amount": [
+            2.0
+          ],
+          "unit": "cup",
+          "ingredient": "water (maybe a little less for chunkier)"
+        },
+        {
+          "amount": [
+            0.5
+          ],
+          "unit": "cup",
+          "ingredient": "dry bulger wheat",
+          "modifier": "hot sauce or cyane pepper (optional)"
+        },
+        {
+          "amount": [
+            0.25
+          ],
+          "unit": "cup",
+          "ingredient": "minced fresh cilantro",
+          "modifier": "for garnish."
+        }
+      ]
+    }
+  ],
+  "timestamp": "11/11/2022 9:03:36"
+}

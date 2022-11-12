@@ -72,7 +72,9 @@ def is_recipe_old(recipe: reciperow, since) -> bool:
     recipe_date = datetime.strptime(recipe.timestamp, "%m/%d/%Y %H:%M:%S")
     return recipe_date <= since
 
-def write_recipe_to_json(recipe: reciperow):
+def write_recipe_to_json(recipe: reciperow, additional_keys=None):
+    if additional_keys is None:
+        additional_keys = {}
     attrs = {
         "version": "1",
         "name": recipe.name,
@@ -97,7 +99,7 @@ def write_recipe_to_json(recipe: reciperow):
     logging.debug(f"Recipe will be named {filename}")
 
     with open(path.join("..", "data", "recipes", filename), "w") as fh:
-        fh.write(json.dumps(recipe, indent=2))
+        fh.write(json.dumps({**recipe, **additional_keys}, indent=2)) # type: ignore
 
 
 def optional(value) -> t.Optional[t.Any]:

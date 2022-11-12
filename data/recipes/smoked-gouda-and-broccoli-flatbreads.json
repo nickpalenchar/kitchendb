@@ -61,5 +61,8 @@
       ]
     }
   ],
-  "timestamp": "11/4/2022 23:03:00"
+  "timestamp": "11/4/2022 23:03:00",
+  "categories": [
+    "vegetarian"
+  ]
 }

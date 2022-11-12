@@ -96,5 +96,10 @@
       ]
     }
   ],
-  "timestamp": "10/3/2022 17:31:54"
+  "timestamp": "10/3/2022 17:31:54",
+  "categories": [
+    "side dish",
+    "vegetarian",
+    "vegan"
+  ]
 }
