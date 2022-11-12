@@ -4,7 +4,7 @@ import string
 
 def parse_steps(text: str) -> t.List[dict]:
     # TODO - sections
-    steps = [strip_number_prefix(t) for t in text.split("\n") if t]
+    steps = [strip_number_prefix(t) for t in text.split("\n") if t.strip()]
     return [{"sectionTitle": "", "steps": steps}]
 
 

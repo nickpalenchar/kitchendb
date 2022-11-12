@@ -117,3 +117,15 @@ class TestParseIngredient(unittest.TestCase):
             },
             result
         )
+    
+    def test_parses_whole_number_and_fraction(self):
+        line = '1 1/2 cup frozen corn'
+        result = reciparcer.parse_ingredient(line)
+        self.assertDictEqual(
+            {
+                "amount": [1.5],
+                "unit": "cup",
+                "ingredient": "frozen corn"
+            },
+            result
+        )
