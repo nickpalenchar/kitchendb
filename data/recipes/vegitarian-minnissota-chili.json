@@ -1,14 +1,14 @@
 {
   "version": "1",
-  "name": "Vegitarian Minnissota Chili",
+  "name": "Vegetarian Minnesota Chili",
   "summary": "From \"Eat and Run.\" Vegetarian chili never tasted so hearty.",
   "steps": [
     {
       "sectionTitle": "",
       "steps": [
-        "Finely chop onion, red and green peppers, and carrots. Add with corn into pot on medium to meduim low heat. Simmer for 10 minutes or until tender.",
-        "Add remanining ingrediants except cilantro and simmer over medium-low heat, covered, for 30 minutes.",
-        "uncover and stir and simmer for an aditional 20-30 minutes."
+        "Finely chop onion, red and green peppers, and carrots. Add with corn into pot on medium to medium low heat. Simmer for 10 minutes or until tender.",
+        "Add remaining ingredients except cilantro and simmer over medium-low heat, covered, for 30 minutes.",
+        "uncover and stir and simmer for an additional 20-30 minutes."
       ]
     }
   ],
@@ -170,7 +170,7 @@
           ],
           "unit": "cup",
           "ingredient": "dry bulger wheat",
-          "modifier": "hot sauce or cyane pepper (optional)"
+          "modifier": "hot sauce or cayenne pepper (optional)"
         },
         {
           "amount": [
