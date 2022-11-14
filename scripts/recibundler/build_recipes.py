@@ -93,6 +93,7 @@ def post_build_mods(file: str, mkdown: str) -> None:
         recipe = json.loads(fh.read())
 
     correct_date(recipe, mkdown)
+    use_json_name_as_title(recipe, mkdown)
     correct_categories(recipe, mkdown)
 
 
@@ -101,6 +102,9 @@ def correct_date(recipe: dict, mkdown: str) -> None:
     timestamp = date.strftime("%Y-%m-%dT%H:%M:%S-05:00")
     subprocess.run(["sed", "-i", "", f"s#.*\\$DATE\\$$#date: {timestamp}#", mkdown])
 
+def use_json_name_as_title(recipe: dict, mkdown: str) -> None:
+    log.debug(f'{__name__}: replacing name with `{recipe["name"]}`')
+    subprocess.run(["sed", "-i", "", f"s#.*\\$TITLE\\$$#title: {recipe['name']}#", mkdown])
 
 def correct_categories(recipe: dict, mkdown: str) -> None:
     if "categories" not in recipe:
