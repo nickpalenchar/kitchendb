@@ -1,7 +1,7 @@
 {
   "version": "1",
   "name": "Beef Lo Mein",
-  "summary": "Simple and delicious take-out replacement.",
+  "summary": "",
   "steps": [
     {
       "sectionTitle": "",
@@ -18,7 +18,6 @@
       ]
     }
   ],
-  "categories": ["dinner"],
   "ingredients": [
     {
       "sectionTitle": "Pasta dish",
@@ -36,21 +35,42 @@
           ],
           "customUnit": "",
           "ingredient": "large carrot",
-          "modifier": "3 oz"
+          "modifier": "3 oz (85g)"
+        },
+        {
+          "amount": [
+            10.0
+          ],
+          "unit": "oz",
+          "ingredient": "- 16 oz (283 g - 463g) broccoli"
         },
         {
           "amount": [
             3.0
           ],
           "unit": "oz",
-          "ingredient": "snow peas"
+          "ingredient": "(85g) snow peas"
         },
         {
           "amount": [
             3.0
           ],
           "unit": "tbsp",
-          "ingredient": "sesame oil"
+          "ingredient": "(45 mL) sesame oil"
+        },
+        {
+          "amount": [
+            8.0
+          ],
+          "unit": "oz",
+          "ingredient": "- 10 oz (227g -283g) chicken breast"
+        },
+        {
+          "amount": [
+            9.0
+          ],
+          "unit": "oz",
+          "ingredient": "- 10 oz (255g - 283g) thin spaghetti/linquine pasta"
         }
       ]
     },
@@ -62,42 +82,42 @@
             0.25
           ],
           "unit": "cup",
-          "ingredient": "soy sauce"
+          "ingredient": "(60 mL) original soy sauce"
         },
         {
           "amount": [
             0.25
           ],
           "unit": "cup",
-          "ingredient": "water"
+          "ingredient": "(60 mL) water"
         },
         {
           "amount": [
             3.0
           ],
           "unit": "tbsp",
-          "ingredient": "sesame oil"
+          "ingredient": "(45 mL) sesame oil"
         },
         {
           "amount": [
             1.0
           ],
           "unit": "tbsp",
-          "ingredient": "sugar"
+          "ingredient": "(12.6g) sugar"
         },
         {
           "amount": [
             0.5
           ],
           "unit": "tsp",
-          "ingredient": "ground pepper"
+          "ingredient": "(1.2g) ground pepper"
         },
         {
           "amount": [
             0.25
           ],
           "unit": "tsp",
-          "ingredient": "red pepper flakes",
+          "ingredient": "(0.5g) red pepper flakes",
           "modifier": "optional for a kick"
         },
         {
@@ -105,10 +125,13 @@
             1.0
           ],
           "unit": "tsp",
-          "ingredient": "ground ginger"
+          "ingredient": "(2.8g) ground ginger"
         }
       ]
     }
   ],
-  "timestamp": "11/4/2022 23:00:00"
+  "timestamp": "11/4/2022 23:00:00",
+  "categories": [
+    "dinner"
+  ]
 }

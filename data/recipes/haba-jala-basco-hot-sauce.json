@@ -1,0 +1,81 @@
+{
+  "version": "1",
+  "name": "Haba-Jala-Basco Hot Sauce",
+  "summary": "Easy home made hot sauce",
+  "steps": [
+    {
+      "sectionTitle": "",
+      "steps": [
+        "Remove the stems from the peppers and cut them in half, lengthwise. Remove and discard the seeds and ribs according to desired heat levels. Roughly chop the peppers into pieces approximately 2\u2033 in size.",
+        "NOT OPTIONAL: WEAR GLOVES!",
+        "Put the chopped peppers and the rest of the ingredients in a medium-sized sauce pan. Bring it to a boil, then cover and reduce to a lightly-bubbling simmer for 15-20 minutes. Be careful when removing the lid \u2014 the vinegar steam is potent!",
+        "While still hot, carefully pour everything into a powerful blender. Slowly increase speed from low to high until the sauce is completely smooth. This may require a few minutes of blending.",
+        "Pour still-hot hot sauce through a strainer into funnel set up in the mouth of your hot sanitized hot sauce bottle. You may need to do this in a few batches. Use a small spatula to press the sauce through the strainer, occasionally lifting the strainer to scrape the sauce off the bottom and into the funnel.",
+        "Seal the bottle tightly and let the hot sauce cool to room temperature, then store in the refrigerator or at room temperature for up to 8 months"
+      ]
+    }
+  ],
+  "ingredients": [
+    {
+      "sectionTitle": "",
+      "ingredients": [
+        {
+          "amount": [
+            4.0
+          ],
+          "customUnit": "",
+          "ingredient": "8-oz hot sauce bottles"
+        },
+        {
+          "ingredient": "Rubber Gloves!!"
+        },
+        {
+          "amount": [
+            10.0
+          ],
+          "unit": "oz",
+          "ingredient": "Combined Habaneros",
+          "modifier": "Jalape\u00f1os, and Tabasco Peppers (weight is after chopping the peppers and removing desired seeds)"
+        },
+        {
+          "amount": [
+            4.0
+          ],
+          "unit": "oz",
+          "ingredient": "medium shallots (about 2-3 bulbs",
+          "modifier": "cut into quarters)"
+        },
+        {
+          "amount": [
+            1.0
+          ],
+          "unit": "oz",
+          "ingredient": "garlic cloves (about 5 cloves",
+          "modifier": "smashed)"
+        },
+        {
+          "amount": [
+            5.0
+          ],
+          "customUnit": "",
+          "ingredient": "whole peppercorns"
+        },
+        {
+          "amount": [
+            2.0
+          ],
+          "unit": "tsp",
+          "ingredient": "pickling salt"
+        },
+        {
+          "amount": [
+            6.0
+          ],
+          "unit": "oz",
+          "ingredient": "distilled white vinegar (0.75 cup)"
+        }
+      ]
+    }
+  ],
+  "timestamp": "11/12/2022 9:00:52"
+}
