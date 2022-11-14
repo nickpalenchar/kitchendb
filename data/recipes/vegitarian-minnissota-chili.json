@@ -2,12 +2,11 @@
   "version": "1",
   "name": "Vegetarian Minnesota Chili",
   "summary": "From \"Eat and Run.\" Vegetarian chili never tasted so hearty.",
-  "categories": ["soup", "vegetarian", "vegetarian"],
   "steps": [
     {
       "sectionTitle": "",
       "steps": [
-        "Finely chop onion, red and green peppers, and carrots. Add with corn into pot on medium to meduim low heat. Simmer for 10 minutes or until tender.",
+        "Finely chop onion, red and green peppers, and carrots. Add with corn into pot on medium to medium low heat. Simmer for 10 minutes or until tender.",
         "Add remaining ingredients except cilantro and simmer over medium-low heat, covered, for 30 minutes.",
         "uncover and stir and simmer for an additional 20-30 minutes."
       ]
@@ -86,7 +85,7 @@
             1.5
           ],
           "unit": "cup",
-          "ingredient": "frozen corn kernals"
+          "ingredient": "frozen corn kernals (maybe more)"
         },
         {
           "amount": [
@@ -171,7 +170,7 @@
           ],
           "unit": "cup",
           "ingredient": "dry bulger wheat",
-          "modifier": "hot sauce or cyane pepper (optional)"
+          "modifier": "hot sauce or cayenne pepper (optional)"
         },
         {
           "amount": [
@@ -184,5 +183,10 @@
       ]
     }
   ],
-  "timestamp": "11/11/2022 9:03:36"
+  "timestamp": "11/11/2022 9:03:36",
+  "categories": [
+    "soup",
+    "vegetarian",
+    "vegetarian"
+  ]
 }

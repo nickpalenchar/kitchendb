@@ -2,7 +2,6 @@
   "version": "1",
   "name": "Cacio e pepe",
   "summary": "A simple yet elegant three-ingredient pasta dish",
-  "categories": ["pasta", "dinner"],
   "steps": [
     {
       "sectionTitle": "",
@@ -52,5 +51,9 @@
       ]
     }
   ],
-  "timestamp": "11/11/2022 9:00:30"
+  "timestamp": "11/11/2022 9:00:30",
+  "categories": [
+    "pasta",
+    "dinner"
+  ]
 }

@@ -107,38 +107,35 @@ class TestParseIngredient(unittest.TestCase):
         )
 
     def test_parse_with_alias_unit(self):
-        line = '1 tablespoon ginger'
+        line = "1 tablespoon ginger"
         result = reciparcer.parse_ingredient(line)
         self.assertDictEqual(
-            {
-                "amount": [1.0],
-                "unit": "tbsp",
-                "ingredient": "ginger"
-            },
-            result
+            {"amount": [1.0], "unit": "tbsp", "ingredient": "ginger"}, result
         )
-    
+
     def test_parse_with_alias_unit2(self):
-        line = '1 ounces butternut squash'
+        line = "1 ounces butternut squash"
         result = reciparcer.parse_ingredient(line)
         self.assertDictEqual(
-            {
-                "amount": [1.0],
-                "unit": "oz",
-                "ingredient": "butternut squash"
-            },
-            result
+            {"amount": [1.0], "unit": "oz", "ingredient": "butternut squash"}, result
         )
-    
 
     def test_parses_whole_number_and_fraction(self):
-        line = '1 1/2 cup frozen corn'
+        line = "1 1/2 cup frozen corn"
+        result = reciparcer.parse_ingredient(line)
+        self.assertDictEqual(
+            {"amount": [1.5], "unit": "cup", "ingredient": "frozen corn"}, result
+        )
+
+    def test_parse_ingredient2(self):
+        line = "4 oz medium shallots (about 2-3 bulbs, cut into quarters)"
         result = reciparcer.parse_ingredient(line)
         self.assertDictEqual(
             {
-                "amount": [1.5],
-                "unit": "cup",
-                "ingredient": "frozen corn"
+                "amount": [4.0],
+                "unit": "oz",
+                "ingredient": "medium shallots (about 2-3 bulbs",
+                "modifier": "cut into quarters)"
             },
-            result
+            result,
         )

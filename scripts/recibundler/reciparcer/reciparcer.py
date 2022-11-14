@@ -140,10 +140,15 @@ def parse_amount(m: str) -> t.Optional[t.Tuple[t.List[float], int]]:
             ("DECIMAL_MATCH", decimal_match),
         )
     )
+    if re_match := re.match('([^a-zA-Z]*)([a-zA-Z].*)', m):
+        amount, ing = re_match.groups()
+    else:
+        return None
+    
     for dash in DASHES:
-        if dash in m:
-            min, max = m.split(dash)
-            min = f"{min} cup devnull"
+        if dash in amount:
+            min, max = amount.split(dash)
+            min, max = f"{min} cup devnull", f"{max} cup devnull"
             parsed_min = parse_amount(min)
             parsed_max = parse_amount(max)
             if parsed_min and parsed_max:
@@ -155,7 +160,7 @@ def parse_amount(m: str) -> t.Optional[t.Tuple[t.List[float], int]]:
                 )
 
     for matcher, fn in matchers.items():
-        match = fn(m)
+        match = fn(amount + ing)
         if match:
             log.debug(f"matched on {matcher}")
             return ([match[0]], match[1])
