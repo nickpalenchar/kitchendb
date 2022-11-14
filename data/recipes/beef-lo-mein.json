@@ -18,6 +18,7 @@
       ]
     }
   ],
+  "categories": ["dinner"],
   "ingredients": [
     {
       "sectionTitle": "Pasta dish",
@@ -35,42 +36,21 @@
           ],
           "customUnit": "",
           "ingredient": "large carrot",
-          "modifier": "3 oz (85g)"
-        },
-        {
-          "amount": [
-            10.0
-          ],
-          "unit": "oz",
-          "ingredient": "- 16 oz (283 g - 463g) broccoli"
+          "modifier": "3 oz"
         },
         {
           "amount": [
             3.0
           ],
           "unit": "oz",
-          "ingredient": "(85g) snow peas"
+          "ingredient": "snow peas"
         },
         {
           "amount": [
             3.0
           ],
           "unit": "tbsp",
-          "ingredient": "(45 mL) sesame oil"
-        },
-        {
-          "amount": [
-            8.0
-          ],
-          "unit": "oz",
-          "ingredient": "- 10 oz (227g -283g) chicken breast"
-        },
-        {
-          "amount": [
-            9.0
-          ],
-          "unit": "oz",
-          "ingredient": "- 10 oz (255g - 283g) thin spaghetti/linquine pasta"
+          "ingredient": "sesame oil"
         }
       ]
     },
@@ -82,42 +62,42 @@
             0.25
           ],
           "unit": "cup",
-          "ingredient": "(60 mL) original soy sauce"
+          "ingredient": "soy sauce"
         },
         {
           "amount": [
             0.25
           ],
           "unit": "cup",
-          "ingredient": "(60 mL) water"
+          "ingredient": "water"
         },
         {
           "amount": [
             3.0
           ],
           "unit": "tbsp",
-          "ingredient": "(45 mL) sesame oil"
+          "ingredient": "sesame oil"
         },
         {
           "amount": [
             1.0
           ],
           "unit": "tbsp",
-          "ingredient": "(12.6g) sugar"
+          "ingredient": "sugar"
         },
         {
           "amount": [
             0.5
           ],
           "unit": "tsp",
-          "ingredient": "(1.2g) ground pepper"
+          "ingredient": "ground pepper"
         },
         {
           "amount": [
             0.25
           ],
           "unit": "tsp",
-          "ingredient": "(0.5g) red pepper flakes",
+          "ingredient": "red pepper flakes",
           "modifier": "optional for a kick"
         },
         {
@@ -125,13 +105,10 @@
             1.0
           ],
           "unit": "tsp",
-          "ingredient": "(2.8g) ground ginger"
+          "ingredient": "ground ginger"
         }
       ]
     }
   ],
-  "timestamp": "11/4/2022 23:00:00",
-  "categories": [
-    "dinner"
-  ]
+  "timestamp": "11/4/2022 23:00:00"
 }
