@@ -2,6 +2,7 @@
   "version": "1",
   "name": "Haba-Jala-Basco Hot Sauce",
   "summary": "Easy home made hot sauce",
+  "categories": ["condiment/dressing"],
   "steps": [
     {
       "sectionTitle": "",
