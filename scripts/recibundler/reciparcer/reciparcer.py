@@ -70,13 +70,31 @@ def parse_ingredient(m: str) -> t.Union[dict, object]:
     else:
         result["unit"] = unit
     ingredient, *modifier = rest[0].split(",", 1)
-    result["ingredient"] = ingredient  # type: ignore
+    result["ingredient"] = normalize_ingredient(ingredient)  # type: ignore
     if modifier:
         result["modifier"] = modifier[0].strip()  # type: ignore
 
     log.debug(result)
     return result
 
+def normalize_ingredient(ing: str) -> str:
+    """
+    Some final doctoring of the ingredient
+    """
+    if matches := re.match('([(\[\])].*\d.*[(\[\])])(.*)', ing):
+        ing = matches.group(2).strip()
+    
+    return alias_ingredient(ing)
+
+def alias_ingredient(ing: str) -> str:
+    alias_ingredient = {
+        'frozen corn kernals': 'frozen corn',
+        'frozen corn kernels': 'frozen corn',
+        'original soy sauce': 'soy sauce',
+    }
+    if ing.lower() in alias_ingredient:
+        return alias_ingredient[ing]
+    return ing
 
 def _parse_unit(m: str):
     """
