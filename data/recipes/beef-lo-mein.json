@@ -1,7 +1,7 @@
 {
   "version": "1",
   "name": "Beef Lo Mein",
-  "summary": "Simple and delicious take-out replacement.",
+  "summary": "",
   "steps": [
     {
       "sectionTitle": "",
@@ -18,7 +18,6 @@
       ]
     }
   ],
-  "categories": ["dinner"],
   "ingredients": [
     {
       "sectionTitle": "Pasta dish",
@@ -36,7 +35,14 @@
           ],
           "customUnit": "",
           "ingredient": "large carrot",
-          "modifier": "3 oz"
+          "modifier": "3 oz (85g)"
+        },
+        {
+          "amount": [
+            10.0
+          ],
+          "unit": "oz",
+          "ingredient": "- 16 oz (283 g - 463g) broccoli"
         },
         {
           "amount": [

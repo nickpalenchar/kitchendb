@@ -98,6 +98,13 @@ class TestParseIngredient(unittest.TestCase):
         self.assertDictEqual(
             {"amount": [6.0, 7.0], "unit": "gal", "ingredient": "milk"}, result
         )
+    
+    def test_handle_range_unit_repeating(self):
+        line = "8 oz - 10 oz milk"
+        result = reciparcer.parse_ingredient(line)
+        self.assertDictEqual(
+            {"amount": [8.0, 10.0], "unit": "oz", "ingredient": "milk"}, result
+        )
 
     def test_parse_unit_handles_caps(self):
         line = "1 TSP baking soda"
