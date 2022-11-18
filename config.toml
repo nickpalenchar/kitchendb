@@ -4,3 +4,17 @@ title = "KitchenDB"
 theme = "ananke"
 
 recent_posts_number = 10
+
+
+#[[menu.main]]
+#identifier = "recipes"
+#name = "Recipes"
+#url = "/recipes/"
+#weight = -110
+
+[[menu.main]]
+identifier = "submit"
+name = "Submit"
+pre = "<span style='padding: 0.3em; border-radius: 4px; border: 1px solid #597998' class='light-blue'>"
+post = "</span>"
+url = "https://docs.google.com/forms/d/e/1FAIpQLSduUXKyLCMNml5BKIsXPwpdqDk640Ch_uX8RUAxYXKWeuGm7w/viewform?usp=sf_link"
