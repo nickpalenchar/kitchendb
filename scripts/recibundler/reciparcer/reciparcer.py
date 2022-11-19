@@ -4,7 +4,7 @@ from collections import OrderedDict
 import logging as log
 import typing as t
 from .constants import UNPARSABLE_INGREDIENT, UNPARSABLE_UNIT, FRAC_CHARS_TO_DEC
-from recibundler.reciparcer.subparsers.amount import parse_amount, _parse_unit
+from recibundler.reciparcer.subparsers.amount import parse_amount, _parse_unit, _format_amount
 from recibundler.reciparcer.subparsers.ingredient import normalize_ingredient
 
 
@@ -76,33 +76,6 @@ def parse_ingredient(m: str) -> t.Union[dict, object]:
 
     log.debug(result)
     return result
-
-
-def _format_amount(m: t.Union[str, t.List[str]]) -> t.List[str]:
-    """
-    attempts to parse the measurement for the `amount` into its decimal form
-    """
-    return [_format_amount_item(el) for el in m]
-
-
-def _format_amount_item(m: str) -> str:
-    m = re.sub("\s+", " ", m.strip())
-    leading = "0"
-
-    if " " in m:
-        leading, m = m.split(" ")
-
-    if m in FRAC_CHARS_TO_DEC.keys():
-        return leading + str(FRAC_CHARS_TO_DEC[m])
-
-    try:
-        float(m)
-        return str(int(leading) + round(float(m), 2))
-    except ValueError:
-        if "/" in m:
-            num, den = m.split("/")
-            return leading + str(round(int(num) / int(den), 2))
-        raise Exception("could not parse amount")
 
 
 def _convert_frac_chars(m: str) -> str:
