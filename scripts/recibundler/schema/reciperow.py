@@ -13,6 +13,8 @@ reciperow = t.NamedTuple(
         ("steps", str),
         ("link_to_photo", t.Optional[str]),
         ("submitter_email", t.Optional[str]),
+        ("null", t.Any),
+        ("categories", str)
     ],
 )
 

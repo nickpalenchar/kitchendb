@@ -120,6 +120,14 @@ class TestParseIngredient(unittest.TestCase):
             {"amount": [1.0], "unit": "oz", "ingredient": "butternut squash"}, result
         )
 
+    def test_parse_with_ingredient_aliases(self):
+        line = "10 cup frozen corn kernals"
+        result = reciparcer.parse_ingredient(line)
+        self.assertDictEqual(
+            {"amount": [10.0], "unit": "cup", "ingredient": "frozen corn"},
+            result
+        )
+
     def test_parses_whole_number_and_fraction(self):
         line = "1 1/2 cup frozen corn"
         result = reciparcer.parse_ingredient(line)
@@ -136,6 +144,32 @@ class TestParseIngredient(unittest.TestCase):
                 "unit": "oz",
                 "ingredient": "medium shallots (about 2-3 bulbs",
                 "modifier": "cut into quarters)"
+            },
+            result,
+        )
+
+    def test_strip_alternate_measurements(self):
+        """This will be added programmatically"""
+        line = "8-10 oz (227g -283g) chicken breast"
+        result = reciparcer.parse_ingredient(line)
+        self.assertDictEqual(
+            {
+                "amount": [8.0, 10.0],
+                "unit": "oz",
+                "ingredient": "chicken breast",
+            },
+            result,
+        )
+
+    def test_strip_alternate_measurements2(self):
+        """This will be added programmatically"""
+        line = "1/4 cup (60 mL) original soy sauce"
+        result = reciparcer.parse_ingredient(line)
+        self.assertDictEqual(
+            {
+                "amount": [0.25],
+                "unit": "cup",
+                "ingredient": "soy sauce", # alias to original soy sauce
             },
             result,
         )

@@ -4,8 +4,8 @@ from collections import OrderedDict
 import logging as log
 import typing as t
 from .constants import UNPARSABLE_INGREDIENT, UNPARSABLE_UNIT, FRAC_CHARS_TO_DEC
-from .matchers import fraction_match, decimal_match, number_match
-from recibundler.constants import DASHES
+from recibundler.reciparcer.subparsers.amount import parse_amount, _parse_unit, _format_amount
+from recibundler.reciparcer.subparsers.ingredient import normalize_ingredient
 
 
 def parse_ingredients(s: str):
@@ -70,129 +70,12 @@ def parse_ingredient(m: str) -> t.Union[dict, object]:
     else:
         result["unit"] = unit
     ingredient, *modifier = rest[0].split(",", 1)
-    result["ingredient"] = ingredient  # type: ignore
+    result["ingredient"] = normalize_ingredient(ingredient)  # type: ignore
     if modifier:
         result["modifier"] = modifier[0].strip()  # type: ignore
 
     log.debug(result)
     return result
-
-
-def _parse_unit(m: str):
-    """
-    Attempts to parse a unit of measurement.
-    """
-    log.debug(f"parsing unit: {m}")
-    # NB: These acceptable enums come from the `data/schemase/recipes.json` schema.
-    # keep them in sync
-    valid_units = (
-        "lb",
-        "oz",
-        "g",
-        "cup",
-        "fl oz",
-        "ml",
-        "pint",
-        "tsp",
-        "tbsp",
-        "kg",
-        "gal",
-        "liter",
-    )
-
-    alias_units = {
-        "tbs": "tbsp",
-        "tablespoon": "tbsp",
-        "ts": "tsp",
-        "teaspoon": "tsp",
-        "pound": "lb",
-        "gram": "g",
-        "mililiter": "ml",
-        "milliliter": "ml",
-        "pt": "pint",
-        "kilogram": "kg",
-        "killogram": "kg",
-        "gallon": "gal",
-        "ounce": "oz",
-        "fluid ounces": "fl oz",
-    }
-
-    parsed = m.strip().replace(".", "").lower()
-    if parsed in valid_units:
-        return parsed.lower()
-    if parsed in alias_units.keys():
-        return alias_units[parsed]
-    if parsed.endswith("s"):
-        return _parse_unit(parsed[:-1])
-    return UNPARSABLE_UNIT
-
-
-def parse_amount(m: str) -> t.Optional[t.Tuple[t.List[float], int]]:
-    """
-    Returns the match, and a number indicating the characters
-    consumed from the string. The char should be used to
-    slice off what was used in the calling function
-    """
-    matchers = OrderedDict(
-        (
-            ("FRACTION_MATCH", fraction_match),
-            ("NUMBER_MATCH", number_match),
-            ("DECIMAL_MATCH", decimal_match),
-        )
-    )
-    if re_match := re.match('([^a-zA-Z]*)([a-zA-Z].*)', m):
-        amount, ing = re_match.groups()
-    else:
-        return None
-    
-    for dash in DASHES:
-        if dash in amount:
-            min, max = amount.split(dash)
-            min, max = f"{min} cup devnull", f"{max} cup devnull"
-            parsed_min = parse_amount(min)
-            parsed_max = parse_amount(max)
-            if parsed_min and parsed_max:
-                if len(parsed_min[0]) > 1 or len(parsed_max[0]) > 1:
-                    return None
-                return (
-                    [parsed_min[0][0], parsed_max[0][0]],
-                    parsed_min[1] + parsed_max[1] + 1,
-                )
-
-    for matcher, fn in matchers.items():
-        match = fn(amount + ing)
-        if match:
-            log.debug(f"matched on {matcher}")
-            return ([match[0]], match[1])
-
-    return None
-
-
-def _format_amount(m: t.Union[str, t.List[str]]) -> t.List[str]:
-    """
-    attempts to parse the measurement for the `amount` into its decimal form
-    """
-    return [_format_amount_item(el) for el in m]
-
-
-def _format_amount_item(m: str) -> str:
-    m = re.sub("\s+", " ", m.strip())
-    leading = "0"
-
-    if " " in m:
-        leading, m = m.split(" ")
-
-    if m in FRAC_CHARS_TO_DEC.keys():
-        return leading + str(FRAC_CHARS_TO_DEC[m])
-
-    try:
-        float(m)
-        return str(int(leading) + round(float(m), 2))
-    except ValueError:
-        if "/" in m:
-            num, den = m.split("/")
-            return leading + str(round(int(num) / int(den), 2))
-        raise Exception("could not parse amount")
 
 
 def _convert_frac_chars(m: str) -> str:
