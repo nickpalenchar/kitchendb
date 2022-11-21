@@ -20,7 +20,7 @@
             {{ $.Param "recent_copy" | default (i18n "recentTitle" .) }}
           </h1>
         {{ end }}
-
+      {{ partial "search" }}
       {{ $n_posts := $.Param "recent_posts_number" | default 10}}
 
       <section class="w-100 mw8">
