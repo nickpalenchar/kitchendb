@@ -1,4 +1,9 @@
-<h1 id="partial-search-title">search goes here</h1>
+<article id="partials_search">
+  <form class="search-form">
+    {{ partial "form-ui/input" (dict "id" "foobarzz") }}
+  </form>
+</article>
+
 
 <script>
   $("#partial-search-title").html('hellooo!')
