@@ -7,7 +7,6 @@
       console.log('trying again');
       setTimeout(function () { main(nextDelay * 2) }, nextDelay);
     }
-    console.log('importing page find')
     var pagefind = await import("/_pagefind/pagefind.js");
     var search = await pagefind.search("soup");
     var data = await search.results[0].data();
