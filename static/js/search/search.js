@@ -44,20 +44,15 @@ function searchIngredientKeypress (event) {
     updateIngredientList(ingredient);
     return;
   }
-  if (key === "Enter" || event.originalEvent.type === 'blur') {
-    console.log('doing it')
+}
+function preventKeys (event) {
+  if (event.originalEvent.key === 'Enter') {
     event.preventDefault();
-    var ingredient = this.innerText.replace(/\W/g, '');
-    if (INGREDIENTS.indexOf(ingredient) === -1) {
-      this.innerText = "";
-      return;
-    }
-    updateIngredientList(ingredient);
   }
 }
 
 var searchIngredients = $('#search-ingredient');
 searchIngredients
   .autocomplete({ source: INGREDIENTS, minLength: 1, select: searchIngredientKeypress })
-  {{/*  .keypress(searchIngredientKeypress)
-  .on('blur', searchIngredientKeypress.bind(searchIngredients.get(0)))  */}}
+  .keypress(preventKeys);
+  // .on('blur', searchIngredientKeypress.bind(searchIngredients.get(0)));
