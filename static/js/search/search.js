@@ -55,7 +55,8 @@ function preventKeys (event) {
   var pagefind = await import("/_pagefind/pagefind.js");
   console.log('loading pagefind');
   var filters = await pagefind.filters();
-  INGREDIENTS = Object.keys(filters.ingredients);
+  console.log(filters);
+  INGREDIENTS = Object.keys(filters.ingredient);
   console.log("ingrediest?", INGREDIENTS);
   var searchIngredients = $('#search-ingredient');
   searchIngredients
