@@ -29,7 +29,7 @@ function updateIngredientList(ingredient, ingredients) {
   var el = IngredientBox(ingredient);
   el.attr('checked', true);
   $('#add-ingredient-form').remove();
-  $('#filter-ingredients').append(el, AddIngredientForm(ingredients));
+  $('#search-area-ingredients').prepend(el);
 }
 
 $(function () {
@@ -41,6 +41,7 @@ function searchIngredientKeypress (event) {
   var key = event.originalEvent.key;
   if (event.type === "autocompleteselect" ) {
     var ingredient = event.innerText;
+    updateIngredientList(ingredient, INGREDIENTS);
   }
   if (key === "Enter" || event.originalEvent.type === 'blur') {
     console.log('doing it')
@@ -50,7 +51,7 @@ function searchIngredientKeypress (event) {
       this.innerText = "";
       return;
     }
-    updateIngredientList(el[0].value, INGREDIENTS);
+    updateIngredientList(ingredient, INGREDIENTS);
   }
 }
 
