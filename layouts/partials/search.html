@@ -1,6 +1,26 @@
 <article id="partials_search">
   <form class="search-form">
-    <div id="search-area-ingredients">{{ partial "form-ui/input" (dict "id" "search-ingredient") }}</div>
+    <span id="search-area-ingredients"></span>{{ partial "form-ui/input" (dict "id" "search-ingredient") }}
   </form>
 </article>
 <script src="/js/search/search.js"></script>
+<style>
+  .filter-ingredient {
+    cursor: pointer;
+    display: inline-block;
+    background-color: rgb(205, 236, 255);
+    border-radius: 10px;
+    padding: 4px;
+    margin: 0.22em;
+  }
+
+  .filter-ingredient:hover {
+    background-color: rgb(162, 219, 255);
+    ;
+  }
+
+  .filter-ingredient-label {
+    cursor: pointer;
+    padding: 0 4px 0;
+  }
+</style>

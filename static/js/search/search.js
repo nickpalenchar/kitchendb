@@ -28,7 +28,7 @@ function IngredientBox(name, persistent = false) {
 function updateIngredientList(ingredient) {
   var el = IngredientBox(ingredient);
   el.attr('checked', true);
-  $('#search-area-ingredients').prepend(el);
+  $('#search-area-ingredients').append(el);
 }
 
 $(function () {
