@@ -35,11 +35,10 @@ $(function () {
   $("#partial-search-title").html('hellooo!')
 });
 
-function searchIngredientKeypress (event) {
-  console.dir(event);
-  var key = event.originalEvent.key;
+function searchIngredientKeypress (event, ui) {
+  console.dir(event, ui);
   if (event.type === "autocompleteselect" ) {
-    var ingredient = event.currentTarget.innerText;
+    var ingredient = ui.item.value;
     setTimeout(function () {$("#search-ingredient").html("")});
     updateIngredientList(ingredient);
     return;
@@ -53,11 +52,8 @@ function preventKeys (event) {
 
 (async function () {
   var pagefind = await import("/_pagefind/pagefind.js");
-  console.log('loading pagefind');
   var filters = await pagefind.filters();
-  console.log(filters);
   INGREDIENTS = Object.keys(filters.ingredient);
-  console.log("ingrediest?", INGREDIENTS);
   var searchIngredients = $('#search-ingredient');
   searchIngredients
     .autocomplete({ source: INGREDIENTS, minLength: 1, select: searchIngredientKeypress })
