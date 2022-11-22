@@ -51,8 +51,15 @@ function preventKeys (event) {
   }
 }
 
-var searchIngredients = $('#search-ingredient');
-searchIngredients
-  .autocomplete({ source: INGREDIENTS, minLength: 1, select: searchIngredientKeypress })
-  .keypress(preventKeys);
-  // .on('blur', searchIngredientKeypress.bind(searchIngredients.get(0)));
+(async function () {
+  var pagefind = await import("/_pagefind/pagefind.js");
+  console.log('loading pagefind');
+  var filters = await pagefind.filters();
+  INGREDIENTS = Object.keys(filters.ingredients);
+  console.log("ingrediest?", INGREDIENTS);
+  var searchIngredients = $('#search-ingredient');
+  searchIngredients
+    .autocomplete({ source: INGREDIENTS, minLength: 1, select: searchIngredientKeypress })
+    .keypress(preventKeys);
+    // .on('blur', searchIngredientKeypress.bind(searchIngredients.get(0)));
+})()

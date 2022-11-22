@@ -13,11 +13,11 @@
       {{ range . }}
       <li>
         {{ if .amount }}
-          <b><span  class="recipe-unit">
+          <b><span class="recipe-unit">
             {{ cond ( eq (len .amount) 1 ) ( index .amount 0 ) ( printf "%v-%v" (index .amount 0) (index .amount 1) ) }}
             </span>
         {{ end }}
-        {{ .unit }}</b> {{ .ingredient }}{{ if .modifier }}, {{ .modifier }}{{ end}}
+        {{ .unit }}</b> <span data-pagefind-filter="ingredient">{{ .ingredient }}</span>{{ if .modifier }}, {{ .modifier }}{{ end}}
       </li>
       {{ end }}
       </ul>
