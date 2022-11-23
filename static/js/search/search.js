@@ -11,10 +11,8 @@ function IngredientBox(name, persistent = false) {
   var label = $('<label class="filter-ingredient-label" for="' + name + '"> ' + name + ' </label>');
   el.append(input, label);
   el.addClass('ingredient-box');
-  el.attr('id', 'filter-ingredient').attr('data-persistent', persistent);
-  if (!persistent) {
-    input.attr('checked', true);
-  }
+  el.attr('id', 'filter-ingredient')
+  input.attr('checked', 'true');
   el.on('click', () => {
     if (persistent) {
       return;
