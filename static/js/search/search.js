@@ -51,12 +51,22 @@ function preventKeys (event) {
 }
 
 (async function () {
-  var pagefind = await import("/_pagefind/pagefind.js");
-  var filters = await pagefind.filters();
+  try {
+    var pagefind = await import("/_pagefind/pagefind.js");
+    var filters = await pagefind.filters();
+  } catch (e) {
+    // we are probably in dev so mock ingredients
+    filters = { ingredient: {
+      "red cabbage": 3,
+      "sugar": 2,
+      "butter": 2,
+      "flour": 2,
+    }}
+  }
+
   INGREDIENTS = Object.keys(filters.ingredient);
   var searchIngredients = $('#search-ingredient');
   searchIngredients
     .autocomplete({ source: INGREDIENTS, minLength: 1, select: searchIngredientKeypress })
     .keypress(preventKeys);
-    // .on('blur', searchIngredientKeypress.bind(searchIngredients.get(0)));
 })()
