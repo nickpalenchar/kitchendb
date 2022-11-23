@@ -100,5 +100,6 @@ function preventKeys (event) {
         console.log('>>>', r)
         $searchResults.append(RecipeResult(r.meta.title, r.url, r.meta.summary));
       });
+    $('#search-results-header').show();
   })
 })()
