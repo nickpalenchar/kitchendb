@@ -23,6 +23,13 @@ function IngredientBox(name, persistent = false) {
   return el;
 }
 
+function RecipeResult(name, url) {
+  var el = $(`<h1 class="f3 fw1 athelas mt0 lh-title recipe-result">
+  <a href="${url}" class="color-inherit dim link">
+    ${name} </a></h1>`);
+  return el;
+}
+
 function updateIngredientList(ingredient) {
   var el = IngredientBox(ingredient);
   el.attr('checked', true);
@@ -79,9 +86,14 @@ function preventKeys (event) {
     });
     var results = await pagefind.search(null, {
       filters: {
-        ingredient: ["butter"],
+        ingredient,
       }
     });
-    console.log('results!', results);
+    var $searchResults = $('#search-results');
+    $('#search-results .recipe-result').remove();
+    (await Promise.all(results.results.slice(0, 5).map(r => r.data())))
+      .forEach(function(r) {
+        $searchResults.append(RecipeResult(r.meta.title, r.url));
+      });
   })
 })()
