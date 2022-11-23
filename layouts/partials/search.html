@@ -1,6 +1,9 @@
 <article id="partials_search">
   <form class="search-form">
     <span><h4 style="display: inline;">Ingredients: </h4><span id="search-area-ingredients"></span>{{ partial "form-ui/input" (dict "id" "search-ingredient") }}
+    <div style="padding: 2em 0;">
+      <button id="search-submit" type="button">Search</button>
+    </div>
   </form>
 </article>
 <script src="/js/search/search.js"></script>
@@ -41,6 +44,9 @@
     font-size: 16px;
     display: inline-block;
     cursor: auto;
+  }
+  #search-submit:hover {
+    cursor: pointer;
   }
   /* TODO make it grow when selected with focus */
 </style>

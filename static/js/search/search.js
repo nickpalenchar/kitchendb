@@ -66,5 +66,22 @@ function preventKeys (event) {
   var searchIngredients = $('#search-ingredient');
   searchIngredients
     .autocomplete({ source: INGREDIENTS, minLength: 1, select: searchIngredientKeypress })
-    .keypress(preventKeys);
+    .keypress(preventKeys)
+
+  // submit button
+  $('#search-submit').on('click', async function() {
+    var ingredient = []
+    $('.filter-ingredient').each(function() {
+      if (!this.innerText) {
+        return;
+      }
+      ingredient.push(this.innerText.replace(/^\s?/, ''));
+    });
+    var results = await pagefind.search(null, {
+      filters: {
+        ingredient: ["butter"],
+      }
+    });
+    console.log('results!', results);
+  })
 })()
