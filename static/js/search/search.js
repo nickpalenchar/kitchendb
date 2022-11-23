@@ -23,16 +23,20 @@ function IngredientBox(name, persistent = false) {
   return el;
 }
 
-function RecipeResult(name, url) {
-  var el = $(`<h1 class="f3 fw1 athelas mt0 lh-title recipe-result">
+function RecipeResult(name, url, summary) {
+  var el = $(`
+  <div class="recipe-result"><h1 class="f3 fw1 athelas mt0 lh-title">
   <a href="${url}" class="color-inherit dim link">
-    ${name} </a></h1>`);
+    ${name} </a></h1>
+    <div class="f6 f5-l lh-copy nested-copy-line-height nested-links">
+          <i>${summary || ''}</i>
+        </div></div>`);
   return el;
 }
 
 function updateIngredientList(ingredient) {
   var el = IngredientBox(ingredient);
-  el.attr('checked', true);
+  el.attr('checked', 'true');
   $('#search-area-ingredients').append(el);
 }
 
@@ -93,7 +97,8 @@ function preventKeys (event) {
     $('#search-results .recipe-result').remove();
     (await Promise.all(results.results.slice(0, 5).map(r => r.data())))
       .forEach(function(r) {
-        $searchResults.append(RecipeResult(r.meta.title, r.url));
+        console.log('>>>', r)
+        $searchResults.append(RecipeResult(r.meta.title, r.url, r.meta.summary));
       });
   })
 })()
