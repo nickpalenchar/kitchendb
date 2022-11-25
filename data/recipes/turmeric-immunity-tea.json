@@ -1,0 +1,97 @@
+{
+  "version": "1",
+  "name": "Turmeric Immunity Tea",
+  "summary": "Keep your immune system strong during the winter months",
+  "steps": [
+    {
+      "sectionTitle": "",
+      "steps": [
+        "Bring the water, lemon peel, ginger, turmeric, cayenne, and black pepper to a minimal simmer.",
+        "Maintain a low simmer for 7 minutes. Don't let bubble or boil, as it can harm the nutrients.",
+        "Take off the heat and squeeze in the lemon juice and stir in the coconut oil and honey. ",
+        "Strain the tea into a container or a cup. Tea in a closed container kept in the refrigerator will keep up to 3 days."
+      ]
+    }
+  ],
+  "ingredients": [
+    {
+      "sectionTitle": "",
+      "ingredients": [
+        {
+          "amount": [
+            5.0
+          ],
+          "unit": "cup",
+          "ingredient": "of water"
+        },
+        {
+          "amount": [
+            1.0
+          ],
+          "customUnit": "",
+          "ingredient": "lemon's peel (keep white pith intact)"
+        },
+        {
+          "amount": [
+            2.0
+          ],
+          "customUnit": "",
+          "ingredient": "inch piece of ginger (cut into thin rounds",
+          "modifier": "skin on)"
+        },
+        {
+          "amount": [
+            1.5
+          ],
+          "unit": "tbsp",
+          "ingredient": "ground turmeric"
+        },
+        {
+          "amount": [
+            1.0
+          ],
+          "customUnit": "",
+          "ingredient": "pinch of cayenne pepper"
+        },
+        {
+          "amount": [
+            1.0
+          ],
+          "customUnit": "",
+          "ingredient": "crack of black pepper"
+        },
+        {
+          "amount": [
+            1.0
+          ],
+          "customUnit": "",
+          "ingredient": "lemon's juice"
+        },
+        {
+          "amount": [
+            1.0
+          ],
+          "unit": "tsp",
+          "ingredient": "coconut oil",
+          "modifier": "butter, or avocado oil"
+        },
+        {
+          "amount": [
+            1.0
+          ],
+          "unit": "tbsp",
+          "ingredient": "honey"
+        }
+      ]
+    }
+  ],
+  "timestamp": "11/22/2022 16:21:54",
+  "categories": [
+    "drink",
+    "seasonal"
+  ],
+  "attribution": {
+    "name": "Bobby Parrish",
+    "links": []
+  }
+}

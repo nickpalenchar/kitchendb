@@ -72,6 +72,7 @@ def is_recipe_old(recipe: reciperow, since) -> bool:
     recipe_date = datetime.strptime(recipe.timestamp, "%m/%d/%Y %H:%M:%S")
     return recipe_date <= since
 
+
 def write_recipe_to_json(recipe: reciperow, additional_keys=None):
     if additional_keys is None:
         additional_keys = {}
@@ -82,7 +83,18 @@ def write_recipe_to_json(recipe: reciperow, additional_keys=None):
         "steps": reciparcer.parse_steps(recipe.steps),
         "ingredients": reciparcer.parse_ingredients(recipe.ingredients),
         "timestamp": recipe.timestamp,
+        "categories": [c.strip() for c in recipe.categories.split(",")],
     }
+    if recipe.author_name or recipe.social_links:
+        attrs["attribution"] = {
+            "name": recipe.author_name,
+            "links": [
+                {"type": "TODO", "link": link}
+                for link in (
+                    recipe.social_links.split("\n") if recipe.social_links else []
+                )
+            ],
+        }
     optional_attrs = {
         "yields": None,  # TODO
         "yieldsUnit": None,  # TODO
@@ -99,7 +111,7 @@ def write_recipe_to_json(recipe: reciperow, additional_keys=None):
     logging.debug(f"Recipe will be named {filename}")
 
     with open(path.join("..", "data", "recipes", filename), "w") as fh:
-        fh.write(json.dumps({**recipe, **additional_keys}, indent=2)) # type: ignore
+        fh.write(json.dumps({**recipe, **additional_keys}, indent=2))  # type: ignore
 
 
 def optional(value) -> t.Optional[t.Any]:

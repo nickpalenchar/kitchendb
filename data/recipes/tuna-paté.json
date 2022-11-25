@@ -1,0 +1,66 @@
+{
+  "version": "1",
+  "name": "Tuna Pat\u00e9",
+  "summary": "Quick, cheap, and super easy, this tuna salad is great as a lettuce wrap or sandwhich",
+  "steps": [
+    {
+      "sectionTitle": "",
+      "steps": [
+        "Mix all ingredients well. Serve in lettuce wraps"
+      ]
+    }
+  ],
+  "ingredients": [
+    {
+      "sectionTitle": "",
+      "ingredients": [
+        {
+          "amount": [
+            1.0
+          ],
+          "customUnit": "",
+          "ingredient": "can tuna"
+        },
+        {
+          "amount": [
+            2.0
+          ],
+          "customUnit": "",
+          "ingredient": "soup spoons mayonnaise"
+        },
+        {
+          "amount": [
+            0.5
+          ],
+          "customUnit": "",
+          "ingredient": "onion",
+          "modifier": "finely chopped,"
+        },
+        {
+          "amount": [
+            1.0
+          ],
+          "customUnit": "",
+          "ingredient": "garlic clove",
+          "modifier": "minced"
+        },
+        {
+          "ingredient": "parsley leaves, to taste"
+        },
+        {
+          "ingredient": "salt, to taste"
+        },
+        {
+          "ingredient": "black pepper, to taste"
+        },
+        {
+          "ingredient": "hot sauce, to taste (optional)"
+        }
+      ]
+    }
+  ],
+  "timestamp": "11/21/2022 17:01:52",
+  "categories": [
+    "lunch"
+  ]
+}
