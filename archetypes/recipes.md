@@ -5,8 +5,10 @@ draft: true
 categories: [] #$CATEGORIES$
 summary: " " #$SUMMARY$
 #$AUTHOR$
+prepTime: 0
+cookTime: 0
+difficulty: 0
 ---
-
+{{< recipe-data url="data/recipes/{{ replace .Name "\"" "\\\"" }}.json">}}
 {{< recipe-summary url="data/recipes/{{ replace .Name "\"" "\\\"" }}.json">}}
-<!--more-->
 {{< recipe-list url="data/recipes/{{ replace .Name "\"" "\\\"" }}.json">}}

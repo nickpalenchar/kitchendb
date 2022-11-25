@@ -1,0 +1,51 @@
+{{ with .Page.Params }}
+  {{ $data := . }}
+  {{ if or (ne .prepTime 0) (ne .cookTime 0) (ne .difficulty 0) }}
+    <dl class="recipe-data-table avenir">
+      {{ if ne .prepTime 0 }}
+      <span>
+        <dt class="f5">Prep time</dt>
+        <dd>{{ .prepTime }}<span class=f6>mins</span></dd>
+      </span>
+      {{ end }}
+      {{ if ne .cookTime 0 }}
+      <span>
+        <dt class="f5">Cook time</dt>
+        <dd>{{ .cookTime }}<span class=f6>mins</span></dd>
+      </span>
+      {{ end }}
+      {{ if ne .difficulty 0 }}
+      <span class="recipe-data-difficulty">
+        <dt class="f5">Difficulty</dt>
+        <span class="f5" style="padding-left: 1px"> 
+        {{ safeHTML (strings.Repeat .difficulty `<i class="fa-solid fa-circle"></i> `) }}
+        {{ safeHTML (strings.Repeat (sub 5 .difficulty) `<i class="fa-solid fa-circle" style="color: #ccc"></i> `) }}
+        </span>
+      </span>
+      {{ end }}
+    </dl>
+    {{ end }}
+  {{ end }}
+
+<style>
+  .recipe-data-table {
+    color: #666;
+    display: flex;
+    border: 1px dashed #666;
+    background: white;
+  }
+  .recipe-data-table dd {
+    margin-left: 0;
+    font-weight: bold;
+    display: inline-block
+  }
+  .recipe-data-table > span {
+    padding: 12px;
+    min-width: 5em;
+    flex-grow: 1;
+    border-right: 1px dashed #666;
+  }
+  .recipe-data-table span.recipe-data-difficulty img {
+    display: inline
+  }
+</style>

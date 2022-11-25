@@ -31,6 +31,14 @@
       "description": "The unit of what the recipe yields",
       "type": "string"
     },
+    "prepTimeMinutes": {
+      "description": "How long to prep",
+      "type": "number"
+    },
+    "cookTimeMinutes": {
+      "description": "How long cooking takes",
+      "type": "number"
+    },
     "categories": {
       "description": "list of categories for further recipe refinement",
       "type": "array",

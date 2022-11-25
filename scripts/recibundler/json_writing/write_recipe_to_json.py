@@ -98,9 +98,14 @@ def write_recipe_to_json(recipe: reciperow, additional_keys=None):
     optional_attrs = {
         "yields": None,  # TODO
         "yieldsUnit": None,  # TODO
-        "prep_time": optional(recipe.prep_time),
-        "cook_time": optional(recipe.cook_time),
+        "prepTimeMinutes": optional(recipe.prep_time),
+        "cookTimeMinutes": optional(recipe.cook_time),
     }
+
+    for key, value in optional_attrs.items():
+        if value:
+            breakpoint()
+            attrs[key] = int(value)
 
     logging.debug("parsing")
     logging.debug(f"csv row: {recipe}")

@@ -9,6 +9,7 @@ from concurrent.futures import ThreadPoolExecutor
 import string
 import functools
 from jsonschema import validate
+from tempfile import TemporaryFile
 import logging as log
 
 log.basicConfig(level=os.environ.get("LOGLEVEL", "WARN"))
@@ -19,6 +20,7 @@ RECIPE_DIR = "../data/recipes"
 SCHEMA_DIR = "../data/schemas"
 
 HUGO_RECIPE_DIR = "../content/recipes"
+MAX_WORKERS = multiprocessing.cpu_count() * 2
 
 
 def create_hugo_content_from_json(jsonfiles: List[str]):
@@ -40,7 +42,7 @@ def create_hugo_content_from_json(jsonfiles: List[str]):
             os.path.join(RECIPE_DIR, json_name), f"{HUGO_RECIPE_DIR}/{mkdown_name}"
         )
 
-    with ThreadPoolExecutor(max_workers=multiprocessing.cpu_count() * 2) as executor:
+    with ThreadPoolExecutor(max_workers=MAX_WORKERS) as executor:
         executor.map(func, jsonfiles)
 
 
@@ -105,6 +107,10 @@ def post_build_mods(file: str, mkdown: str) -> None:
     correct_categories(recipe, mkdown)
     add_summary(recipe, mkdown)
     add_author(recipe, mkdown)
+    try:
+        add_frontmatter(recipe, mkdown)
+    except Exception as e:
+        print("ERROR", e)
 
 
 def correct_date(recipe: dict, mkdown: str) -> None:
@@ -147,6 +153,35 @@ def add_author(recipe: dict, mkdown: str) -> None:
         return
     author = recipe["attribution"]["name"]
     subprocess.run(["sed", "-i", "", f"s#.*\\$AUTHOR\\$$#author: {author}#", mkdown])
+
+
+def add_frontmatter(recipe: dict, mkdown: str) -> None:
+    with TemporaryFile() as fp:
+        with open(mkdown) as orig:
+            for line in orig:
+                if line == "prepTime: 0\n":
+                    fp.write(
+                        b"prepTime: "
+                        + str(recipe.get("prepTimeMinutes", "0")).encode()
+                        + b"\n"
+                    )
+                elif line == "cookTime: 0\n":
+                    fp.write(
+                        b"cookTime: "
+                        + str(recipe.get("cookTimeMinutes", "0")).encode()
+                        + b"\n"
+                    )
+                elif line == "difficulty: 0\n":
+                    fp.write(
+                        b"difficulty: "
+                        + str(recipe.get("difficulty", "0")).encode()
+                        + b"\n"
+                    )
+                else:
+                    fp.write(line.encode())
+            fp.seek(0)
+        with open(mkdown, mode="w") as fh:
+            fh.writelines([l.decode("utf-8") for l in fp.readlines()])
 
 
 if __name__ == "__main__":
