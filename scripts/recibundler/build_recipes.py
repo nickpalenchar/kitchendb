@@ -1,8 +1,11 @@
+import multiprocessing
 import os
 import subprocess
+from typing import List
 from datetime import datetime
 from recibundler.schema.reciperow import isodate_from_recipe
 import json
+from concurrent.futures import ThreadPoolExecutor
 import string
 import functools
 from jsonschema import validate
@@ -18,15 +21,8 @@ SCHEMA_DIR = "../data/schemas"
 HUGO_RECIPE_DIR = "../content/recipes"
 
 
-def build():
-    """
-    build takes all json files in data/recipes and builds them into content pages.
-
-    JSON files must all be UpperCammelCase
-    """
-    clean()
-
-    for file in os.listdir(RECIPE_DIR):
+def create_hugo_content_from_json(jsonfiles: List[str]):
+    def func(file):
         validate_file_name(file)
         with open(os.path.join(RECIPE_DIR, file)) as fh:
             log.debug(f"Validating schema for {file}...")
@@ -43,6 +39,18 @@ def build():
         post_build_mods(
             os.path.join(RECIPE_DIR, json_name), f"{HUGO_RECIPE_DIR}/{mkdown_name}"
         )
+
+    with ThreadPoolExecutor(max_workers=multiprocessing.cpu_count() * 2) as executor:
+        executor.map(func, jsonfiles)
+
+
+def build():
+    """
+    build takes all json files in data/recipes and builds them into content pages.
+    """
+    clean()
+
+    create_hugo_content_from_json([file for file in os.listdir(RECIPE_DIR)])
 
 
 def clean():
@@ -133,13 +141,12 @@ def add_summary(recipe: dict, mkdown: str) -> None:
         ["sed", "-i", "", f's#.*\\$SUMMARY\\$$#summary: "{summary}"#', mkdown]
     )
 
+
 def add_author(recipe: dict, mkdown: str) -> None:
     if "attribution" not in recipe or "name" not in recipe["attribution"]:
         return
     author = recipe["attribution"]["name"]
-    subprocess.run(
-        ["sed", "-i", "", f's#.*\\$AUTHOR\\$$#author: {author}#', mkdown]
-    )
+    subprocess.run(["sed", "-i", "", f"s#.*\\$AUTHOR\\$$#author: {author}#", mkdown])
 
 
 if __name__ == "__main__":
