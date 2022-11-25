@@ -1,27 +1,25 @@
-{{ with .Get "url" }}
-  {{ $data := getJSON . }}
+{{ with .Page.Params }}
+  {{ $data := . }}
   <dl class="recipe-data-table avenir">
-    {{ if $data.prepTimeMinutes }}
+    {{ if ne .prepTime 0 }}
     <span>
       <dt class="f5">Prep time</dt>
-      <dd>{{ $data.prepTimeMinutes }}<span class=f6>mins</span></dd>
+      <dd>{{ .prepTime }}<span class=f6>mins</span></dd>
     </span>
     {{ end }}
-    {{ if $data.prepTimeMinutes }}
+    {{ if ne .cookTime 0 }}
     <span>
       <dt class="f5">Cook time</dt>
-      <dd>{{ $data.cookTimeMinutes }}<span class=f6>mins</span></dd>
+      <dd>{{ .cookTime }}<span class=f6>mins</span></dd>
     </span>
     {{ end }}
-    {{ if $data.difficulty }}
+    {{ if ne .difficulty 0 }}
     <span class="recipe-data-difficulty">
       <dt class="f5">Difficulty</dt>
       <span class="f5" style="padding-left: 1px"> 
-      {{ safeHTML (strings.Repeat $data.difficulty `<i class="fa-solid fa-circle"></i> `) }}
-      {{ safeHTML (strings.Repeat (sub 5 $data.difficulty) `<i class="fa-solid fa-circle" style="color: #ccc"></i>`) }}
+      {{ safeHTML (strings.Repeat .difficulty `<i class="fa-solid fa-circle"></i> `) }}
+      {{ safeHTML (strings.Repeat (sub 5 .difficulty) `<i class="fa-solid fa-circle" style="color: #ccc"></i> `) }}
       </span>
-
-      
     </span>
     {{ end }}
   </dl>
