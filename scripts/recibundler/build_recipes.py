@@ -52,13 +52,7 @@ def build():
     """
     clean()
 
-    create_hugo_content_from_json(
-        [
-            file
-            for file in os.listdir(RECIPE_DIR)
-            if file == "sweet-potato-casserole.json"
-        ]
-    )
+    create_hugo_content_from_json([file for file in os.listdir(RECIPE_DIR)])
 
 
 def clean():
@@ -168,19 +162,19 @@ def add_frontmatter(recipe: dict, mkdown: str) -> None:
                 if line == "prepTime: 0\n":
                     fp.write(
                         b"prepTime: "
-                        + str(recipe.get("prepTimeMinutes", "nil")).encode()
+                        + str(recipe.get("prepTimeMinutes", "0")).encode()
                         + b"\n"
                     )
                 elif line == "cookTime: 0\n":
                     fp.write(
                         b"cookTime: "
-                        + str(recipe.get("cookTimeMinutes", "nil")).encode()
+                        + str(recipe.get("cookTimeMinutes", "0")).encode()
                         + b"\n"
                     )
                 elif line == "difficulty: 0\n":
                     fp.write(
                         b"difficulty: "
-                        + str(recipe.get("difficulty", "nil")).encode()
+                        + str(recipe.get("difficulty", "0")).encode()
                         + b"\n"
                     )
                 else:
