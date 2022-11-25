@@ -1,0 +1,51 @@
+{{ with .Get "url" }}
+  {{ $data := getJSON . }}
+  <dl class="recipe-data-table avenir">
+    {{ if $data.prepTimeMinutes }}
+    <span>
+      <dt class="f5">Prep time</dt>
+      <dd>{{ $data.prepTimeMinutes }}<span class=f6>mins</span></dd>
+    </span>
+    {{ end }}
+    {{ if $data.prepTimeMinutes }}
+    <span>
+      <dt class="f5">Cook time</dt>
+      <dd>{{ $data.cookTimeMinutes }}<span class=f6>mins</span></dd>
+    </span>
+    {{ end }}
+    {{ if $data.difficulty }}
+    <span class="recipe-data-difficulty">
+      <dt class="f5">Difficulty</dt>
+      <span class="f5" style="padding-left: 1px"> 
+      {{ safeHTML (strings.Repeat $data.difficulty `<i class="fa-solid fa-circle"></i> `) }}
+      {{ safeHTML (strings.Repeat (sub 5 $data.difficulty) `<i class="fa-solid fa-circle" style="color: #ccc"></i>`) }}
+      </span>
+
+      
+    </span>
+    {{ end }}
+  </dl>
+  {{ end }}
+
+<style>
+  .recipe-data-table {
+    color: #666;
+    display: flex;
+    border: 1px dashed #666;
+    background: white;
+  }
+  .recipe-data-table dd {
+    margin-left: 0;
+    font-weight: bold;
+    display: inline-block
+  }
+  .recipe-data-table > span {
+    padding: 12px;
+    min-width: 5em;
+    flex-grow: 1;
+    border-right: 1px dashed #666;
+  }
+  .recipe-data-table span.recipe-data-difficulty img {
+    display: inline
+  }
+</style>

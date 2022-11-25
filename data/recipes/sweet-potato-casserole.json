@@ -1,0 +1,137 @@
+{
+  "version": "1",
+  "name": "Sweet potato casserole",
+  "summary": "Lots of cooking time pays off in this excellent Thanksgiving side dish.",
+  "steps": [
+    {
+      "sectionTitle": "",
+      "steps": [
+        "Preheat the oven to 350 degrees",
+        "Poke the sweet potatoes all over with a fork, place on baking sheet lined with aluminum foil. Bake in oven until soft, about 1 hour. Let cool for about 30 minutes.",
+        "Peel sweet potatoes with a knife, discard the skin. Add to bowl and mash with potato masher or strong fork.",
+        "Add the 1/2 cup butter, eggs, condensed milk, granulated sugar, vanilla extract and salt to the bowl. Mix with a hand mixer on medium speed until well combined.",
+        "Make the topping: In a medium bowl, stir together pecans, cornflakes, brown sugar, flour and butter until well combined.",
+        "Grease a 9x13 casserole or glass dish with butter. Pour the sweet potato mix evenly in pan. Carefully top mix with topping, lightly smoothing over with spoon.",
+        "Bake until slightly browned, about 35 mins.",
+        "Remove from oven and add marshmallows in an even layer.",
+        "Return to the oven for another 5 minutes, until marshmallows are slightly toasted."
+      ]
+    }
+  ],
+  "difficulty": 4,
+  "ingredients": [
+    {
+      "sectionTitle": "sweet potato mix",
+      "ingredients": [
+        {
+          "amount": [
+            0.5
+          ],
+          "unit": "cup",
+          "ingredient": "unsalted butter",
+          "modifier": "room temperature, plus more for greasing pan."
+        },
+        {
+          "amount": [
+            6.0
+          ],
+          "customUnit": "",
+          "ingredient": "sweet potatoes (about 4lbs)"
+        },
+        {
+          "amount": [
+            2.0
+          ],
+          "customUnit": "",
+          "ingredient": "large eggs",
+          "modifier": "room temperature"
+        },
+        {
+          "amount": [
+            1.0
+          ],
+          "customUnit": "",
+          "ingredient": "14-oz can sweetened condensed milk"
+        },
+        {
+          "amount": [
+            0.25
+          ],
+          "unit": "cup",
+          "ingredient": "granulated sugar"
+        },
+        {
+          "amount": [
+            1.0
+          ],
+          "unit": "tsp",
+          "ingredient": "vanilla extract"
+        },
+        {
+          "amount": [
+            1.0
+          ],
+          "unit": "tsp",
+          "ingredient": "kosher salt"
+        }
+      ]
+    },
+    {
+      "sectionTitle": "topping",
+      "ingredients": [
+        {
+          "amount": [
+            1.0
+          ],
+          "unit": "cup",
+          "ingredient": "finely chopped pecans"
+        },
+        {
+          "amount": [
+            1.0
+          ],
+          "unit": "cup",
+          "ingredient": "cornflakes",
+          "modifier": "lightly crushed (optional)"
+        },
+        {
+          "amount": [
+            0.5
+          ],
+          "customUnit": "",
+          "ingredient": "packed cup brown sugar"
+        },
+        {
+          "amount": [
+            0.5
+          ],
+          "unit": "cup",
+          "ingredient": "all-purpose flour"
+        },
+        {
+          "amount": [
+            0.25
+          ],
+          "unit": "cup",
+          "ingredient": "unsalted butter",
+          "modifier": "melted"
+        },
+        {
+          "amount": [
+            2.0
+          ],
+          "unit": "cup",
+          "ingredient": "mini marshmallows",
+          "modifier": "plus more to taste."
+        }
+      ]
+    }
+  ],
+  "timestamp": "11/24/2022 15:41:31",
+  "categories": [
+    "side dish",
+    "vegetarian"
+  ],
+  "prepTimeMinutes": 40,
+  "cookTimeMinutes": 130
+}
