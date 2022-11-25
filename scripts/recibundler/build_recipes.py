@@ -95,6 +95,8 @@ def post_build_mods(file: str, mkdown: str) -> None:
     correct_date(recipe, mkdown)
     use_json_name_as_title(recipe, mkdown)
     correct_categories(recipe, mkdown)
+    add_summary(recipe, mkdown)
+    add_author(recipe, mkdown)
 
 
 def correct_date(recipe: dict, mkdown: str) -> None:
@@ -102,15 +104,42 @@ def correct_date(recipe: dict, mkdown: str) -> None:
     timestamp = date.strftime("%Y-%m-%dT%H:%M:%S-05:00")
     subprocess.run(["sed", "-i", "", f"s#.*\\$DATE\\$$#date: {timestamp}#", mkdown])
 
+
 def use_json_name_as_title(recipe: dict, mkdown: str) -> None:
     log.debug(f'{__name__}: replacing name with `{recipe["name"]}`')
-    subprocess.run(["sed", "-i", "", f"s#.*\\$TITLE\\$$#title: {recipe['name']}#", mkdown])
+    subprocess.run(
+        ["sed", "-i", "", f"s#.*\\$TITLE\\$$#title: {recipe['name']}#", mkdown]
+    )
+
 
 def correct_categories(recipe: dict, mkdown: str) -> None:
     if "categories" not in recipe:
         return
     categories = recipe["categories"]
-    subprocess.run(["sed", "-i", "", f"s#.*\\$CATEGORIES\\$$#categories: {categories}#", mkdown])
+    subprocess.run(
+        ["sed", "-i", "", f"s#.*\\$CATEGORIES\\$$#categories: {categories}#", mkdown]
+    )
+
+
+def add_summary(recipe: dict, mkdown: str) -> None:
+    """
+    Add the summary field to content as frontmatter.
+    https://gohugo.io/content-management/summaries/#front-matter-summary
+    """
+    if "summary" not in recipe:
+        return
+    summary = recipe["summary"].replace('"', '\\\\"')
+    subprocess.run(
+        ["sed", "-i", "", f's#.*\\$SUMMARY\\$$#summary: "{summary}"#', mkdown]
+    )
+
+def add_author(recipe: dict, mkdown: str) -> None:
+    if "attribution" not in recipe or "name" not in recipe["attribution"]:
+        return
+    author = recipe["attribution"]["name"]
+    subprocess.run(
+        ["sed", "-i", "", f's#.*\\$AUTHOR\\$$#author: {author}#', mkdown]
+    )
 
 
 if __name__ == "__main__":

@@ -18,11 +18,12 @@ import logging
 from recibundler.schema import reciperow
 from recibundler import json_writing
 
-ADD_NEW_RECIPES_SINCE_PATH = 'add_new_recipes_since'
+ADD_NEW_RECIPES_SINCE_PATH = "add_new_recipes_since"
 
 T = t.TypeVar("T")
 
 logging.basicConfig(level=os.environ.get("LOGLEVEL", "WARN"))
+
 
 def add_new_recipes(filepath):
     logging.debug(f"filepath is {filepath}")
@@ -41,7 +42,7 @@ def add_new_recipes(filepath):
         next(reader)
 
         for recipe in reader:
-            recipe = reciperow.reciperow(*recipe)
+            recipe = reciperow.reciperow(*recipe[:16])
             if reciperow.is_recipe_old(recipe, last_date):
                 continue
             logging.info(f"the next recipe is {recipe.name}")
