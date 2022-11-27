@@ -12,6 +12,9 @@
       ]
     }
   ],
+  "difficulty": 2,
+  "prepTimeMinutes": 20,
+  "cookTimeMinutes": 60,
   "ingredients": [
     {
       "sectionTitle": "",

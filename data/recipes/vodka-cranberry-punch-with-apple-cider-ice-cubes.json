@@ -12,6 +12,9 @@
       ]
     }
   ],
+  "prepTimeMinutes": 480,
+  "cookTimeMinutes": 30,
+  "difficulty": 2,
   "ingredients": [
     {
       "sectionTitle": "",
@@ -78,6 +81,6 @@
   ],
   "timestamp": "11/11/2022 9:04:58",
   "categories": [
-    "drink"
+    "cocktail"
   ]
 }

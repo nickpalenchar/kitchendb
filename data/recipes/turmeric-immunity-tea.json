@@ -13,6 +13,9 @@
       ]
     }
   ],
+  "difficulty": 2,
+  "prepTimeMinutes": 7,
+  "cookTimeMinutes": 7,
   "ingredients": [
     {
       "sectionTitle": "",

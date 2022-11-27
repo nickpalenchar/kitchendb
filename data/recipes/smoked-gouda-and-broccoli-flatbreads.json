@@ -12,6 +12,8 @@
       ]
     }
   ],
+  "difficulty": 2,
+  "prepTimeMinutes": 0,
   "ingredients": [
     {
       "sectionTitle": "",

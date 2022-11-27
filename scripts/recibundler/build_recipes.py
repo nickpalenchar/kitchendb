@@ -142,7 +142,7 @@ def add_summary(recipe: dict, mkdown: str) -> None:
     """
     if "summary" not in recipe:
         return
-    summary = recipe["summary"].replace('"', '\\\\"')
+    summary = recipe["summary"].replace('"', '\\\\"') or " "
     subprocess.run(
         ["sed", "-i", "", f's#.*\\$SUMMARY\\$$#summary: "{summary}"#', mkdown]
     )
@@ -177,6 +177,9 @@ def add_frontmatter(recipe: dict, mkdown: str) -> None:
                         + str(recipe.get("difficulty", "0")).encode()
                         + b"\n"
                     )
+                elif line == 'featured_image: ""\n':
+                    image_url = recipe.get("imageUrl", '""')
+                    fp.write(f"featured_image: {image_url}\n".encode())
                 else:
                     fp.write(line.encode())
             fp.seek(0)

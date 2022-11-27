@@ -8,6 +8,7 @@ summary: " " #$SUMMARY$
 prepTime: 0
 cookTime: 0
 difficulty: 0
+featured_image: ""
 ---
 {{< recipe-data url="data/recipes/{{ replace .Name "\"" "\\\"" }}.json">}}
 {{< recipe-summary url="data/recipes/{{ replace .Name "\"" "\\\"" }}.json">}}
