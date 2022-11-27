@@ -34,7 +34,7 @@ def build_recipes():
 
 def build_hugo():
     log.info("calling `hugo -D` to build hugo..")
-    subprocess.run(["hugo", "-D"], cwd=PROJECT_ROOT, check=True)
+    subprocess.run(["hugo", "-D", "--environment", "preview"], cwd=PROJECT_ROOT, check=True)
     log.info("hugo build DONE")
 
 
