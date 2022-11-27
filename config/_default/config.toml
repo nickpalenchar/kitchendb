@@ -1,0 +1,6 @@
+baseURL = "/"
+languageCode = "en-us"
+title = "KitchenDB"
+theme = "ananke"
+
+recent_posts_number = 10
