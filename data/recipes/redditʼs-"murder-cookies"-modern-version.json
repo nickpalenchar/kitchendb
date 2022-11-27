@@ -3,6 +3,10 @@
   "name": "Reddit's \"Murder Cookies\" (modern version)",
   "summary": "From a 1930's recipe where the baker's neighbor got murdered, now repopularized on reddit under a name you can't forget! This recipe is updated with more common ingredients.",
   "categories": ["dessert"],
+  "imageUrl": "/images/murder-cookies.png",
+  "difficulty": 2,
+  "prepTimeMinutes": 15,
+  "cookTimeMinutes": 10,
   "steps": [
     {
       "sectionTitle": "",

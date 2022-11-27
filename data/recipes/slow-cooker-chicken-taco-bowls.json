@@ -13,6 +13,9 @@
       ]
     }
   ],
+  "difficulty": 1,
+  "prepTimeMinutes": 10,
+  "cookTimeMinutes": 240,
   "categories": ["dinner", "crock pot", "gluten-free"],
   "ingredients": [
     {

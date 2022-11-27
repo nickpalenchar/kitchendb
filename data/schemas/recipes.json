@@ -22,6 +22,16 @@
       "type": "string",
       "maxLength": 480
     },
+    "difficulty": {
+      "description": "difficulty on a scale of 1-5",
+      "type": "number",
+      "minimum": 0,
+      "maximum": 5
+    },
+    "imageUrl": {
+      "description": "The main (featured) image for the recipe (more can be added in .media)",
+      "type": "string"
+    },
     "yields": {
       "description": "number of servings recipe makes",
       "type": "integer",

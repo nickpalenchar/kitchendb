@@ -10,6 +10,8 @@
       ]
     }
   ],
+  "difficulty": 1,
+  "prepTimeMinutes": 15,
   "ingredients": [
     {
       "sectionTitle": "",
