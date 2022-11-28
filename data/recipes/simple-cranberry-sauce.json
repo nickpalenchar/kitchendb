@@ -1,0 +1,54 @@
+{
+  "version": "1",
+  "name": "Simple Cranberry Sauce",
+  "summary": "Making this cranberry sauce is so easy you'll never get the canned stuff again.",
+  "steps": [
+    {
+      "sectionTitle": "",
+      "steps": [
+        "Combine water and sugar in a medium sauce pan and bring to a boil.",
+        "Add the cranberries.",
+        "Stir for 10 minutes while maintaining a slight boil (whenever the mixture approaches a roaring boil, reduce heat).",
+        "Remove from heat and let sit in pan to cool, about 20 minutes.",
+        "Refrigerate until ready to serve."
+      ]
+    }
+  ],
+  "difficulty": 1,
+  "ingredients": [
+    {
+      "sectionTitle": "",
+      "ingredients": [
+        {
+          "amount": [
+            1.0
+          ],
+          "unit": "cup",
+          "ingredient": "water"
+        },
+        {
+          "amount": [
+            1.0
+          ],
+          "unit": "cup",
+          "ingredient": "sugar"
+        },
+        {
+          "amount": [
+            2.0
+          ],
+          "unit": "cup",
+          "ingredient": "cranberries"
+        }
+      ]
+    }
+  ],
+  "timestamp": "11/24/2022 20:14:33",
+  "categories": [
+    "side dish",
+    "vegetarian",
+    "vegan"
+  ],
+  "prepTimeMinutes": 5,
+  "cookTimeMinutes": 10
+}
