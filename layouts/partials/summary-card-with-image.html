@@ -1,0 +1,40 @@
+{{/* A variation of summary-with-image, meant for smaller sized containers */}}
+
+{{ $featured_image := partial "func/GetFeaturedImage.html" . }}
+<div class="w-100 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray">
+    <div class="recipe-card">
+      {{ if $featured_image }}
+        <img src="{{$featured_image}}" />
+      {{ end }}
+      <h1 class="f4 near-black">
+        <a href="{{ .RelPermalink }}" class="link black dim">
+          {{ .Title }}
+        </a>
+      </h1>
+    </div>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      {{ .Summary  }} 
+    </div>
+  </div>
+</div>
+
+<style>
+  .recipe-card {
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100%;
+  }
+  .recipe-card img {
+    width: 50%;
+    padding: 8px;
+    border-radius: 12px;
+    object-fit: cover;
+    max-width: 100%;
+  }
+  .recipe-card h1 {
+    display: inline-block;
+    min-width: 60%;
+  }
+
+</style>
