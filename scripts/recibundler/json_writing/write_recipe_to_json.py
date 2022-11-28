@@ -104,7 +104,6 @@ def write_recipe_to_json(recipe: reciperow, additional_keys=None):
 
     for key, value in optional_attrs.items():
         if value:
-            breakpoint()
             attrs[key] = int(value)
 
     logging.debug("parsing")
