@@ -1,0 +1,154 @@
+{
+  "version": "1",
+  "name": "Samosas",
+  "summary": "Flaky pastries filled with spicy potatoes and peas.",
+  "imageUrl": "/images/samosas.png",
+  "steps": [
+    {
+      "sectionTitle": "",
+      "steps": [
+        "Fill a large saucepan with about 3 qts of water and set on high heat until boiling. Peel the potatoes and boil until soft, about 15 minutes.",
+        "Meanwhile, make the dough: combine flour and salt in a medium bowl. Make a \"well\" in the middle by pushing the ingredients out to the side; pour buttermilk or yogurt in the middle.",
+        "Mix the ingredients together: start by gently moving the flour/salt into the well with a spoon, continue until all combined.",
+        "Add flour to a flat surface and hands, and place dough onto surface. Kneed the dough, adding flour to remove stickiness as necessary.",
+        "Make 1-inch round balls form the dough.",
+        "Using a rolling pin, roll out each ball of dough into a oval (continuing to coat the pin and surface with flour as necessary)",
+        "Once the potatoes are very soft, remove from saucepan and into medium bowl. Mash and set aside.",
+        "Cooking the filling)",
+        "Melt the butter in a sauce pan on medium heat. Add onion, garlic, ginger, mustard seeds, coriander, and salt.",
+        "Saut\u00e9 for about 8 to 10 minutes, or until the onions are transparent and fragrant.",
+        "Add mashed potatoes and frozen peas to pan and combine all for about a minute.",
+        "Sprinkle in paprika and mix well.",
+        "Let the mixture sit for 15 minutes before assembling the samosas.",
+        "Assembling Samosas)",
+        "Preheat the oven to 425 degrees F.",
+        "Fill a small bowl with water and another with oil.",
+        "Take about a tablespoon of potato mix and a rolled out dough oval. Place the mix on the center of the dough. Dip a brush in water and wet the edges of the dough. Fold in half, keeping the bulk of the mixture in the center, and press down on the edges with a fork until it sticks together. Repeat for all ovals.",
+        "Grease a pan generously with oil and place samosas onto pan. Brush the top with more oil.",
+        "Bake in center of the oven for 15 minutes.",
+        "Remove from oven. Reduce oven to 375 degrees F.",
+        "Turn all samosas over and return to oven. Bake for another 10 minutes.",
+        "Let cool for about 5 minutes, then serve immediately."
+      ]
+    }
+  ],
+  "ingredients": [
+    {
+      "sectionTitle": "Dough",
+      "ingredients": [
+        {
+          "amount": [
+            2.5
+          ],
+          "unit": "cup",
+          "ingredient": "all-purpose flour",
+          "modifier": "plus extra for working with dough."
+        },
+        {
+          "amount": [
+            0.5,
+            1.0
+          ],
+          "unit": "tsp",
+          "ingredient": "salt (to taste)"
+        },
+        {
+          "amount": [
+            1.0
+          ],
+          "unit": "cup",
+          "ingredient": "buttermilk or yogurt"
+        }
+      ]
+    },
+    {
+      "sectionTitle": "Filling",
+      "ingredients": [
+        {
+          "amount": [
+            2.0
+          ],
+          "customUnit": "",
+          "ingredient": "large potatoes"
+        },
+        {
+          "amount": [
+            1.0
+          ],
+          "unit": "tbsp",
+          "ingredient": "butter"
+        },
+        {
+          "amount": [
+            1.0
+          ],
+          "unit": "cup",
+          "ingredient": "onion",
+          "modifier": "finely minced or chopped"
+        },
+        {
+          "amount": [
+            2.0
+          ],
+          "customUnit": "",
+          "ingredient": "cloves garlic",
+          "modifier": "minced"
+        },
+        {
+          "amount": [
+            1.0
+          ],
+          "unit": "tbsp",
+          "ingredient": "freshly grated ginger"
+        },
+        {
+          "amount": [
+            1.0
+          ],
+          "unit": "tsp",
+          "ingredient": "mustard seeds"
+        },
+        {
+          "amount": [
+            1.0
+          ],
+          "unit": "tsp",
+          "ingredient": "dried coriander (optional)"
+        },
+        {
+          "amount": [
+            0.75
+          ],
+          "unit": "tsp",
+          "ingredient": "salt"
+        },
+        {
+          "amount": [
+            1.5
+          ],
+          "unit": "cup",
+          "ingredient": "green peas",
+          "modifier": "frozen"
+        },
+        {
+          "amount": [
+            2.0
+          ],
+          "unit": "tbsp",
+          "ingredient": "lemon juice"
+        },
+        {
+          "ingredient": "cayenne, to taste"
+        }
+      ]
+    }
+  ],
+  "timestamp": "11/26/2022 19:12:56",
+  "categories": [
+    "side dish",
+    "vegetarian"
+  ],
+  "difficulty": 4,
+  "prepTimeMinutes": 90,
+  "cookTimeMinutes": 25
+}

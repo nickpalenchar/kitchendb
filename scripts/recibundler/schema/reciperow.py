@@ -19,7 +19,8 @@ reciperow = t.NamedTuple(
         ("submitter_email", t.Optional[str]),
         ("author_name", t.Optional[str]),
         ("social_links", t.Optional[str]),
-        ("book_merch_links", t.Optional[str])
+        ("book_merch_links", t.Optional[str]),
+        ("difficulty", t.Optional[int])
     ],
 )
 

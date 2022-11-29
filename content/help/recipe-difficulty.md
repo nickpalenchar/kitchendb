@@ -41,7 +41,7 @@ If the steps are all Level 2, but there is a large amount that it requires a mor
 Recipe requires previous cooking experience with similar dishes to guarantee success. There may be 2 or 3 more steps to multi-task
 at the same time, or require very precise timing. Over- or underdoing some steps may result in failure that can't be recovered from.
 
-**Examples**: _None yet (why not [submit one?]({{< param "submitLink" >}}))_
+**Examples**: [Samosas](/recipes/samosas/)
 
 ## Level 5: {{< recipe-difficulty difficulty=5 >}} Very Challenging
 

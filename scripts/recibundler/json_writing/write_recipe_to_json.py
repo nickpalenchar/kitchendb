@@ -84,6 +84,7 @@ def write_recipe_to_json(recipe: reciperow, additional_keys=None):
         "ingredients": reciparcer.parse_ingredients(recipe.ingredients),
         "timestamp": recipe.timestamp,
         "categories": [c.strip() for c in recipe.categories.split(",")],
+        "difficulty": (int(recipe.difficulty) or 0) if recipe.difficulty else 0
     }
     if recipe.author_name or recipe.social_links:
         attrs["attribution"] = {

@@ -1,0 +1,88 @@
+{
+  "version": "1",
+  "name": "Crepes",
+  "summary": "So simple yet so tasty. Very cheap to make as well.",
+  "steps": [
+    {
+      "sectionTitle": "",
+      "steps": [
+        "Combine all ingredients in a bowl. Mix well and fast, until small small bubbles in the batter are noticeable.",
+        "Turn a pan on low heat. Wait until it's warm.",
+        "Drop a ladle in the center of the pan. Rotate the pan to cover with batter. Let cook about 2 minutes until the batter starts to solidify.",
+        "Using a spatula, lift the sides of the crepe before flipping, then flip over, cooking for another 30-60 seconds.",
+        "Slide off pan and onto plate, stuff with any of the suggested toppings or add your own, then fold.",
+        "Some ingredients can be topped. Try: drizzling melted chocolate on top, then sprinkling with powdered sugar (really ups the presentation value!)"
+      ]
+    }
+  ],
+  "ingredients": [
+    {
+      "sectionTitle": "crepes",
+      "ingredients": [
+        {
+          "amount": [
+            3.0
+          ],
+          "customUnit": "",
+          "ingredient": "eggs"
+        },
+        {
+          "amount": [
+            1.0
+          ],
+          "unit": "cup",
+          "ingredient": "flour"
+        },
+        {
+          "amount": [
+            1.0
+          ],
+          "unit": "cup",
+          "ingredient": "milk"
+        },
+        {
+          "amount": [
+            1.0
+          ],
+          "unit": "tbsp",
+          "ingredient": "sugar"
+        },
+        {
+          "amount": [
+            0.5
+          ],
+          "unit": "tsp",
+          "ingredient": "salt"
+        }
+      ]
+    },
+    {
+      "sectionTitle": "suggested toppings",
+      "ingredients": [
+        {
+          "ingredient": "Jelly"
+        },
+        {
+          "ingredient": "Chocolate and fruit"
+        },
+        {
+          "ingredient": "Bacon, egg, cheese"
+        },
+        {
+          "ingredient": "Ham, cheese, arugula"
+        },
+        {
+          "ingredient": "Confection sugar"
+        }
+      ]
+    }
+  ],
+  "timestamp": "11/27/2022 8:48:13",
+  "categories": [
+    "breakfast",
+    "vegetarian"
+  ],
+  "difficulty": 3,
+  "prepTimeMinutes": 10,
+  "cookTimeMinutes": 15
+}

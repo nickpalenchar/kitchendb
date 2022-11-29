@@ -1,0 +1,77 @@
+{
+  "version": "1",
+  "name": "Gordon Ramsey Scrambled Eggs",
+  "summary": "Ramsey's preferred way to make scrambled eggs",
+  "steps": [
+    {
+      "sectionTitle": "",
+      "steps": [
+        "Add the eggs and butter to a deep saucepan (do not heat the saucepan ahead of time).",
+        "Put the saucepan on the stove over medium-high heat.",
+        "Stir the eggs and butter for about 30-60 seconds.",
+        "Remove saucepan from heat, continue to stir for another 30-60 seconds.",
+        "Continue alternating between having the saucepan on and off the stove until the eggs look like they have about a minute left to cook.",
+        "At this point, season lightly with salt and pepper. Add Cr\u00e8me fra\u00eeche for creamier texture.",
+        "Serve, topping with chopped chives."
+      ]
+    }
+  ],
+  "difficulty": 2,
+  "ingredients": [
+    {
+      "sectionTitle": "",
+      "ingredients": [
+        {
+          "amount": [
+            3.0
+          ],
+          "customUnit": "",
+          "ingredient": "eggs",
+          "modifier": "cold"
+        },
+        {
+          "amount": [
+            1.0
+          ],
+          "unit": "tbsp",
+          "ingredient": "butter"
+        },
+        {
+          "amount": [
+            7.0
+          ],
+          "unit": "g",
+          "ingredient": "butter"
+        },
+        {
+          "amount": [
+            1.0
+          ],
+          "unit": "tsp",
+          "ingredient": "Cr\u00e8me fra\u00eeche"
+        },
+        {
+          "ingredient": "Chives"
+        },
+        {
+          "ingredient": "Salt"
+        },
+        {
+          "ingredient": "Pepper"
+        }
+      ]
+    }
+  ],
+  "timestamp": "11/26/2022 15:16:54",
+  "categories": [
+    "breakfast",
+    "vegetarian",
+    "gluten-free"
+  ],
+  "attribution": {
+    "name": "Gordon Ramsey",
+    "links": []
+  },
+  "prepTimeMinutes": 5,
+  "cookTimeMinutes": 10
+}
