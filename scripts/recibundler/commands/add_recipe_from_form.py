@@ -42,7 +42,7 @@ def add_new_recipes(filepath):
         next(reader)
 
         for recipe in reader:
-            recipe = reciperow.reciperow(*recipe[:16])
+            recipe = reciperow.reciperow(*recipe[:17])
             if reciperow.is_recipe_old(recipe, last_date):
                 continue
             logging.info(f"the next recipe is {recipe.name}")
