@@ -1,0 +1,6 @@
+<span class="recipe-data-difficulty" style="display: inline">
+  <span class="f5" style="padding-left: 1px"> 
+  {{ safeHTML (strings.Repeat .Params.difficulty `<i class="fa-solid fa-circle"></i> `) }}
+  {{ safeHTML (strings.Repeat (sub 5 .Params.difficulty) `<i class="fa-solid fa-circle" style="color: #ccc"></i> `) }}
+  </span>
+</span>
