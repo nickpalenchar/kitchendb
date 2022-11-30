@@ -2,6 +2,7 @@
   "version": "1",
   "name": "Apple Crisp",
   "summary": "",
+  "cuisines": ["american"],
   "steps": [
     {
       "sectionTitle": "",

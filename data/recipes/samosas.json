@@ -3,6 +3,8 @@
   "name": "Samosas",
   "summary": "Flaky pastries filled with spicy potatoes and peas.",
   "imageUrl": "/images/samosas.png",
+  "cuisines": ["indian"],
+  "diets": ["vegetarian"],
   "steps": [
     {
       "sectionTitle": "",

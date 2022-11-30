@@ -1,6 +1,7 @@
 {
   "version": "1",
   "name": "Slow Cooker Chicken Taco Bowls",
+  "diets": ["paleo"],
   "summary": "",
   "steps": [
     {
