@@ -2,6 +2,7 @@
   "version": "1",
   "name": "Crepes",
   "summary": "So simple yet so tasty. Very cheap to make as well.",
+  "cuisines": ["french"],
   "steps": [
     {
       "sectionTitle": "",

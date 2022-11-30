@@ -1,6 +1,7 @@
 {
   "version": "1",
   "name": "Vegetarian Minnesota Chili",
+  "diets": ["vegan", "vegetarian", "gluten-free"],
   "summary": "From \"Eat and Run.\" Vegetarian chili never tasted so hearty.",
   "steps": [
     {

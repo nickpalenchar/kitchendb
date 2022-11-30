@@ -2,6 +2,7 @@
   "version": "1",
   "name": "Tuna Pat\u00e9",
   "summary": "Quick, cheap, and super easy, this tuna salad is great as a lettuce wrap or sandwhich",
+  "diets": ["gluten-free", "low carb"],
   "steps": [
     {
       "sectionTitle": "",

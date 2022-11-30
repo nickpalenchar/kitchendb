@@ -99,13 +99,15 @@ def write_recipe_to_json(recipe: reciperow, additional_keys=None):
     optional_attrs = {
         "yields": None,  # TODO
         "yieldsUnit": None,  # TODO
-        "prepTimeMinutes": optional(recipe.prep_time),
-        "cookTimeMinutes": optional(recipe.cook_time),
+        "prepTimeMinutes": int(recipe.prep_time) if recipe.prep_time else None,
+        "cookTimeMinutes": int(recipe.cook_time) if recipe.cook_time else None,
+        "cuisine": recipe.cuisine.split(', ') if recipe.cuisine else None,
+        "diet": recipe.diet.split(', ') if recipe.diet else None,
     }
 
     for key, value in optional_attrs.items():
         if value:
-            attrs[key] = int(value)
+            attrs[key] = value
 
     logging.debug("parsing")
     logging.debug(f"csv row: {recipe}")

@@ -1,0 +1,9 @@
+{
+  "description": "Paleo diets include lean meats at the core if its meals and no grains, sugar, or salts. Fresh fruits and vegetables are also encouraged",
+  "notIngredients": [
+    "sugar",
+    "salt",
+    "black beans",
+    "beans"
+  ]
+}

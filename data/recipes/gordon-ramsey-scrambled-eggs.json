@@ -2,6 +2,7 @@
   "version": "1",
   "name": "Gordon Ramsey Scrambled Eggs",
   "summary": "Ramsey's preferred way to make scrambled eggs",
+  "cuisines": ["american"],
   "steps": [
     {
       "sectionTitle": "",

@@ -180,6 +180,10 @@ def add_frontmatter(recipe: dict, mkdown: str) -> None:
                 elif line == 'featured_image: ""\n':
                     image_url = recipe.get("imageUrl", '""')
                     fp.write(f"featured_image: {image_url}\n".encode())
+                elif line == 'diets: []\n' and recipe.get('diets'):
+                    fp.write(f'diets: {recipe["diets"]}\n'.encode())
+                elif line == 'cuisines: []\n' and recipe.get('cuisines'):
+                    fp.write(f'cuisines: {recipe["cuisines"]}\n'.encode())
                 else:
                     fp.write(line.encode())
             fp.seek(0)

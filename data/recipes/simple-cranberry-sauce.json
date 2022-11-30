@@ -2,6 +2,7 @@
   "version": "1",
   "name": "Simple Cranberry Sauce",
   "summary": "Making this cranberry sauce is so easy you'll never get the canned stuff again.",
+  "diets": ["paleo"],
   "steps": [
     {
       "sectionTitle": "",
