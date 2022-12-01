@@ -1,0 +1,73 @@
+{
+  "version": "1",
+  "name": "Kielbasa Egg Hash",
+  "summary": "A super easy twist on a classic. Kielbasa can be substituted with other sausages or thick-cut bacon",
+  "imageUrl": "/images/kielbasa-hash.png",
+  "steps": [
+    {
+      "sectionTitle": "",
+      "steps": [
+        "Grate the potato using the larger side of a cheese grater.",
+        "Slice the Kielbasa into 1/2 in pieces.",
+        "Set a pan to medium-high heat and add the olive oil. Let it heat for about 1 minute.",
+        "Add the Kielbasa, cook until slightly seared, about 2-3 minutes, then flip for another minute.",
+        "Move the Kielbasa to the sides of the pan; add the grated potato, spreading out as thin as possible. Sprinkle garlic powder across the potatoes. If using rosemary, sprinkle a little bit onto the potatoes as well.",
+        "When the edges start to crisp, flip the potato for another minute.",
+        "To ensure all shreds of the potato cook, pull apart and mix around using two spatulas.",
+        "Crack the eggs into the pan and scramble into the potatoes, while incorporating the Kielbasa into the mix, about 30 seconds.",
+        "Remove from heat and serve with salt and pepper"
+      ]
+    }
+  ],
+  "ingredients": [
+    {
+      "sectionTitle": "",
+      "ingredients": [
+        {
+          "ingredient": "Kielbasa"
+        },
+        {
+          "amount": [
+            1.0
+          ],
+          "customUnit": "",
+          "ingredient": "Potato"
+        },
+        {
+          "amount": [
+            2.0,
+            3.0
+          ],
+          "customUnit": "",
+          "ingredient": "Eggs"
+        },
+        {
+          "ingredient": "Olive oil"
+        },
+        {
+          "ingredient": "Rosemary (optional)"
+        },
+        {
+          "ingredient": "Garlic powder"
+        },
+        {
+          "ingredient": "Salt"
+        },
+        {
+          "ingredient": "Pepper"
+        }
+      ]
+    }
+  ],
+  "timestamp": "11/29/2022 8:01:53",
+  "categories": [
+    "breakfast"
+  ],
+  "difficulty": 2,
+  "attribution": {
+    "name": "Nick Palenchar",
+    "links": []
+  },
+  "prepTimeMinutes": 5,
+  "cookTimeMinutes": 12
+}
