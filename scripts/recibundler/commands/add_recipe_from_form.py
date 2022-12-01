@@ -42,6 +42,7 @@ def add_new_recipes(filepath):
         next(reader)
 
         for recipe in reader:
+            recipe += [None, None]
             recipe = reciperow.reciperow(*recipe[:19])
             if reciperow.is_recipe_old(recipe, last_date):
                 continue

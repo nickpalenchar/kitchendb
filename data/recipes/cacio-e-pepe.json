@@ -3,6 +3,7 @@
   "name": "Cacio e pepe",
   "summary": "A simple yet elegant three-ingredient pasta dish",
   "cuisines": ["italian"],
+  "imageUrl": "/images/cacio-e-pepe.png",
   "steps": [
     {
       "sectionTitle": "",
