@@ -15,7 +15,7 @@
             {{ cond ( eq (len .amount) 1 ) ( index .amount 0 ) ( printf "%v-%v" (index .amount 0) (index .amount 1) ) }}
             </span>
         {{ end }}
-        {{ .unit }}</b> {{ .ingredient }}{{ if .modifier }}, {{ .modifier }}{{ end}}
+        {{ .unit }}</b> {{ .ingredient | markdownify }}{{ if .modifier | markdownify }}, {{ .modifier }}{{ end }}
       </li>
       {{ end }}
       </ul>
@@ -29,7 +29,7 @@
     {{ end }}
     <ol>
     {{ range .steps }}
-      <li>{{ . }}</li>
+      <li>{{ . | markdownify }}</li>
     {{ end }}
     </ol>
   {{ end }}
