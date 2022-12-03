@@ -2,12 +2,11 @@
 Downloads the survey results from google sheets for processing
 """
 import os.path
-from typing import List
+from typing import Iterator, List
 from google.auth.transport.requests import Request
 from google.oauth2.credentials import Credentials
 from google_auth_oauthlib.flow import InstalledAppFlow
 from googleapiclient.discovery import build
-from googleapiclient.errors import HttpError
 
 # If modifying these scopes, delete the file token.json.
 SCOPES = ["https://www.googleapis.com/auth/spreadsheets.readonly"]
@@ -15,10 +14,10 @@ SCOPES = ["https://www.googleapis.com/auth/spreadsheets.readonly"]
 # The ID and range of a sample spreadsheet.
 with open("secrets/spreadsheet-id.txt") as fh:
     SAMPLE_SPREADSHEET_ID = fh.read().strip()
-SAMPLE_RANGE_NAME = "A:T"
+SAMPLE_RANGE_NAME = "A:S"
 
 
-def fetch() -> List[List[str]]:
+def fetch() -> Iterator[List[str]]:
     """Shows basic usage of the Sheets API.
     Prints values from a sample spreadsheet.
     """
@@ -54,8 +53,7 @@ def fetch() -> List[List[str]]:
 
     if not values:
         raise LookupError("No data found.")
-
-    return values
+    return (v + 10*[''] for v in values)
 
 
 if __name__ == "__main__":

@@ -13,6 +13,7 @@ import sys
 import os
 import csv
 import typing as t
+from typing import Iterator
 from datetime import datetime
 import logging
 from recibundler.schema import reciperow
@@ -31,7 +32,7 @@ def add_new_recipes(filepath=None):
 
     try:
 
-        reader = (
+        reader: Iterator = (
             csv.reader(open(filepath, newline=""))
             if filepath
             else gsheets_download.fetch()
@@ -63,7 +64,7 @@ def add_new_recipes(filepath=None):
         logging.error("no new recipes")
         sys.exit(1)
     finally:
-        reader.close()
+        print('done')
 
 
 if __name__ == "__main__":
