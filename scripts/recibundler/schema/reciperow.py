@@ -22,9 +22,10 @@ reciperow = t.NamedTuple(
         ("book_merch_links", t.Optional[str]),
         ("difficulty", t.Optional[int]),
         ("cuisine", t.Optional[str]),
-        ("diet", t.Optional[str])
+        ("diet", t.Optional[str]),
     ],
 )
+
 
 def is_recipe_old(recipe: reciperow, since) -> bool:
     """
@@ -34,6 +35,7 @@ def is_recipe_old(recipe: reciperow, since) -> bool:
     """
     recipe_date = datetime.strptime(recipe.timestamp, "%m/%d/%Y %H:%M:%S")
     return recipe_date <= since
+
 
 def isodate_from_recipe(recipe: reciperow) -> datetime:
     return datetime.strptime(recipe.timestamp, "%m/%d/%Y %H:%M:%S")

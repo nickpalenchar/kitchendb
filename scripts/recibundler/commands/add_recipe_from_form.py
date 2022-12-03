@@ -17,6 +17,7 @@ from datetime import datetime
 import logging
 from recibundler.schema import reciperow
 from recibundler import json_writing
+import gsheets_download
 
 ADD_NEW_RECIPES_SINCE_PATH = "add_new_recipes_since"
 
@@ -25,12 +26,18 @@ T = t.TypeVar("T")
 logging.basicConfig(level=os.environ.get("LOGLEVEL", "WARN"))
 
 
-def add_new_recipes(filepath):
+def add_new_recipes(filepath=None):
     logging.debug(f"filepath is {filepath}")
 
-    with open(filepath, newline="") as fh:
-        reader = csv.reader(fh)
+    try:
 
+        reader = (
+            csv.reader(open(filepath, newline=""))
+            if filepath
+            else gsheets_download.fetch()
+        )
+
+        next(reader)
         with open(ADD_NEW_RECIPES_SINCE_PATH) as datefh:
             try:
                 last_date = datetime.fromisoformat(datefh.read().strip())
@@ -55,6 +62,8 @@ def add_new_recipes(filepath):
 
         logging.error("no new recipes")
         sys.exit(1)
+    finally:
+        reader.close()
 
 
 if __name__ == "__main__":

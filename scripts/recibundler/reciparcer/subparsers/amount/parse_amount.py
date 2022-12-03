@@ -5,6 +5,7 @@ from recibundler.constants import DASHES
 from .matchers import fraction_match, number_match, decimal_match
 import logging as log
 
+
 def parse_amount(m: str) -> t.Optional[t.Tuple[t.List[float], int]]:
     """
     Returns the match, and a number indicating the characters
@@ -18,11 +19,11 @@ def parse_amount(m: str) -> t.Optional[t.Tuple[t.List[float], int]]:
             ("DECIMAL_MATCH", decimal_match),
         )
     )
-    if re_match := re.match('([^a-zA-Z]*)([a-zA-Z].*)', m):
+    if re_match := re.match("([^a-zA-Z]*)([a-zA-Z].*)", m):
         amount, ing = re_match.groups()
     else:
         return None
-    
+
     for dash in DASHES:
         if dash in amount:
             min, max = amount.split(dash)

@@ -26,8 +26,8 @@ def fraction_match(m: str) -> t.Optional[t.Tuple[float, int]]:
     if len(match.groups()) < 1:
         return None
     leading = "0"
-    num, denom = groups[0].strip().split('/')
-    if ' ' in num:
+    num, denom = groups[0].strip().split("/")
+    if " " in num:
         leading, num = num.split(" ")
     return (int(leading) + int(num) / int(denom), len(groups[0]))
 

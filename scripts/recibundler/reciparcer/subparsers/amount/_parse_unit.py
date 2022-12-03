@@ -1,6 +1,7 @@
 import logging as log
 from recibundler.reciparcer.constants import UNPARSABLE_UNIT
 
+
 def _parse_unit(m: str):
     """
     Attempts to parse a unit of measurement.

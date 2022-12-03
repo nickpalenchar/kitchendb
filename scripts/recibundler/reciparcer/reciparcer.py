@@ -4,7 +4,11 @@ from collections import OrderedDict
 import logging as log
 import typing as t
 from .constants import UNPARSABLE_INGREDIENT, UNPARSABLE_UNIT, FRAC_CHARS_TO_DEC
-from recibundler.reciparcer.subparsers.amount import parse_amount, _parse_unit, _format_amount
+from recibundler.reciparcer.subparsers.amount import (
+    parse_amount,
+    _parse_unit,
+    _format_amount,
+)
 from recibundler.reciparcer.subparsers.ingredient import normalize_ingredient
 
 

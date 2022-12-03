@@ -1,4 +1,3 @@
-
 import re
 import typing as t
 from recibundler.reciparcer.constants import FRAC_CHARS_TO_DEC
@@ -22,6 +21,7 @@ def _format_amount_item(m: str) -> str:
             num, den = m.split("/")
             return leading + str(round(int(num) / int(den), 2))
         raise Exception("could not parse amount")
+
 
 def _format_amount(m: t.Union[str, t.List[str]]) -> t.List[str]:
     """
