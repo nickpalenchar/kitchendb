@@ -124,8 +124,7 @@ class TestParseIngredient(unittest.TestCase):
         line = "10 cup frozen corn kernals"
         result = reciparcer.parse_ingredient(line)
         self.assertDictEqual(
-            {"amount": [10.0], "unit": "cup", "ingredient": "frozen corn"},
-            result
+            {"amount": [10.0], "unit": "cup", "ingredient": "frozen corn"}, result
         )
 
     def test_parses_whole_number_and_fraction(self):
@@ -143,7 +142,7 @@ class TestParseIngredient(unittest.TestCase):
                 "amount": [4.0],
                 "unit": "oz",
                 "ingredient": "medium shallots (about 2-3 bulbs",
-                "modifier": "cut into quarters)"
+                "modifier": "cut into quarters)",
             },
             result,
         )
@@ -169,7 +168,7 @@ class TestParseIngredient(unittest.TestCase):
             {
                 "amount": [0.25],
                 "unit": "cup",
-                "ingredient": "soy sauce", # alias to original soy sauce
+                "ingredient": "soy sauce",  # alias to original soy sauce
             },
             result,
         )

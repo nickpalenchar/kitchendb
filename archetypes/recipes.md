@@ -1,7 +1,6 @@
 ---
 title: '{{ replace .Name "-" " " | title }}' #$TITLE$
 date: {{ .Date }} #$DATE$
-draft: true
 categories: [] #$CATEGORIES$
 summary: " " #$SUMMARY$
 #$AUTHOR$

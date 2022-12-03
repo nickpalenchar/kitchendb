@@ -34,7 +34,9 @@ def build_recipes():
 
 def build_hugo():
     log.info("calling `hugo -D` to build hugo..")
-    subprocess.run(["hugo", "-D", "--environment", "preview"], cwd=PROJECT_ROOT, check=True)
+    subprocess.run(
+        ["hugo", "-D", "--environment", "preview"], cwd=PROJECT_ROOT, check=True
+    )
     log.info("hugo build DONE")
 
 
@@ -66,7 +68,7 @@ def upload_to_s3():
 
 if __name__ == "__main__":
     try:
-      deploy()
+        deploy()
     except subprocess.CalledProcessError as e:
-      log.critical("Could not deploy!!")
-      log.critical(e.stderr)
+        log.critical("Could not deploy!!")
+        log.critical(e.stderr)
