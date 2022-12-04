@@ -1,0 +1,134 @@
+{
+  "version": "1",
+  "name": "Plov",
+  "summary": "Lamb and rice dish",
+  "imageUrl": "/images/dalle-plov.png",
+  "steps": [
+    {
+      "sectionTitle": "",
+      "steps": [
+        "Wash rice under tepid water until water runs clear of starch, then soak in warm water as you prepare the rest of the dish",
+        "Heat the oil in a Dutch oven or cast-iron",
+        "Fry the lamb over medium heat until it's golden on all sides (10-15 min), remove from pan",
+        "Add the onions and carrots to the same pan (keep the lamb fat) and fry for 10 min, stirring occasionally",
+        "Cover with boiling water (enough so the vegetables are submerged)",
+        "Add garlic bulb, spices, barberries (or cranberries), and salt. Don't cover, but bring to a boil",
+        "Once boiling, reduce heat to a minimum and simmer for 30-40 min",
+        "Drain rice and add to the pot in a layer on top (don't mix) ",
+        "Gently submerge the rice by pushing it down with a wooden spoon -- if there isn't enough liquid, top with boiling water so the rice is covered by at least .5 inch of liquid",
+        "Cover and cook over low heat for 25-30 min"
+      ]
+    }
+  ],
+  "cuisines": ["russian"],
+  "ingredients": [
+    {
+      "sectionTitle": "",
+      "ingredients": [
+        {
+          "amount": [
+            500.0
+          ],
+          "unit": "g",
+          "ingredient": "basmati rice"
+        },
+        {
+          "amount": [
+            100.0
+          ],
+          "unit": "ml",
+          "ingredient": "vegetable oil"
+        },
+        {
+          "amount": [
+            800.0
+          ],
+          "unit": "g",
+          "ingredient": "cubed oneless lamb shoulder"
+        },
+        {
+          "amount": [
+            2.0
+          ],
+          "customUnit": "",
+          "ingredient": "onions",
+          "modifier": "large, thinly sliced into half-rings"
+        },
+        {
+          "amount": [
+            3.0,
+            4.0
+          ],
+          "customUnit": "",
+          "ingredient": "carrots",
+          "modifier": "peeled and cut into batons"
+        },
+        {
+          "amount": [
+            1.0
+          ],
+          "customUnit": "large bulb",
+          "ingredient": "garlic"
+        },
+        {
+          "amount": [
+            2.0
+          ],
+          "unit": "tsp",
+          "ingredient": "cumin seeds",
+          "modifier": "toasted and roughly crushed"
+        },
+        {
+          "amount": [
+            1.0
+          ],
+          "unit": "tsp",
+          "ingredient": "coriander seeds",
+          "modifier": "roughly crushed"
+        },
+        {
+          "amount": [
+            0.5
+          ],
+          "unit": "tsp",
+          "ingredient": "cayenne"
+        },
+        {
+          "amount": [
+            0.5
+          ],
+          "unit": "tsp",
+          "ingredient": "black pepper"
+        },
+        {
+          "amount": [
+            1.0
+          ],
+          "unit": "tbsp",
+          "ingredient": "dried barberries",
+          "modifier": "(dried cranberries also totally work just try to find sugar free)"
+        },
+        {
+          "amount": [
+            1.0
+          ],
+          "unit": "tbsp",
+          "ingredient": "salt"
+        }
+      ]
+    }
+  ],
+  "timestamp": "12/2/2022 11:38:21",
+  "categories": [
+    "dinner"
+  ],
+  "difficulty": 4,
+  "prepTimeMinutes": 60,
+  "cookTimeMinutes": 30,
+  "cuisine": [
+    "russian"
+  ],
+  "diet": [
+    "gluten-free"
+  ]
+}
