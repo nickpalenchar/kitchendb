@@ -3,6 +3,7 @@
   "name": "Crepes",
   "summary": "So simple yet so tasty. Very cheap to make as well.",
   "cuisines": ["french"],
+  "imageUrl": "/images/dalle-crepes.png",
   "steps": [
     {
       "sectionTitle": "",

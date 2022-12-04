@@ -11,7 +11,7 @@ def create(overwrite=False):
     for file in os.listdir("../static/images"):
         if file == "thumbnail":
             continue
-        if os.path.exists(f"../static/images/{file}") and not overwrite:
+        if os.path.exists(f"../static/images/thumbnail/{file}") and not overwrite:
             continue
 
         im = Image.open(f"../static/images/{file}").copy()
