@@ -2,6 +2,7 @@
   "version": "1",
   "name": "Flourless Chocolate Cake",
   "summary": "This chocolate cake does not contain flour. That's the meaning of \"flourless\"!",
+  "imageUrl": "/images/dalle-flourless-chocolate-cake.png",
   "steps": [
     {
       "sectionTitle": "",

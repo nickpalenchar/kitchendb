@@ -2,6 +2,7 @@
   "version": "1",
   "name": "Hard Boiled Eggs",
   "summary": "It's eggs! Hard boiled!",
+  "imageUrl": "/images/dalle-hard-boiled-eggs.png",
   "steps": [
     {
       "sectionTitle": "",
