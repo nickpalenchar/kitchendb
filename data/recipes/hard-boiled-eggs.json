@@ -1,0 +1,43 @@
+{
+  "version": "1",
+  "name": "Hard Boiled Eggs",
+  "summary": "It's eggs! Hard boiled!",
+  "steps": [
+    {
+      "sectionTitle": "",
+      "steps": [
+        "Add eggs to a pot. Fill with enough cold water so that the level is about an inch above the eggs. Sprinkle in salt.",
+        "Set to high heat, bringing the water to a boil.",
+        "Once boiling, remove from heat and immediately cover. Let sit for 8-10 minutes.",
+        "Transfer eggs to a bowl of ice water for at least 1 minute.",
+        "Eggs can be consumed immediately or refrigerated for leader consumption."
+      ]
+    }
+  ],
+  "ingredients": [
+    {
+      "sectionTitle": "",
+      "ingredients": [
+        {
+          "amount": [
+            4.0,
+            6.0
+          ],
+          "customUnit": "",
+          "ingredient": "eggs"
+        },
+        {
+          "ingredient": "dash of salt"
+        },
+        {
+          "ingredient": "water"
+        }
+      ]
+    }
+  ],
+  "timestamp": "12/1/2022 7:11:26",
+  "categories": [],
+  "difficulty": 1,
+  "prepTimeMinutes": 5,
+  "cookTimeMinutes": 10
+}

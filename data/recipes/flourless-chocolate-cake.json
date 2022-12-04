@@ -1,0 +1,91 @@
+{
+  "version": "1",
+  "name": "Flourless Chocolate Cake",
+  "summary": "This chocolate cake does not contain flour. That's the meaning of \"flourless\"!",
+  "steps": [
+    {
+      "sectionTitle": "",
+      "steps": [
+        "Set a pot of water to a boil",
+        "Melt chocolate chips and butter, stirring often, in a medium heat-resistant bowl held over the boiling water",
+        "Remove from heat once melted and beat in sugar, salt, and vanilla",
+        "Beat in eggs",
+        "Add cocoa powder last, stir to combine",
+        "Ladle into a greased pan",
+        "Bake at 375 until set",
+        "Cool before serving"
+      ]
+    }
+  ],
+  "ingredients": [
+    {
+      "sectionTitle": "",
+      "ingredients": [
+        {
+          "amount": [
+            2.0
+          ],
+          "unit": "cup",
+          "ingredient": "of chocolate chips"
+        },
+        {
+          "amount": [
+            8.0
+          ],
+          "unit": "oz",
+          "ingredient": "of butter",
+          "modifier": "chopped"
+        },
+        {
+          "amount": [
+            0.75
+          ],
+          "unit": "cup",
+          "ingredient": "of sugar"
+        },
+        {
+          "amount": [
+            2.0
+          ],
+          "unit": "tsp",
+          "ingredient": "of vanilla"
+        },
+        {
+          "amount": [
+            0.25
+          ],
+          "unit": "tsp",
+          "ingredient": "of salt"
+        },
+        {
+          "amount": [
+            6.0
+          ],
+          "customUnit": "",
+          "ingredient": "eggs",
+          "modifier": "beaten"
+        },
+        {
+          "amount": [
+            1.0
+          ],
+          "unit": "cup",
+          "ingredient": "of cocoa powder"
+        }
+      ]
+    }
+  ],
+  "timestamp": "12/2/2022 11:22:45",
+  "categories": [
+    "dessert"
+  ],
+  "difficulty": 3,
+  "prepTimeMinutes": 20,
+  "cookTimeMinutes": 30,
+  "cuisine": [
+    "american"
+  ],
+  "diet": [
+    "gluten-free"
+  ]
+}
