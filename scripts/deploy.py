@@ -7,6 +7,7 @@ import logging as log
 from re import sub
 from tkinter import PROJECTING
 from recibundler.build_recipes import build as r_build_recipes
+import create_thumbnails
 import subprocess
 
 log.basicConfig(level=os.environ.get("LOGLEVEL", log.INFO))
@@ -55,6 +56,15 @@ def add_pagefind():
 def upload_to_s3():
     AWS_S3_BUCKET = os.environ.get("KDB_AWS_S3_BUCKET", secrets["AWS_S3_BUCKET"])
     AWS_S3_CDN_BUCKET = os.environ.get("KDB_AWS_S3_CDN_BUCKET", secrets["AWS_S3_CDN_BUCKET"])
+
+    if AWS_S3_BUCKET == AWS_S3_CDN_BUCKET:
+        log.error("values AWS_S3_BUCKET and AWS_S3_CDN should not match! Not deploying")
+        return
+
+    log.info("Creating thumbnails")
+    create_thumbnails.create()
+    log.info("done")
+
     log.debug(f"will deploy to {AWS_S3_BUCKET}")
     log.info("uploading to s3...")
     cp = subprocess.run(
@@ -65,9 +75,12 @@ def upload_to_s3():
     )
     log.info(str(cp.stdout))
     log.info("uploading to s3 DONE")
-    log.debug("uploading images to cdn")
+    log.info("uploading images to cdn")
     cp = subprocess.run(
-        ["aws", "s3", "cp", "static", f"s3://{AWS_S3_BUCKET}", "--recursive"],
+        ["aws", "s3", "sync", "static", f"s3://{AWS_S3_CDN_BUCKET}"],
+        cwd=PROJECT_ROOT,
+        stdout=subprocess.PIPE,
+        check=True,
     )
 
 
