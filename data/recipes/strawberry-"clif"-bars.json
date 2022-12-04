@@ -2,6 +2,7 @@
   "version": "1",
   "name": "Strawberry \"Clif\" Bars",
   "summary": "Immatation clif bars",
+  "imageUrl": "/images/dalle-strawberry-clif-bars.png",
   "diets": ["vegetarian"],
   "steps": [
     {

@@ -54,6 +54,7 @@ def add_pagefind():
 
 def upload_to_s3():
     AWS_S3_BUCKET = os.environ.get("KDB_AWS_S3_BUCKET", secrets["AWS_S3_BUCKET"])
+    AWS_S3_CDN_BUCKET = os.environ.get("KDB_AWS_S3_CDN_BUCKET", secrets["AWS_S3_CDN_BUCKET"])
     log.debug(f"will deploy to {AWS_S3_BUCKET}")
     log.info("uploading to s3...")
     cp = subprocess.run(
@@ -62,8 +63,12 @@ def upload_to_s3():
         stdout=subprocess.PIPE,
         check=True,
     )
-    log.debug(str(cp.stdout))
+    log.info(str(cp.stdout))
     log.info("uploading to s3 DONE")
+    log.debug("uploading images to cdn")
+    cp = subprocess.run(
+        ["aws", "s3", "cp", "static", f"s3://{AWS_S3_BUCKET}", "--recursive"],
+    )
 
 
 if __name__ == "__main__":

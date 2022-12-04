@@ -2,6 +2,7 @@
   "version": "1",
   "name": "Sweet potato casserole",
   "summary": "Lots of cooking time pays off in this excellent Thanksgiving side dish.",
+  "imageUrl": "/images/dalle-sweet-potato-caserole.png",
   "steps": [
     {
       "sectionTitle": "",

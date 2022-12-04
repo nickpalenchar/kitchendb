@@ -2,6 +2,7 @@
   "version": "1",
   "name": "Turmeric Immunity Tea",
   "summary": "Keep your immune system strong during the winter months",
+  "imageUrl": "/images/dalle-yellow-tea.png",
   "steps": [
     {
       "sectionTitle": "",

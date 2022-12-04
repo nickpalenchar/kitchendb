@@ -1,0 +1,159 @@
+{
+  "version": "1",
+  "name": "Shrimp Tostadas with Pineapple Salsa",
+  "summary": "",
+  "imageUrl": "/images/shrimp-tostadas.png",
+  "steps": [
+    {
+      "sectionTitle": "",
+      "steps": [
+        "Preheat the oven to 400 degrees F",
+        "On a cookie sheet, spray oil. Lay corn tortillas flat on sheet.",
+        "Bake for 8-10 minutes, flipping tortillas halfway through.",
+        "Meanwhile, prepare the shrimp: mix garlic powder (1/2 tsp), smoked paprika, chili powder, cumin, salt, pepper together in a bowl with shrimp tossed in.",
+        "Set a skillet on medium heat. Add shrimp, cooking on one side for about 3 minutes. Flip all shrimp for another 3 minutes, until shrimp is pink.",
+        "Make the salsa: combine pineapple, tomato, onion and spices. Squeeze in lime juice. Still thoroughly.",
+        "Assemble the tostadas: when the tortillas are cool, smear on a bit of avocado, then top with 3-4 shrimp and salsa. Garnish with cilantro. Serve Immediately."
+      ]
+    }
+  ],
+  "cuisines": ["mexican"],
+  "ingredients": [
+    {
+      "sectionTitle": "Pineapple salsa",
+      "ingredients": [
+        {
+          "amount": [
+            0.5
+          ],
+          "unit": "cup",
+          "ingredient": "pineapple",
+          "modifier": "chopped"
+        },
+        {
+          "amount": [
+            0.5
+          ],
+          "unit": "cup",
+          "ingredient": "cherry tomatoes",
+          "modifier": "chopped"
+        },
+        {
+          "amount": [
+            0.5
+          ],
+          "unit": "cup",
+          "ingredient": "red onion",
+          "modifier": "chopped"
+        },
+        {
+          "amount": [
+            1.0
+          ],
+          "customUnit": "",
+          "ingredient": "juice of lime"
+        },
+        {
+          "amount": [
+            0.5
+          ],
+          "unit": "tsp",
+          "ingredient": "garlic powder"
+        },
+        {
+          "ingredient": "salt, to taste"
+        },
+        {
+          "ingredient": "pepper, to taste"
+        }
+      ]
+    },
+    {
+      "sectionTitle": "Grilled Shrimp",
+      "ingredients": [
+        {
+          "amount": [
+            9.0,
+            10.0
+          ],
+          "customUnit": "",
+          "ingredient": "shrimp",
+          "modifier": "(Large, 31-40 ct)"
+        },
+        {
+          "amount": [
+            0.5
+          ],
+          "unit": "tsp",
+          "ingredient": "garlic powder"
+        },
+        {
+          "amount": [
+            0.5
+          ],
+          "unit": "tsp",
+          "ingredient": "smoked paprika"
+        },
+        {
+          "amount": [
+            0.5
+          ],
+          "unit": "tsp",
+          "ingredient": "chili powder"
+        },
+        {
+          "amount": [
+            0.25
+          ],
+          "unit": "tsp",
+          "ingredient": "cumin"
+        },
+        {
+          "amount": [
+            0.5
+          ],
+          "unit": "tsp",
+          "ingredient": "sea salt",
+          "modifier": "plus more to taste"
+        },
+        {
+          "ingredient": "pepper, to taste"
+        },
+        {
+          "ingredient": "cilantro"
+        }
+      ]
+    },
+    {
+      "sectionTitle": "Tostadas",
+      "ingredients": [
+        {
+          "amount": [
+            3.0
+          ],
+          "customUnit": "",
+          "ingredient": "corn tortillas"
+        },
+        {
+          "ingredient": "Avocado oil spray (or olive oil spray)"
+        },
+        {
+          "amount": [
+            1.0,
+            2.0
+          ],
+          "customUnit": "",
+          "ingredient": "Avocado",
+          "modifier": "to top"
+        }
+      ]
+    }
+  ],
+  "timestamp": "12/3/2022 19:50:02",
+  "categories": [
+    "lunch"
+  ],
+  "difficulty": 2,
+  "prepTimeMinutes": 18,
+  "cookTimeMinutes": 15
+}
