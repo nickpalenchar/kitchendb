@@ -6,6 +6,7 @@
   "difficulty": 3,
   "cookTimeMinutes": 20,
   "prepTimeMinutes": 15,
+  "imageUrl": "/images/dalle-hot-sauce.png",
   "steps": [
     {
       "sectionTitle": "",
