@@ -1,0 +1,16 @@
+<!-- This search page uses pagefind https://pagefind.app/
+It's ran after the site is built: i.e. after you run `hugo`
+The binary can be fetched from scripts, by running ./get_pagefind
+-->
+<div id="rendered-search" class="mw7 center"></div>
+<!--div style="background: white; border: 2px solid #ccc; width: 140px; height: 30px"> this is search</h1-->
+<script>
+    window.addEventListener('DOMContentLoaded', (event) => {
+        new PagefindUI({ element: "#rendered-search", placeholder: "" });
+    });
+</script>
+<style>
+    #rendered-search {
+        padding-top: 24px;
+    }
+</style>
