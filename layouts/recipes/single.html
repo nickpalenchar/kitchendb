@@ -15,9 +15,8 @@
         {{with .CurrentSection.Title }}{{. | upper }}{{end}}
       </aside>
       {{ partial "social-share.html" . }}
-      <meta data-pagefind-default-meta="image[content]" content="/images/thumbnail/apple-crisp.png" property="og:image">
+      <meta data-pagefind-default-meta="image[content]" content="{{ partial "func/ThumbnailFromImage" .Params.featured_image }}" property="og:image">
       <h1 class="f1 athelas mt3 mb1" data-pagefind-body>
-        {{ partial "func/ThumbnailFromImage" .Params.featured_image }}
         {{- .Title -}}
       </h1>
       {{ with .Params.author | default .Site.Params.author }}
