@@ -21,13 +21,13 @@
     <div class="pb3-m pb3-l {{ .Site.Params.background_color_class | default "bg-black" }}">
       {{ partial "site-navigation.html" . }}
       <div class="tc-l pv3 ph3 ph4-ns">
-        <h1 class="f-subheadline fw2 light-silver mb0 lh-title tc" style="font-size: 4rem;">
+        <h1 class="f-subheadline fw2 mv0 mv8-ns light-silver mb0 lh-title tc" style="font-size: 4rem;">
           {{ .Title | default .Site.Title }}
         </h1>
         <div class="f4 silver tc moon-grey i">
-          The open-source, ad-free recipe database.
+          {{ if .Params.useTagline }}The open-source, ad-free recipe database.{{ end}}
         </div>
-        <div class="white">{{ partial "search.html" }}</div>
+        {{ if .Params.useSearch }}<div class="white">{{ partial "search.html" }}</div>{{ end }}
         {{ with .Params.description }}
           <h2 class="fw1 f5 f3-l white-80 measure-wide-l center lh-copy mt3 mb4">
             {{ . }}
