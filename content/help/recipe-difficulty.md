@@ -1,7 +1,7 @@
 ---
 title: "Recipe Difficulty"
 date: 2022-11-27T07:38:40-05:00
-draft: true
+type: kitchendb
 ---
 
 Recipes are ranked from 1-5 depending on the difficulty.

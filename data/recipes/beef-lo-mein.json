@@ -2,6 +2,7 @@
   "version": "1",
   "name": "Beef Lo Mein",
   "summary": "Simple and delicious take-out replacement.",
+  "imageUrl": "/images/dalle-beef-lo-mein.png",
   "steps": [
     {
       "sectionTitle": "",

@@ -1,0 +1,18 @@
+.pagefind-ui__result-thumb {
+  overflow: hidden;
+  max-width: 90px;
+  border-radius: 6px;
+}
+
+.pagefind-ui__result-thumb img {
+  overflow: hidden;
+  transform: scale(5)
+}
+
+body {
+  --pagefind-ui-primary: #eeeeee;
+  --pagefind-ui-text: #eeeeee;
+  --pagefind-ui-background: #152028d1;
+  --pagefind-ui-border: #142f41;
+  --pagefind-ui-tag: #152028;
+}
