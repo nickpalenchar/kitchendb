@@ -2,37 +2,43 @@
   {{ $data := getJSON . }}
 
   <h2>Ingredients</h2>
+  <div class="flex flex-wrap justify-between">
   {{ range $data.ingredients }}
-    {{ with .sectionTitle }}
-      <h3> {{ . }}</h3>
-    {{ end }}
+    <div class="w-50-l w-70-m ph1-l">
+      {{ with .sectionTitle }}
+        <h3 class="fw4 underline"> {{ . | title }}</h3>
+      {{ end }}
     {{ with .ingredients }}
       <ul>
       {{ range . }}
-      <li>
-        {{ if .amount }}
-          <b><span  class="recipe-unit">
-            {{ cond ( eq (len .amount) 1 ) ( index .amount 0 ) ( printf "%v-%v" (index .amount 0) (index .amount 1) ) }}
-            </span>
+        <li class="avenir fw4">
+          {{ if .amount }}
+            <b><span class="recipe-unit">
+              {{ cond ( eq (len .amount) 1 ) ( index .amount 0 ) ( printf "%v-%v" (index .amount 0) (index .amount 1) ) }}
+              </span>
+          {{ end }}
+          {{ .unit }}</b> {{ .ingredient | markdownify }}{{ if .modifier | markdownify }}, {{ .modifier }}{{ end }}
+        </li>
         {{ end }}
-        {{ .unit }}</b> {{ .ingredient | markdownify }}{{ if .modifier | markdownify }}, {{ .modifier }}{{ end }}
-      </li>
-      {{ end }}
-      </ul>
+        </ul>
     {{ end }}
+    </div>
   {{ end }}
+  </div>
 
   {{ range $data.steps }}
     <h2>Steps</h2>
-    {{ with .sectionTitle }}
-      <h3> {{ .sectionTitle }}</h3>
+    <div class="w-two-thirds-l">
+      {{ with .sectionTitle }}
+        <h3> {{ .sectionTitle }}</h3>
+      {{ end }}
+      <ol>
+      {{ range .steps }}
+        <li class="avenir fw4">{{ . | markdownify }}</li>
+      {{ end }}
+      </ol>
     {{ end }}
-    <ol>
-    {{ range .steps }}
-      <li>{{ . | markdownify }}</li>
-    {{ end }}
-    </ol>
-  {{ end }}
+    </div>
 {{ end }}
 <script>
   function displayUnits(mul=1) {
