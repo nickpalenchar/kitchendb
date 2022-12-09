@@ -23,11 +23,11 @@
 
       <div class="center">
       {{ $n_posts := $.Param "recent_posts_number" | default 10}}
-      <section class="w-70 mw9 center">
+      <section class="flex flex-column w-70 mw9 center">
         {{/* Range through the first $n_posts items of the section */}}
-          <div class="cf ph2-ns">
+          <div class="cf ph2-ns flex flex-wrap">
             {{ range (first $n_posts $section) }}
-            <div class="fl w-100 w-50-l pa2-l" style="min-height: 320px;">
+            <div class="fl w-100 w-50-l pa2-l">
               <div class="pv4">
                 {{ .Render "summary-with-image" }}
               </div>
