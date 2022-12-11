@@ -1,0 +1,7 @@
+{
+  "compilerOptions": {
+    "outDir": "../../static/scripts",
+    "target": "ES2015",
+  },
+  "include": ["src"]
+}
