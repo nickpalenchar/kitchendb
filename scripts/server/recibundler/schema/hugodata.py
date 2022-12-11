@@ -12,7 +12,7 @@ import json
 
 with open(
     os.path.join(
-        pathlib.Path(__file__).parent.absolute(), "../../../data/schemas/recipes.json"
+        pathlib.Path(__file__).parent.absolute(), "../../../../data/schemas/recipes.json"
     )
 ) as fh:
     recipe_schema = json.loads(fh.read())
@@ -21,7 +21,7 @@ with open(
 with open(
     os.path.join(
         pathlib.Path(__file__).parent.absolute(),
-        "../../../data/schemas/ingredient.json",
+        "../../../../data/schemas/ingredient.json",
     )
 ) as fh:
     ingredient_schema = json.loads(fh.read())
