@@ -1,0 +1,91 @@
+{
+  "version": "1",
+  "name": "Fuggy Brownies",
+  "summary": "If you like a fuggy brownie with a rich chocolate flavor, this recipe is perfect.",
+  "imageUrl": "/images/fudgy-brownies.png",
+  "steps": [
+    {
+      "sectionTitle": "",
+      "steps": [
+        "Preheat the oven to 235 degrees F. Position oven rack to the middle of the oven.",
+        "Combine the butter, sugar, cacao powder, and salt in a medium bowl. Mix well to combine.",
+        "Stir in vanilla.",
+        "Add the eggs, one at a time, stirring vigorously between each one.",
+        "Add batter to an 8x8 inch pan. Spread evenly.",
+        "Bake for 25-30 minutes until a wooden tooth pick in the center comes out clean. Let cool for 10 minutes before serving."
+      ]
+    }
+  ],
+  "ingredients": [
+    {
+      "sectionTitle": "",
+      "ingredients": [
+        {
+          "amount": [
+            10.0
+          ],
+          "unit": "tbsp",
+          "ingredient": "unsalted butter",
+          "modifier": "melted and warm"
+        },
+        {
+          "amount": [
+            1.25
+          ],
+          "unit": "cup",
+          "ingredient": "granulated sugar"
+        },
+        {
+          "amount": [
+            0.75
+          ],
+          "unit": "g",
+          "ingredient": "unsweetened cacao powder or coca powder"
+        },
+        {
+          "amount": [
+            0.25
+          ],
+          "unit": "tsp",
+          "ingredient": "kosher salt"
+        },
+        {
+          "amount": [
+            2.0
+          ],
+          "customUnit": "",
+          "ingredient": "large cold eggs"
+        },
+        {
+          "amount": [
+            1.0
+          ],
+          "unit": "tsp",
+          "ingredient": "vanilla extract"
+        },
+        {
+          "amount": [
+            0.5
+          ],
+          "unit": "cup",
+          "ingredient": "all-purpose flour"
+        },
+        {
+          "amount": [
+            0.66
+          ],
+          "unit": "cup",
+          "ingredient": "chopped walnuts or pecans (optional)"
+        }
+      ]
+    }
+  ],
+  "timestamp": "12/7/2022 9:02:30",
+  "categories": [
+    "dessert",
+    "vegetarian"
+  ],
+  "difficulty": 2,
+  "prepTimeMinutes": 10,
+  "cookTimeMinutes": 30
+}

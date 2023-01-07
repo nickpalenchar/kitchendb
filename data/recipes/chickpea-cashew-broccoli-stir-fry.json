@@ -1,0 +1,93 @@
+{
+  "version": "1",
+  "name": "Chickpea Cashew Broccoli Stir-Fry",
+  "imageUrl": "/images/dalle-broccoli-cashew-stir-fry.png",
+  "summary": "Super delicious, simple, and healthy",
+  "steps": [
+    {
+      "sectionTitle": "",
+      "steps": [
+        "combine cornstarch, chili sauce, and half the soy sauce in a small bowl. Whisk until combined.",
+        "Chop garlic.",
+        "Chop broccoli stems from broccoli. Continue to chop the stems into bite-sized pieces.",
+        "Set large skillet on medium to medium-low heat. Add olive oil and garlic. Cook, mixing around gently, until the garlic starts to become fragrant.",
+        "Add broccoli stems ONLY. Increase the pan to medium heat. Cook, stirring continuously, about 2 minutes.",
+        "Add the remaining broccoli florets. Continue to cook and stir, another 3 minutes.",
+        "Add the cashews and chickpeas. Continue cooking for another 3 minutes.",
+        "If rice was also made, top rice with broccoli."
+      ]
+    }
+  ],
+  "ingredients": [
+    {
+      "sectionTitle": "",
+      "ingredients": [
+        {
+          "amount": [
+            7.0,
+            8.0
+          ],
+          "customUnit": "",
+          "ingredient": "garlic cloves",
+          "modifier": "chopped fine"
+        },
+        {
+          "ingredient": "broccoli, stems and florets"
+        },
+        {
+          "amount": [
+            1.0
+          ],
+          "customUnit": "",
+          "ingredient": "can chickpeas"
+        },
+        {
+          "amount": [
+            1.0
+          ],
+          "unit": "tbsp",
+          "ingredient": "soy sauce"
+        },
+        {
+          "amount": [
+            1.0
+          ],
+          "unit": "tbsp",
+          "ingredient": "garlic chili sauce"
+        },
+        {
+          "amount": [
+            1.0
+          ],
+          "unit": "tsp",
+          "ingredient": "cornstarch"
+        },
+        {
+          "amount": [
+            0.5
+          ],
+          "unit": "cup",
+          "ingredient": "cashews"
+        },
+        {
+          "ingredient": "Brown Rice (optional)"
+        }
+      ]
+    }
+  ],
+  "timestamp": "12/7/2022 8:52:30",
+  "categories": [
+    "side dish",
+    "lunch",
+    "vegan",
+    "vegetarian",
+    "gluten-free"
+  ],
+  "difficulty": 2,
+  "prepTimeMinutes": 12,
+  "cookTimeMinutes": 10,
+  "diet": [
+    "vegetarian",
+    "vegan"
+  ]
+}
