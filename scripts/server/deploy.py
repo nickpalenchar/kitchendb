@@ -5,16 +5,15 @@ import os
 import json
 import logging as log
 from re import sub
-from tkinter import PROJECTING
 from recibundler.build_recipes import build as r_build_recipes
 import create_thumbnails
 import subprocess
 
 log.basicConfig(level=os.environ.get("LOGLEVEL", log.INFO))
 
-PROJECT_ROOT = ".."
+PROJECT_ROOT = "../.."
 
-with open("../secrets.json") as fh:
+with open("../../secrets.json") as fh:
     secrets = json.loads(fh.read())
     log.debug(f"Loaded {len(secrets)} secrets")
 
@@ -71,6 +70,7 @@ def upload_to_s3():
         ["aws", "s3", "cp", "public", f"s3://{AWS_S3_BUCKET}", "--recursive"],
         cwd=PROJECT_ROOT,
         stdout=subprocess.PIPE,
+        stderr=subprocess.PIPE,
         check=True,
     )
     log.info(str(cp.stdout))

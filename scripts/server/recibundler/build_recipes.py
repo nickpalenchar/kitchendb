@@ -15,11 +15,11 @@ import logging as log
 log.basicConfig(level=os.environ.get("LOGLEVEL", "WARN"))
 
 
-PROJECT_ROOT = ".."
-RECIPE_DIR = "../data/recipes"
-SCHEMA_DIR = "../data/schemas"
+PROJECT_ROOT = "../.."
+RECIPE_DIR = "../../data/recipes"
+SCHEMA_DIR = "../../data/schemas"
 
-HUGO_RECIPE_DIR = "../content/recipes"
+HUGO_RECIPE_DIR = "../../content/recipes"
 MAX_WORKERS = multiprocessing.cpu_count() * 3
 
 
@@ -31,7 +31,6 @@ def create_hugo_content_from_json(jsonfiles: List[str]):
             validate_file_schema(fh)
         json_name = file.replace("'", "ʼ")
         mkdown_name = camel_to_snake_case(json_name).replace(".json", ".md")
-
         log.info(f"building {mkdown_name}...")
         log.debug(f"CMD: hugo new --kind recipes {HUGO_RECIPE_DIR}/{mkdown_name}")
         subprocess.run(
@@ -51,13 +50,12 @@ def build():
     build takes all json files in data/recipes and builds them into content pages.
     """
     clean()
-
     create_hugo_content_from_json([file for file in os.listdir(RECIPE_DIR)])
 
 
 def clean():
-    for file in os.listdir(HUGO_RECIPE_DIR):
-        os.remove(f"{HUGO_RECIPE_DIR}/{file}")
+    for file in os.listdir(f"../{HUGO_RECIPE_DIR}"):
+        os.remove(f"../{HUGO_RECIPE_DIR}/{file}")
 
 
 def validate_file_name(name):
@@ -102,11 +100,11 @@ def post_build_mods(file: str, mkdown: str) -> None:
     with open(file) as fh:
         recipe = json.loads(fh.read())
 
-    correct_date(recipe, mkdown)
-    use_json_name_as_title(recipe, mkdown)
-    correct_categories(recipe, mkdown)
-    add_summary(recipe, mkdown)
-    add_author(recipe, mkdown)
+    correct_date(recipe, os.path.join('..', mkdown))
+    use_json_name_as_title(recipe, os.path.join('..', mkdown))
+    correct_categories(recipe, os.path.join('..', mkdown))
+    add_summary(recipe, os.path.join('..', mkdown))
+    add_author(recipe, os.path.join('..', mkdown))
     try:
         add_frontmatter(recipe, mkdown)
     except Exception as e:
@@ -157,7 +155,7 @@ def add_author(recipe: dict, mkdown: str) -> None:
 
 def add_frontmatter(recipe: dict, mkdown: str) -> None:
     with TemporaryFile() as fp:
-        with open(mkdown) as orig:
+        with open(os.path.join('..', mkdown)) as orig:
             for line in orig:
                 if line == "prepTime: 0\n":
                     fp.write(

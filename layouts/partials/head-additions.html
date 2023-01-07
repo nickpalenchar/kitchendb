@@ -6,4 +6,21 @@
   <link href="/fontawesome/css/brands.css" rel="stylesheet">
   <link href="/fontawesome/css/solid.css" rel="stylesheet">
   <link href="/css/pagefind-custom.css" rel="stylesheet">
+  {{ $path := printf "static/scripts/%s" .Type }}
+  {{ $staticPath := printf "scripts/%s" .Type }}
+  {{ if fileExists $path }}
+  {{ range readDir $path }}
+    <script src="{{ $.Site.BaseURL }}{{ $staticPath }}/{{ .Name }}" type="text/javascript"></script>
+  {{ end }}
+{{ end }}
 </head>
+
+{{ $path := printf "static/scripts/%s" .Type }}
+{{/*  TODO:  make a dev HUGO_ENVIRONMENT variable and a shortcode wrapper that prevents this from happening  */}}
+<code style="display: none;">
+{{ if fileExists $path }}
+  {{ range readDir $path }}
+    {{ $.Site.BaseURL }}{{ .Name }}
+  {{ end }}
+{{ end }}
+</code>
