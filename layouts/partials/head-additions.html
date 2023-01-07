@@ -16,7 +16,8 @@
 </head>
 
 {{ $path := printf "static/scripts/%s" .Type }}
-<code>
+{{/*  TODO:  make a dev HUGO_ENVIRONMENT variable and a shortcode wrapper that prevents this from happening  */}}
+<code style="display: none;">
 {{ if fileExists $path }}
   {{ range readDir $path }}
     {{ $.Site.BaseURL }}{{ .Name }}
