@@ -1,0 +1,89 @@
+{
+  "version": "1",
+  "name": "Baked Sweet Potato \"Fries\"",
+  "summary": "A delicious alternative that's superior in health to it's fried counterpart.",
+  "imageUrl": "/images/baked-sweet-potato-fries.png",
+  "steps": [
+    {
+      "sectionTitle": "",
+      "steps": [
+        "Preheat the oven to 400 degrees F.",
+        "Peel the sweet potatoes and slice them 1/4\"-1/2\" thick by 3\"-5\" wide. Add to a large bowl.",
+        "Drizzle olive oil into bowl.",
+        "Sprinkle all spices into bowl. Toss generously until sweet potatoes are evenly and thoroughly coated.",
+        "Spread evenly onto a large baking sheet (or two medium ones). Keep as much space in between fries as possible (they should all lay flat).",
+        "Bake in center of the oven for 15 minutes. Remove and turn all fries over. Bake for another 10 minutes."
+      ]
+    }
+  ],
+  "ingredients": [
+    {
+      "sectionTitle": "",
+      "ingredients": [
+        {
+          "amount": [
+            2.0
+          ],
+          "unit": "lb",
+          "ingredient": "sweet potatoes",
+          "modifier": "peeled"
+        },
+        {
+          "amount": [
+            2.0
+          ],
+          "unit": "tbsp",
+          "ingredient": "olive oil"
+        },
+        {
+          "amount": [
+            1.0
+          ],
+          "unit": "tsp",
+          "ingredient": "garlic powder"
+        },
+        {
+          "amount": [
+            1.0
+          ],
+          "unit": "tsp",
+          "ingredient": "paprika"
+        },
+        {
+          "amount": [
+            1.0
+          ],
+          "unit": "tsp",
+          "ingredient": "salt"
+        },
+        {
+          "amount": [
+            0.5
+          ],
+          "unit": "tsp",
+          "ingredient": "black pepper"
+        },
+        {
+          "amount": [
+            0.25
+          ],
+          "unit": "tsp",
+          "ingredient": "cayenne pepper (optional)"
+        }
+      ]
+    }
+  ],
+  "timestamp": "1/6/2023 19:48:59",
+  "categories": [
+    "side dish"
+  ],
+  "difficulty": 1,
+  "prepTimeMinutes": 10,
+  "cookTimeMinutes": 25,
+  "diet": [
+    "paleo",
+    "vegetarian",
+    "vegan",
+    "gluten-free"
+  ]
+}
