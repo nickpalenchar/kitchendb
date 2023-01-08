@@ -1,8 +1,7 @@
 import type { Component } from 'solid-js';
 
-import logo from './logo.svg';
-
 const App: Component = () => {
+  console.log('hello????')
   return (
     <div>
       hello from solid!
@@ -11,3 +10,4 @@ const App: Component = () => {
 };
 
 window._componentApp = App;
+export default App;
