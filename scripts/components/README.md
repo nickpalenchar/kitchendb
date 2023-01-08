@@ -1,34 +1,52 @@
-## Usage
+# Components
 
-Those templates dependencies are maintained via [pnpm](https://pnpm.io) via `pnpm up -Lri`.
+This directory contains independent [solid][https://www.solidjs.com/] components, which can be required into a
+hugo page via a partial or shortcode.
 
-This is the reason you see a `pnpm-lock.yaml`. That being said, any package manager will work. This file can be safely be removed once you clone a template.
+Every component with that is capitalized will considered a build input, and will be built into its own file. 
+Lowercased files are not exported by themselves (they should be required into another component).
 
-```bash
-$ npm install # or pnpm install or yarn install
+```
+Form.tsx // built
+utils.tsx // not built
+Login.tsx // built
 ```
 
-### Learn more on the [Solid Website](https://solidjs.com) and come chat with us on our [Discord](https://discord.com/invite/solidjs)
+## Creating a Component.
 
-## Available Scripts
+Declare a solid component, but instead of exporting it, attach it to the window object as `window._components<Name>`
 
-In the project directory, you can run:
+```ts
+import type { Component } from 'solid-js';
 
-### `npm dev` or `npm start`
+const Foo: Component = () => {
+  return (
+    <div>Hello!</div>
+  );
+};
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+window._componentFoo = Foo;
+```
 
-The page will reload if you make edits.<br>
+Run `npm build` from `scripts/compononts`
 
-### `npm run build`
+## Using a component in Hugo
 
-Builds the app for production to the `dist` folder.<br>
-It correctly bundles Solid in production mode and optimizes the build for the best performance.
+### Within a shortcode/layout (as a partial)
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+Pass a `Component` variable in the context
 
-## Deployment
+```hugo
+// example.html
+{{ partial require-component dict "Component" "Foo" }}
+```
 
-You can deploy the `dist` folder to any static host provider (netlify, surge, now, etc.)
+### Within content (as a shortcode)
+
+Pass the name in the shortcode.
+
+```md
+// content/example.md
+
+{{< require-component "Foo" >}}
+```

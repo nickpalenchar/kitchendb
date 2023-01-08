@@ -6,13 +6,6 @@
   <link href="/fontawesome/css/brands.css" rel="stylesheet">
   <link href="/fontawesome/css/solid.css" rel="stylesheet">
   <link href="/css/pagefind-custom.css" rel="stylesheet">
-  {{ $path := printf "static/scripts/%s" .Type }}
-  {{ $staticPath := printf "scripts/%s" .Type }}
-  {{ if fileExists $path }}
-  {{ range readDir $path }}
-    <script src="{{ $.Site.BaseURL }}{{ $staticPath }}/{{ .Name }}" type="text/javascript"></script>
-  {{ end }}
-{{ end }}
 </head>
 
 {{ $path := printf "static/scripts/%s" .Type }}
