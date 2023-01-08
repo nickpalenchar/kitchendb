@@ -1,0 +1,10 @@
+{{/*  This Adds _all_ scripts defined in `scripts/client/src` based on the pages "type" 
+      The idea is that all pages of a certain type should have the associated functions.
+*/}}
+{{ $path := printf "static/scripts/%s" .Type }}
+{{ $staticPath := printf "scripts/%s" .Type }}
+{{ if fileExists $path }}
+  {{ range readDir $path }}
+    <script src="{{ $.Site.BaseURL }}{{ $staticPath }}/{{ .Name }}" type="text/javascript" ></script>
+  {{ end }}
+{{ end }}
