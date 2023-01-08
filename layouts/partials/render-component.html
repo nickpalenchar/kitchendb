@@ -7,13 +7,16 @@
   {{ range readDir $path }}
   {{/*  TODO get a unique id in a partail  */}}
     <div id="my-root"></div>
-    <script src="{{ $.Site.BaseURL }}{{ $staticPath }}/{{ .Name }}" type="module" >
+    <script src="{{ $.Site.BaseURL }}{{ $staticPath }}/{{ $component }}.js" type="module" >
     </script>
     <script async type="module">
       var component = '_component{{ $component }}';
       console.log('looking fro component', component)
       var a = setInterval(function() {
-        if(window.hasOwnProperty(component)) {
+        console.log('looking');
+        var found = false;
+        if(window.hasOwnProperty(component) && !found) {
+          found = true;
           clearInterval(a);
           console.log("clearing");
           var el = document.getElementById('my-root');
