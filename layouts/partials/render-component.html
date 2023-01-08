@@ -1,28 +1,15 @@
-{{ $path := printf "/static/components/" }}
 {{ $staticPath := printf "/components/" }}
 {{ $component := .Component }}
-<div>{{ $path }}</div>
-{{ if fileExists $path }}
-  <div>exists</div>
-  {{ range readDir $path }}
   {{/*  TODO get a unique id in a partail  */}}
-    <div id="my-root"></div>
-    <script src="{{ $.Site.BaseURL }}{{ $staticPath }}/{{ $component }}.js" type="module" >
-    </script>
-    <script async type="module">
-      var component = '_component{{ $component }}';
-      console.log('looking fro component', component)
-      var a = setInterval(function() {
-        console.log('looking');
-        var found = false;
-        if(window.hasOwnProperty(component) && !found) {
-          found = true;
-          clearInterval(a);
-          console.log("clearing");
-          var el = document.getElementById('my-root');
-          el.appendChild(window[component]());
-        }
-      }, 5);
-    </script>
-  {{ end }}
-{{ end }}
+<div id="my-root"></div>
+<script src="{{ $.Site.BaseURL }}{{ $staticPath }}/{{ $component }}.js" type="module" ></script>
+<script async type="module">
+  var component = '_component{{ $component }}';
+  var a = setInterval(function() {
+    if(window.hasOwnProperty(component)) {
+      clearInterval(a);
+      var el = document.getElementById('my-root');
+      el.appendChild(window[component]());
+    }
+  }, 5);
+</script>
