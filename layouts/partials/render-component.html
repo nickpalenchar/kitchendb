@@ -1,0 +1,15 @@
+{{ $staticPath := printf "/components/" }}
+{{ $component := .Component }}
+  {{/*  TODO get a unique id in a partail  */}}
+<div id="my-root"></div>
+<script src="{{ $.Site.BaseURL }}{{ $staticPath }}/{{ $component }}.js" type="module" ></script>
+<script async type="module">
+  var component = '_component{{ $component }}';
+  var a = setInterval(function() {
+    if(window.hasOwnProperty(component)) {
+      clearInterval(a);
+      var el = document.getElementById('my-root');
+      el.appendChild(window[component]());
+    }
+  }, 5);
+</script>

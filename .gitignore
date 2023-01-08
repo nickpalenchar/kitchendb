@@ -3,5 +3,6 @@ public
 pagefind
 secrets.json
 static/images
-static/scripts
+# built from scripts/components
+static/components/
 WORKLOG
