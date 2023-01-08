@@ -21,7 +21,7 @@ import type { Component } from 'solid-js';
 
 const Foo: Component = () => {
   return (
-    <div>Hello!</div>
+    <div>Hello!</div> 
   );
 };
 
@@ -38,7 +38,7 @@ Pass a `Component` variable in the context
 
 ```hugo
 // example.html
-{{ partial require-component dict "Component" "Foo" }}
+{{ partial render-component dict "Component" "Foo" }}
 ```
 
 ### Within content (as a shortcode)
@@ -48,5 +48,5 @@ Pass the name in the shortcode.
 ```md
 // content/example.md
 
-{{< require-component "Foo" >}}
+{{< render-component "Foo" >}}
 ```
